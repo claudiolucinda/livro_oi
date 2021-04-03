@@ -1,0 +1,38 @@
+--- 
+title: "Organização Industrial"
+author: "Claudio Ribeiro de Lucinda"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+# output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: openscapes/series
+description: "Livro de Organização Industrial."
+---
+
+# Apresentação
+
+* O que é esse livro?
+  - Um manual de Organização Industrial para estudantes de graduação.
+  - Evidentemente, ele pode ser útil como bibliografia complementar em cursos de pós-graduação
+  
+* Qual seria o background desejável para o aluno/leitor?
+  - Domínio de Teoria Microeconômica em nível de graduação (livro como o Varian ou o Nicholson).
+  - Para as partes empíricas: conhecimento compatível com o livro do Wooldridge
+  - Programação em R para as partes empíricas
+  
+* Porque estou fazendo este livro?
+  - Existem dois caminhos típicos nos manuais de Organização Industrial:
+    + Oz Shy: Um livro que enfatiza a formalização e a conexão com as derivações dos cursos de Microeconomia, mas muito fraco em termos de aplicações e conexões práticas.
+    + Carlton e Perloff: um livro que enfatiza as aplicações e conexões, mas que demanda do professor um cuidado e um aprofundamento na parte teórica.
+  - Minha ideia é tentar um caminho intermediário, enfatizando aplicações empíricas
+  - Além disso, não existe manual em Português.
+
+* Porque estudar Organização Industrial?
+  - OI faz parte da sequência de Microeconomia - os cursos básicos da sequência costumam ser mais focados em ensinar o ferramental básico e o jeito de pensar dos economistas -- não há um esforço para trazer o que é apresentado para mais perto do mundo real
+  * É justificada esta escolha; todavia, para isso funcionar bem, cursos específicos (Economia do Trabalho, Economia do Setor Público, Organização Industrial), tem que pegar esta base e trazer para mais perto do mundo real e/ou de aplicações empíricas.
+    - Daí o presente livro
+  * Além disso, observamos cada vez mais a coleta e organização de bases de dados gigantescas empresariais.
+    - Para interpretar e agir em cima destes dados, o conhecimento das aplicações da teoria é fundamental.

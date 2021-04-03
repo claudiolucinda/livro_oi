@@ -1,0 +1,243 @@
+# Funções Custo
+
+## Introdução
+
+Neste capítulo iremos falar sobre custos - da forma que os economistas os entendem - e a utilização dos mesmos como forma de se racionalizar as escolhas da empresa, na forma de uma Função Custos. 
+
+Antes de qualquer coisa, devo acalmar o leitor. Nada do que está exposto aqui vai implicar que as coisas que vocês aprenderam ao longo da sequência de Microeconomia ou nos cursos de Introdução à Economia são inválidas. Apenas gostaria de organizar conceitos que vocês já viram em outros cursos em uma estrutura conceitual mais organizada, porque com isso algumas coisas que pareciam complicadas nos outros cursos e que tinham como resposta habitual a memorização sem muita reflexão, deixam de sê-lo. 
+
+Boa parte do que está exposto aqui também pode ser visto neste post aqui [link](https://pricetheory.substack.com/p/costs-and-outputs), bem como na referência clássica [@Alchian1958] de Armen Alchian.
+
+O autor afirma neste texto que o custo de uma ação é a mudança no valor presente do patrimônio líquido causado por ela, sem levar em conta os benefícios (receitas) também gerados por ela.
+
+Para isso, ele utiliza um exemplo bastante simples -- e ilustrativo. Vamos supor que o valor presente dos ativos^[Formalmente, fluxo de caixa livre para a empresa] de uma empresa seja igual a 100 e que, ao final deste período -- por exemplo, um ano -- o valor destes ativos seja de 80, não levando em conta as receitas auferidas dentro deste período. Supondo que a taxa de desconto ajustada ao risco adequada seja de 6%, temos que o valor presente destes ativos é de 75,47. Ou seja, os custos associados com a operação da empresa seriam de 24,53.
+
+Esta definição é útil porque esclarece alguns pontos que ficam meio obscuros quando seguimos as apresentações tradicionais do tema. Por exemplo, com esta definição de custos econômicos a análise dos chamados "custos afundados" (*sunk costs*) fica bem mais simples. O valor de 100 no exemplo anterior já é descontado de todos estes custos afundados e, portanto, não é contado no cálculo dos custos econômicos desta ação.
+
+Da mesma forma, a análise da decisão de se interromper as atividades da empresa também fica mais clara. Quaisquer custos fixos que podem ser evitados também já são considerados no exemplo acima. E, finalmente, esta definição deixa claro que o conceito de custos econômicos está inevitavelmente associado com a dimensão temporal. Ou seja, quando estamos falando de custos associados com uma ação, estamos falando de custos **por algum período de tempo**.
+
+Gráficos como os que vimos nos cursos de Microeconomia pressupõem que o período de tempo esteja dado. E tendo isso em mente, podemos olhar com outros olhos uma distinção -- entre Custos de Curto Prazo e Custos de Longo Prazo. Basicamente, a decisão deixa de ser vista em termos de tempo (sem tentar imaginar qual seria o número de meses em que saímos do Curto para o Longo Prazo), mas sim em termos de se é mais vantajoso para a empresa operar alterando apenas alguns dos insumos (o "Curto Prazo") ou todos os seus insumos (o "Longo Prazo")^[Uma versão interativa desta decisão pode ser encontrada [aqui](https://demonstrations.wolfram.com/LongRunAverageTotalCost/)].
+
+Com esta definição de custos, podemos representar o funcionamento da firma de duas formas alternativas:
+
+* Função de Produção -- Algo que toma as quantidades de insumos, faz o que tem que fazer e mais adiante gera o produto final
+
+* Função de Custos -- Algo que mostra, para dados preços de fatores de produção, qual é o mínimo custo para o atingimento de um **vetor** de quantidades produzidas.
+
+São formas alternativas de se apresentar a mesma coisa, mas não necessariamente as duas são igualmente adequadas para resolver todos os problemas conceituais que podemos ter. Questões como economias de escala, retornos decrescentes, costumam ser mais intuitivamente apreciados a partir da função custos do que a partir da função de produção. 
+
+Temas como economias de escopo, além disso, somente podem ser apreciados corretamente quando olhamos a função custos. Existem situações onde você consegue modelar a produção conjunta a partir de uma função de produção, mas costuma ser bem desajeitado.
+
+Podemos ver isso de forma um pouco mais intuitiva com a figura a seguir, que ilustra uma função de produção cúbica, do tipo $Q=a_{1}x +a_{2}x^2 + a_{3}x^3$. Os valores relativos de $a_{2}$ e $a_{3}$ determinam aonde os retornos crescentes e decrescentes começam.Uma versão interativa desse gráfico encontra-se no [link](https://demonstrations.wolfram.com/ShortRunProductionAndCostCurves/)
+
+Um ponto importante que precisamos ter em mente é que tanto as funções de produção quanto as funções de custo podem ser entendidas como funções que racionalizam as decisões observadas da empresa. Ou seja, a função de produção -- e a função custos -- são relações **comportamentais** e não necessariamente técnicas (entendidas como o resultado dos processos físicos de produção).
+
+Iremos mostrar esta passagem da função de produção para a função de custos para algumas das funções de produção mais conhecidas.
+
+## Funções de Produção e de Custo conhecidas
+
+Como vocês devem se lembrar, a Função de Custos surge a partir do problema de minimização de custos da empresa. Vamos mostrar como é esse processo para algumas das funções de produção mais comuns[^1]
+
+[^1]: A fonte dessas demonstrações é @varian92.
+
+### Cobb-Douglas
+
+O Problema de Minimização de Custos é o seguinte:
+
+$$
+\begin{aligned}
+C(\mathbf{w},y)=min_{x_{1},x_{2}}w_{1}x_{1}+w_{2}x_{2}\\
+\mathrm{tal} \quad \mathrm{que} \quad Ax_{1}^{a}x_{2}^{b}=y
+\end{aligned}
+$$
+
+Resolvendo a restrição para $x_{2}$ e substituindo na função objetivo podemos notar que este problema se torna
+
+$$
+\begin{aligned}
+min_{x_{1}} w_{1} x_{1} + w_{2}A^{-\frac{1}{b}}y^{\frac{1}{b}}x_{1}^{-\frac{a}{b}}
+\end{aligned}
+$$
+
+As condições de primeira ordem são:
+
+$$
+w_{1}-\frac{a}{b}w_{2}A^{-\frac{1}{b}}y^{\frac{1}{b}}x_{1}^{-\frac{a+b}{b}}=0
+$$
+
+Que nos dá a demanda condicional por fatores de $x_{1}$:
+
+$$
+x_{1}(w_{1},w_{2},y)=A^{-\frac{1}{a+b}}\left[ \frac{aw_{2}}{bw_{1}} \right]^{\frac{b}{a+b}}y^{\frac{1}{a+b}}
+$$
+
+Por simetria, temos que a outra demanda condicional por fatores é dada por
+
+$$
+x_{2}(w_{1},w_{2},y)=A^{-\frac{1}{a+b}}\left[ \frac{aw_{2}}{bw_{1}} \right]^{\frac{a}{a+b}}y^{\frac{1}{a+b}}
+$$
+
+A função custos fica sendo então:
+
+$$
+\begin{aligned}
+c(w_{1},w_{2},y)=w_{1}x_{1}(w_{1},w_{2},y)+w_{2}x_{2}(w_{1},w_{2},y)\\
+= A^{-\frac{1}{a+b}}\left[\left( \frac{a}{b} \right)^{\frac{b}{a+b}} + \left( \frac{a}{b} \right)^{\frac{-a}{a+b}} \right]w_{1}^{\frac{a}{a+b}}w_{2}^{\frac{b}{a+b}}y^{\frac{1}{a+b}}
+\end{aligned}
+$$
+
+Ou seja, a função de custos cobb-douglas também tem a forma cobb-douglas. A função Custo Marginal nesse caso é dada por:
+
+$$
+CMg=\frac{1}{a+b}A^{-\frac{1}{a+b}}\left[\left( \frac{a}{b} \right)^{\frac{b}{a+b}} + \left( \frac{a}{b} \right)^{\frac{-a}{a+b}} \right]w_{1}^{\frac{a}{a+b}}w_{2}^{\frac{b}{a+b}}y^{\frac{1-a-b}{a+b}}
+$$
+
+E se a função tiver retornos constantes de escala e $a+b$=1, a função de custo marginal se torna
+
+$$
+CMg=Kw_{1}^{a}w_{2}^{1-a}
+$$
+
+Ou seja, uma função custo marginal log linear e com coeficientes dos logs de fatores de produção somando 1 é uma função de produção cobb-douglas com retornos constantes de escala.
+
+
+### CES
+
+A similaridade entre a função de produção CES e a função custos associada também é grande. Vou apresentar apenas por completude, e porque em outras áreas a representação CES da tecnologia também aparece.
+
+Considerando a forma mais geral da função de produção CES:
+
+$$
+f(x_{1},x_{2})=y=\left[ \left( a_{1} x_{1} \right)^{\rho} + (a_{2} x_{2})^{\rho} \right]^{\frac{1}{\rho}}
+$$
+
+Podemos fazer os seguintes passos:
+
+* Reorganizar a função de produção para tirar o $\frac{1}{\rho}$ de cima do colchete
+* Reorganizar as condições de primeira ordem
+* Substituir de volta na função de produção
+* Chegar de volta nas demandas condicionais por fatores
+
+E chegar na função custo, que terá a forma de:
+
+$$
+C(w_{1},w_{2},y)=\left[ \left(\frac{w_{1}}{a_{1}} \right)^{r} + \left(\frac{w_{2}}{a_{2}} \right)^{r} \right]^{\frac{1}{r}} y
+$$
+E a função de custo marginal da forma:
+
+$$
+CMg=\left[ \left(\frac{w_{1}}{a_{1}} \right)^{r} + \left(\frac{w_{2}}{a_{2}} \right)^{r} \right]^{\frac{1}{r}}
+$$
+
+### Leontief
+
+Suponha que a função de produção seja $y=min\left[a_{1}x_{1}, a_{2}x_{2} \right]$. Qual seria a função custos? Neste caso, o truque tradicional ``deriva e iguala a zero'' não funciona. Precisamos pensar um pouco mais. 
+
+Como a empresa não vai querer desperdiçar insumos, ela vai operar em um ponto onde $y=ax_{1}=bx_{2}$. Ou seja, para produzir $y$ unidades, ela precisa usar $y/a_{1}$ do insumo 1 e $y/a_{2}$ do insumo 2, não importa quais são os preços dos insumos. Portanto, a função custo é dada por:
+
+$$
+C(w_{1},w_{2},y)=\frac{w_{1}y}{a_{1}}+\frac{w_{2}y}{a_{2}}=y\left(\frac{w_{1}}{a_{1}}+\frac{w_{2}}{a_{2}} \right)
+$$
+
+Com uma função de custo marginal linear nos fatores de produção:
+
+$$
+CMg=\left(\frac{w_{1}}{a_{1}} + \frac{w_{2}}{a_{2}} \right)
+$$
+
+## Funções de Custo Empíricas
+
+Nesta subseção, iremos falar um pouco como é possível estimar os parâmetros de uma função custos a partir dos dados, bem como, a partir destas estimativas, calcular alguns parâmetros estruturais como medidas de economias de escala e custos marginais.
+
+Para isso vamos usar a análise de [@nerlove1963returns], que compilou uma base de dados para 145 geradoras de eletricidade em 44 estados dos EUA para o ano de 1955.
+
+Nesta base de dados temos as seguintes informações:
+
+
+* Custo total de produção (*TC*): Custos calculados como a soma dos gastos com trabalho e combustível, mais a soma dos custos com o capital empregado na unidade 
+* Produção (*Q*): Total de Kwh produzido ao longo do ano de 1955.
+* Salários (*PL*): Salário médio por hora de trabalho dos empregados de **utilities**, em dólares de 1955.
+* Preço do Capital (*PK*): Taxa de juros dos títulos de 30 anos mais recentes emitidos pela empresa, expresso em número-índice.
+* Preço dos Combustíveis (*PF*): Preço em centavos de dólar por milhão de Btu (British Thermal Unit).
+
+Vamos começar carregando os pacotes necessários:
+
+```{r part01, echo=TRUE, eval=TRUE, message=FALSE}
+library(tidyverse)
+library(readxl)
+library(car)
+```
+
+O autor começa assumindo que a função de produção seja uma tradicional Cobb-Douglas, com Trabalho ($L$), Capital ($K$) e Combustíveis ($F$) como insumos:
+
+$$
+Q=AK^{\alpha_{K}}L^{\alpha_{L}}F^{\alpha_{F}}
+$$
+
+Olhando na seção anterior, podemos notar que a função custos associada possui a seguinte forma:
+
+$$
+CT=Q^{\frac{1}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}p_{K}^{\frac{\alpha_{K}}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}+ p_{L}^{\frac{\alpha_{L}}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}+p_{F}^{\frac{\alpha_{F}}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}
+$$
+
+Vamos estimar a versão duplo log desta equação, da seguinte forma:
+
+$$
+\ln{CT_{i}}=\beta_{0}+\beta_{1}\ln{Q_{i}}+\beta_{2}\ln{p_{Fi}}+\beta_{3}\ln{p_{Ki}}+\beta_{4}\ln{p_{Li}}+\varepsilon_{i}
+$$
+Mas antes, vamos importar os dados e dar uma olhada se tudo faz sentido:
+
+```{r inputting, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+data=read_xls("NerloveDta.xls",skip=1)
+head(data)
+
+```
+
+Rodando a regressão agora:
+
+```{r ols01_Nerlove, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+lm_log.model=lm(log1p(TC)~log1p(Q)+log1p(PF)+log1p(PK)+log1p(PL), data=data)
+summary(lm_log.model)
+```
+
+Lembrando que o coeficiente $\beta_{1}$ do modelo nos dá o inverso da soma $\alpha_{L}+\alpha_{K}+\alpha_{F}$, temos que a estimativa pontual dos coeficientes acima aponta para a rejeição da hipótese de Retornos Constantes de Escala. Para isso, iremos usar a função `linearHypothesis` do pacote `car`:
+
+```{r linhyp, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+linearHypothesis(lm_log.model,"log1p(PF)+log1p(PK)+log1p(PL)=1")
+```
+
+O Teste F aponta, por outro lado, que não é possível rejeitar a hipótese de retornos constantes de escala com esses dados. Ou seja, vamos agora trabalhar com essa restrição. Uma observação. Se isso for verdade, a equação a ser estimada será:
+
+$$
+\ln{\frac{CT_{i}}{p_{Li}}}=\beta_{0}+\ln{Q_{i}}+\alpha_{F}\ln{\frac{p_{Fi}}{p_{Li}}}+\alpha_{K}\ln{\frac{p_{Ki}}{p_{Li}}}+\varepsilon_{i}
+$$
+```{r mod_restNL, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+lm_log.rest=lm(log1p(TC/PL)~offset(log1p(Q))+log1p(PF/PL)+log1p(PK/PL), data=data)
+summary(lm_log.rest)
+```
+
+
+Com isso conseguimos estimar dois dos três coeficientes da função de produção. Vou mostrar como conseguir o terceiro coeficiente:
+
+```{r lintest, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+alpha_L<-1-coef(lm_log.rest)[2]-coef(lm_log.rest)[3]
+D <- c(0, -1, -1)
+alpha_L.se <- sqrt( t(D) %*% vcov(lm_log.rest) %*% D)
+alpha_L
+alpha_L.se
+
+```
+
+
+
+Mas é necessário enfatizar algumas coisas. Este estudo foi realizado nos anos 60 do século passado e a prática econométrica tem avançado bastante desde então. 
+
+Irei apenas listar sob quais hipóteses as estimativas aqui apresentadas ainda poderiam ser consideradas como as *verdadeiras* (não viesadas e consistentes) estimativas dos parâmetros da função de produção:
+
+* Os preços dos fatores de produção não possuem erros de medida
+
+* Os choques de produtividade não possuem efeitos sobre os preços dos fatores de produção -- por exemplo, firmas mais produtivas não seriam capazes de conseguir insumos melhores e/ou mais baratos.
+  - Ou pelo menos eles são ortogonais à decisão de escolha de insumo das empresas e que as empresas são tomadoras de preços no mercado de insumos.
+
+* Não existe heterogeneidade entre os fatores de produção utilizados nas diferentes plantas. 

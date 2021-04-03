@@ -1,0 +1,48 @@
+# Monopólio
+
+## Introdução
+
+Nesta nota, iremos detalhar um pouco a ideia do monopólio, e expressar algumas relações que vocês já conhecem em outros contextos em uma forma que enfatiza a generalidade com o que vem depois. Inicialmente vamos falar o monopólio tradicional, para depois falarmos da questão da firma dominante com a franja competitiva.
+
+### Monopólio -- Versão tradicional
+
+Vamos supor que o monopólio enfrente uma curva de demanda do tipo $P(Q)$ e possua uma função de Custo total da forma $CT(Q)$. O lucro do monopolista, desta forma, fica sendo:
+
+$$
+\begin{aligned}
+\pi_{m}=Q\times P(Q)-CT(Q)
+\end{aligned}
+$$
+
+Derivando e igualando a zero, temos então o seguinte:
+
+$$
+\begin{aligned}
+\frac{\partial \pi}{\partial Q} = P - \frac{\partial CT}{\partial Q} + Q \frac{\partial P}{\partial Q} = 0\\
+\frac{P-\frac{\partial CT}{\partial Q}}{P}= - \frac{Q}{P}\frac{\partial P}{\partial Q}\\
+\frac{P-\frac{\partial CT}{\partial Q}}{P} = \frac{1}{|\varepsilon_{D}|}
+\end{aligned}
+$$
+
+O lado esquerdo desta igualdade é o chamado ``Índice de Lerner'', uma medida percentual da margem preço-custo marginal (em base percentual). O lado direito é o inverso da elasticidade-preço da demanda. Essa equação é bastante intuitiva, no sentido que mercados com demandas mais elásticas permitem menos elevação dos preços acima dos custos marginais.
+
+Uma forma alternativa de escrever esta última equação é:
+
+$$
+P=\frac{\frac{\partial CT}{\partial Q}}{1-\frac{1}{|\varepsilon_{D}|}}
+$$
+
+### Firma Dominante -- Franja Competitiva
+
+Não há muita diferença na ideia de Firma Dominante com Franja Competitiva. O único ponto diferente é que a firma dominante trabalha com a Demanda Residual, definida de forma similar à do capítulo anterior do Carlton e Perloff: $D_{R}(P)=D(P)-S_{0}(P)$. Vamos apresentar a solução ótima por meio da escolha de preços:
+
+$$
+\begin{aligned}
+\pi_{m}=P \times D_{R}(P) - CT(D_{R}(P))\\
+\frac{\partial \pi_{m}}{\partial P} = D_{R} + P \frac{\partial D_{R}}{\partial P} - \frac{\partial CT}{\partial Q} \frac{\partial D_{R}}{\partial P}=0\\
+P \frac{\partial D_{R}}{\partial P} - \frac{\partial CT}{\partial Q} \frac{\partial D_{R}}{\partial P}=-D_{R}\\
+P-\frac{\partial CT}{\partial Q}=\frac{1}{\frac{\partial D_{R}}{\partial P}} D_{R}\\
+\left( \frac{P-\frac{\partial CT}{\partial Q}}{P} \right)=\frac{1}{|\varepsilon_{D_{R}}|}
+\end{aligned}
+$$
+A única diferença neste caso é a inclinação da demanda residual -- $D_{R}$ ao invés de $D$. Em alguns casos é possível que a inclinação coincida (quando a franja está ativa), em outros não coincide.

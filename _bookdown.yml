@@ -1,0 +1,6 @@
+book_filename: "livro"
+language:
+  ui:
+    chapter_name: "Capitulo "
+delete_merged_file: true 
+output_dir: "docs"
