@@ -5,11 +5,13 @@ funções-de-produção-e-de-custo-conhecidas
 cobb-douglas
 ces
 leontief
+medidas-de-economias-de-escala-e-economias-de-escopo
 empresas-multiproduto
 funções-de-custo-empíricas
 competição-perfeita-e-monopólio
 introdução-1
 competição-e-competição-perfeita
+equilíbrio-em-competição-perfeita
 monopólio
 monopólio-versão-tradicional
 firma-dominante-franja-competitiva

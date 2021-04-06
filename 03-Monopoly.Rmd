@@ -15,7 +15,27 @@ Então, aqui os objetivos principais vão ser:
 
 Esta distinção é importante porque o mercado perfeitamente competitivo vai ser entendido ao longo deste livro como sendo o padrão de comparação contra o qual as outras estruturas de mercado. Além disso, ao fazer a distinção entre um mercado competitivo e um mercado competitivo, podemos também iluminar o seguinte ponto: ainda que um mercado perfeitamente competitivo seja um ideal e dificilmente encontrável no mundo real, mercados no mundo real podem aproximar os resultados do mercado perfeitamente competitivo -- ou seja, há benefícios em observar as conclusões do modelo de competição perfeita como uma forma de entender a realidade também, se entendermos que é uma aproximação ao mundo real.
 
+Vamos então com a definição mais tradicional, que é a do livro do Carlton e Perloff. Competição Perfeita é definida como uma estrutura de mercado com as seguintes características:
+* Bens homogêneos: aos olhos dos consumidores todos os ofertantes são idênticos, e aos olhos dos ofertantes todos os consumidores são idênticos. Note-se que o aspecto aqui importante está na frase ``nos olhos'' -- você não necessariamente precisa que os produtos sejam fisicamente idênticos.
+* Comportamento tomador de preços: Isso significa que nenhum dos ofertantes (e nenhum dos demandantes) é capaz de afetar os preços de mercado por meio das suas compras/vendas.
+* Não existem custos de transação: Os compradores não incorrem em custos (entendidos como custos econômicos) quando da realização de suas compras - e o mesmo valendo pros consumidores
+* Não temos externalidades reais: As decisões de compra e venda não afetam outras pessoas por mecanismos que não sejam os de mercado.
+* Livre Entrada: Os ofertantes e demandantes podem entrar no mercado se assim desejarem (=acharem lucrativo)
+* Divisibilidade: as quantidades produzidas podem ser infinitamente divisíveis
 
+Como mencionado mais acima, estas premissas caracterizam um tipo de mercado que dificilmente pode ser encontrado no ``mundo real''. A partir dessa informação, existem duas reações. A primeira delas é entender que o papel desta definição é justamente este -- ser restritiva para fornecer um padrão de comparação para os modelos que nós detalharemos mais adiante. 
+
+A segunda reação é pensar se, dado que estas condições caracterizam um mercado dificilmente encontrado no mundo real, existe um subconjunto destas condições que seria mais próxima do mundo real e que gere resultados parecidos com o de competição perfeita. Se entendermos ``resultados parecidos'' como sendo preços convergindo para um equilíbrio - que chamarei de *mercado competitivo* como o resultado da interação de curvas de oferta e de demanda, o que a evidência experimental [@smith1962experimental] e [@FriedmanOstroy1995] nos mostra é que apenas as seguintes premissas são necessárias:
+
+* Os compradores conhecem as suas disposições a pagar
+* Os vendedores conhecem o custo marginal de oportunidade das unidades que estão dispostas a oferecer
+* Os compradores e vendedores conhecem o preço de mercado
+
+Note-se que isso não significa que seja possível que outros aspectos (informação, custos de transação) sejam de tal magnitude que impeça que o resultado de mercado competitivo se estabeleça. E nem que todas as consequências de um mercado em competição perfeita também se verifique.
+
+E por falar no equilíbrio em competição perfeita, na seção seguinte iremos reapresentar o mesmo.
+
+### Equilíbrio em Competição Perfeita
 
 
 ## Monopólio

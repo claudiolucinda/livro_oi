@@ -144,6 +144,60 @@ Com uma função de custo marginal linear nos fatores de produção:
 $$
 CMg=\left(\frac{w_{1}}{a_{1}} + \frac{w_{2}}{a_{2}} \right)
 $$
+
+```{r cost_fig, echo=FALSE, engine='tikz', fig.ext='svg'}
+\usetikzlibrary{intersections}
+\begin{tikzpicture}[samples=32, >=latex]
+\draw[->] (0,0) -- (3.5,0) node [right] {$q$};
+\draw[->] (0,0) -- (0,2.5) node [above] {$CT$};
+\draw[name path=LRTC, color=green, thick, domain=0:3] plot (\x, {0.8*\x*\x*\x-3.4*\x*\x+4*\x}) node[right]{CTLP($q$)};
+\end{tikzpicture}
+
+```
+
+
+```{r cost_fig02, echo=FALSE, engine='tikz', fig.ext='svg'}
+\usetikzlibrary{intersections}
+\begin{tikzpicture}[samples=32, >=latex]
+\draw[->] (0,0) -- (3.5,0) node [right] {$q$};
+\draw[->] (0,0) -- (0,2.5) node [above] {LRTC};
+\draw[name path=LRTC, color=green, thick, domain=0:3] plot (\x, {0.8*\x*\x*\x-3.4*\x*\x+4*\x}) node[right]{LRTC($q$)};
+\draw[->] (0,-5) -- +(3.5,0) node [right] {$q$};
+\draw[->] (0,-5) -- +(0,4) node [above] {LRAC, LRMC};
+\draw[name path=LRAC, color=green, thick, domain=0.3:3.9, yshift=-4cm] plot (\x, {0.8*\x*\x-3.4*\x+4}) node[right]{LRAC($q$)};
+\end{tikzpicture}
+```
+
+
+```{r cost_fig03, echo=FALSE, engine='tikz', fig.ext='svg'}
+\usetikzlibrary{intersections}
+\begin{tikzpicture}[samples=32, >=latex]
+\draw[->] (0,0) -- (3.5,0) node [right] {$q$};
+\draw[->] (0,0) -- (0,2.5) node [above] {LRTC};
+\draw[name path=LRTC, color=green, thick, domain=0:3] plot (\x, {0.8*\x*\x*\x-3.4*\x*\x+4*\x}) node[right]{LRTC($q$)};
+\draw[->] (0,-5) -- +(3.5,0) node [right] {$q$};
+\draw[->] (0,-5) -- +(0,4) node [above] {LRAC, LRMC};
+\draw[name path=LRAC, color=green, thick, domain=0.3:3.9, yshift=-4cm] plot (\x, {0.8*\x*\x-3.4*\x+4}) node[right]{LRAC($q$)};
+\draw[name path=LRMC, color=blue!60!red, thick, domain=0.1:2.5, yshift=-4cm] plot (\x, {2.4*\x*\x-6.56*\x+3.67}) node[right] {LRMC($q$)};
+\path[name intersections={of=LRAC and LRMC}];
+\fill (intersection-1) circle(1pt) node[below right]{$B$};
+\draw[name path=vert1, black!30] (intersection-1) -- +(0,5);
+\path[name intersections={of=LRTC and vert1}];
+\fill (intersection-1) circle(1pt);
+\pgfgetlastxy{\myx}{\myy}
+\node[below right] at (intersection-1) {$B$};
+\draw[black!30] (intersection-1) -- (0,0);
+\draw[name path=constructed, red!30] (\myy, \myx) -- (0,0);
+\path[name intersections={of=constructed and LRTC}];
+\fill (intersection-2) circle(1pt) node[left]{$A$};
+\draw[name path=vert2, red!30] (intersection-2) -- +(0,-6);
+\path[name intersections={of=vert2 and LRAC}];
+\fill (intersection-1) circle(1pt) node[right]{$A^{\prime}$};
+\path[name intersections={of=vert2 and LRMC}];
+\fill (intersection-1) circle(1pt) node[right]{$A^{\prime \prime}$};
+\end{tikzpicture}
+```
+
 ## Medidas de Economias de Escala e Economias de Escopo
 
 Medida de economias de escala ( Scale Economy Index ):
