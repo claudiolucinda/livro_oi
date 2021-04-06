@@ -1,6 +1,24 @@
-# Monopólio
+# Competição Perfeita e Monopólio
 
 ## Introdução
+
+Neste capítulo, iremos recapitular duas estruturas de mercado mais comumente apresentadas em cursos de Microeconomia: (i) Competição Perfeita e (ii) Monopólio. No caso da competição perfeita, podemos apresentá-la como um padrão de comparação sobre as estruturas de mercado que vêm depois, e no caso de Monopólio podemos ressaltar alguns aspectos importantes de mercados em competição perfeita -- o papel da entrada e o papel de eventuais competidores (a chamada Franja Competitiva).
+
+
+## Competição e Competição Perfeita
+
+Nesta seção do capítulo, iremos revisitar o conceito de Competição e Competição Perfeita. Digo revisitar porque, novamente, estou assumindo que o leitor deste livro já tenha estudado este tema algumas vezes. 
+Então, aqui os objetivos principais vão ser:
+
+* Deixar claro o que se entende por um *mercado competitivo*
+* Deixar claro o que se entende por um *mercado perfeitamente competitivo*
+
+Esta distinção é importante porque o mercado perfeitamente competitivo vai ser entendido ao longo deste livro como sendo o padrão de comparação contra o qual as outras estruturas de mercado. Além disso, ao fazer a distinção entre um mercado competitivo e um mercado competitivo, podemos também iluminar o seguinte ponto: ainda que um mercado perfeitamente competitivo seja um ideal e dificilmente encontrável no mundo real, mercados no mundo real podem aproximar os resultados do mercado perfeitamente competitivo -- ou seja, há benefícios em observar as conclusões do modelo de competição perfeita como uma forma de entender a realidade também, se entendermos que é uma aproximação ao mundo real.
+
+
+
+
+## Monopólio
 
 Nesta nota, iremos detalhar um pouco a ideia do monopólio, e expressar algumas relações que vocês já conhecem em outros contextos em uma forma que enfatiza a generalidade com o que vem depois. Inicialmente vamos falar o monopólio tradicional, para depois falarmos da questão da firma dominante com a franja competitiva.
 

@@ -144,6 +144,68 @@ Com uma função de custo marginal linear nos fatores de produção:
 $$
 CMg=\left(\frac{w_{1}}{a_{1}} + \frac{w_{2}}{a_{2}} \right)
 $$
+## Medidas de Economias de Escala e Economias de Escopo
+
+Medida de economias de escala ( Scale Economy Index ):
+$$\begin{align*}
+  S=\frac{C(q)}{CMg(q)\times q}=\frac{CMe}{CMg}
+\end{align*}$$
+
+Com $S>1$, existem economias de escala. Com $S<1$, deseconomias de escala
+Podemos notar também que $S$ é o inverso da elasticidade do custo em relação à produção.
+
+$$\begin{align*}
+  \eta_{c} &= \frac{\frac{\partial C}{\partial q}}{\frac{C}{q}} = \frac{1}{S}  \end{align*}$$    
+
+
+
+### Empresas Multiproduto
+
+A maioria das empresas produz mais de um produto. Por exemplo, a Honda produz carros e motocicletas, a Microsoft produz o sistema operacional Windows e vários MS Office.
+
+Como definimos o custo médio desse tipo de empresa? (por exemplo, produz 2 produtos). Seja o custo total: $C(q1, q2)$, podemos definir o custo marginal dos produtos 1 e 2:
+
+$$\begin{align*}
+CMg_{1}&=\frac{\partial C(q_{1},q_{2})}{\partial q_{1}}\\
+CMg_{2}&=\frac{\partial C(q_{1},q_{2})}{\partial q_{2}}
+\end{align*}$$
+
+Mas o custo médio é difícil de definir (custo por unidade do que?) em geral usamos *Ray Average Cost*. Suponha que uma empresa faça dois produtos, 1 e 2 com as quantidades $q_{1}$ e $q_{2}$ produzidas em uma proporção constante de 2 para 1.  Então, a quantidade total Q pode ser definida de forma implícita a partir das equações $q_{1} = (2/3)\times Q$ e $q_{2} = (1/3)\times Q$.
+  
+De uma forma geral, suponha que os dois produtos sejam produzidos na razão $\lambda_{1}/\lambda_{2}$, com $(\lambda_{1}+\lambda_{2})=1$. Então, a quantidade total é definida implicitamente das equações $q_{1}=\lambda_{1} Q$e $q_{2}=\lambda_{2}Q$. O *Ray Average Cost* fica definido então como:
+
+$$\begin{align*}
+RAC=\frac{C(\lambda_{1}Q,\lambda_{2}Q)}{Q}
+\end{align*}$$
+
+Medidas de economias de escala para firmas multiproduto:
+
+$$\begin{align*}
+S&=\frac{C(q_{1},q_{2})}{CMg_{1}q_{1}+CMg_{2}q_{2}}
+\end{align*}$$
+
+**Economias de Escopo:** Uma empresa possui economias de escopo se fornecer os dois produtos conjuntamente é mais barato que fornecer eles separadamente. Por exemplo, suponha que a firma 1 produza os produtos A e B, enquanto a firma 2 só produz o  produto B. Existem economias de escopo se a firma 1 consegue fornecer o produto B a um custo menor que a firma 2. Formalmente:
+          
+$$\begin{align*}
+C(q_{1},q_{2})<C(q_{1},0)+C(0,q_{2})
+\end{align*}$$
+
+Supondo $C(0,0)=0$Isso implica que:
+
+$$\begin{align*}
+C(q_{1},q_{2})-C(q_{1},0)<C(0,q_{2})-C(0,0)
+\end{align*}$$
+
+Ou seja, o chamado ``Custo Incremental'' de $q_{2}$-- o adicional de custos para se oferecer TODA a quantidade -- é menor se você já produzir $q_{1}$.
+
+Podemos medir as economias de escopo da seguinte forma:
+$$\begin{align*}
+S_{c}&=\frac{C(q_{1},0)+C(0,q_{2})-C(q_{1},q_{2})}{C(q_{1},q_{2})}
+\end{align*}$$
+
+Se $S_{c}<0$, não há Economias de Escopo, e se $S_{c}>0$ há Economias de Escopo.
+
+
 
 ## Funções de Custo Empíricas
 
