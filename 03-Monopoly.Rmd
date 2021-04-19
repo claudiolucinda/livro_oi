@@ -16,6 +16,7 @@ Então, aqui os objetivos principais vão ser:
 Esta distinção é importante porque o mercado perfeitamente competitivo vai ser entendido ao longo deste livro como sendo o padrão de comparação contra o qual as outras estruturas de mercado. Além disso, ao fazer a distinção entre um mercado competitivo e um mercado competitivo, podemos também iluminar o seguinte ponto: ainda que um mercado perfeitamente competitivo seja um ideal e dificilmente encontrável no mundo real, mercados no mundo real podem aproximar os resultados do mercado perfeitamente competitivo -- ou seja, há benefícios em observar as conclusões do modelo de competição perfeita como uma forma de entender a realidade também, se entendermos que é uma aproximação ao mundo real.
 
 Vamos então com a definição mais tradicional, que é a do livro do Carlton e Perloff. Competição Perfeita é definida como uma estrutura de mercado com as seguintes características:
+
 * Bens homogêneos: aos olhos dos consumidores todos os ofertantes são idênticos, e aos olhos dos ofertantes todos os consumidores são idênticos. Note-se que o aspecto aqui importante está na frase ``nos olhos'' -- você não necessariamente precisa que os produtos sejam fisicamente idênticos.
 * Comportamento tomador de preços: Isso significa que nenhum dos ofertantes (e nenhum dos demandantes) é capaz de afetar os preços de mercado por meio das suas compras/vendas.
 * Não existem custos de transação: Os compradores não incorrem em custos (entendidos como custos econômicos) quando da realização de suas compras - e o mesmo valendo pros consumidores
@@ -36,6 +37,95 @@ Note-se que isso não significa que seja possível que outros aspectos (informa�
 E por falar no equilíbrio em competição perfeita, na seção seguinte iremos reapresentar o mesmo.
 
 ### Equilíbrio em Competição Perfeita
+
+Seguindo a apresentação mais ``tradicional'' de competição perfeita, o primeiro passo é analisar qual é o equilíbrio associado com estas premissas. Ou seja, se seguirmos este modelo, o que podemos esperar dos agentes desta economia?
+
+Em primeiro lugar, sobre o equilíbrio da empresa individual. Vamos assumir que a empresa maximize seus lucros. Esta maximização de lucros leva à  seguinte relação comportamental: produzir até o nível em que a receita marginal decorrente de um pequeno aumento na produção seja igual ao custo marginal decorrente deste pequeno aumento na produção.
+
+Essa igualdade -- $RMg=CMg$ é mais geral do que aquela que vocês provavelmente viram no curso de microeconomia para o caso de Concorrência Perfeita, que é Preço=Custo Marginal. A vantagem de entender essa relação comportamental da oferta da firma como Receita Marginal = Custo Marginal é que ela engloba todos os casos que vamos ver nesse curso. 
+
+No caso da Concorrência Perfeita, como vamos assumir que as empresas não possuem o poder de afetar os termos segundo os quais podem vender seus produtos, esta receita decorrente de um pequeno aumento na quantidade produzida é igual ao preço, ou seja $RMg=P=CMg$.
+
+Essa é a única regra de comportamento que a empresa em competição perfeita tem que atender? NÃO. Ela precisa decidir se é viável operar neste mercado ou não. Para isso ela precisa checar se a Receita Total associada com esse nível de produção é superior ao total dos **Custos Evitáveis** -- ou seja, os custos variáveis mais a parte recuperável dos custos fixos. 
+
+As receitas além dessa soma dos custos variáveis mais a parte recuperável dos custos fixos são chamadas **quase rendas** -- ou seja, os rendimentos necessários para manter a empresa operando no curto prazo.
+
+Se assumirmos que todos os custos fixos são irrecuperáveis, chegamos na regra tradicional que o preço tem que ser superior ao *Custo Variável Médio* no curto prazo e, no longo prazo, superior ao *Custo Total Médio*.
+
+```{r eq_cperf1, echo=FALSE, engine='tikz', fig.ext='svg', fig.align='center', fig.cap='Equilíbrio Firma em CP'}
+\begin{tikzpicture}[scale=0.8]
+
+\tiny
+
+\draw (0,0) -- (8,0) node [below] {Quantity, units};
+
+\draw (0,-0.5) -- (0,5) node [above] {Cost per unit, \$};
+
+\draw (0.2,5) to [out=270,in=172] (2.6,0.4);
+
+\draw (2.6,0.4) to [out=350.5,in=178] (7,0.1);
+
+\node [right] at (7,0.5) {$AFC$};
+
+\draw (0.3,5) to [out=280,in=150] (2,2.1);
+
+\draw (2,2.1) to [out=330,in=200] (7,2);
+
+\node [right] at (7,2.3) {$ATC$};
+
+\draw (0,2) to [out=340,in=200] (7,1.8);
+
+\node [right] at (7,1.8) {$AVC$};
+
+\draw (0,2) to [out=315,in=240] (7,5);
+
+\node [right] at (7,5) {$MC$};
+
+\end{tikzpicture}
+
+```
+
+A partir dessa decisão da empresa, o passo seguinte é entender de onde vem esse preço de mercado que regula as decisões da empresa. O preço de mercado vem da intersecção da oferta de mercado com a demanda de mercado. **Nota: apenas em concorrência perfeita teremos uma CURVA de Oferta. Em todas as outras, temos uma RELAÇÃO de oferta**
+
+Para entendermos a oferta de mercado, precisamos fazer mais uma hipótese -- que é sobre a possibilidade de entrada. Para ilustrar a importância dessa premissa, vamos mostrar os dois casos extremos -- o chamado "Curto Prazo" de livro-texto de Microeconomia, em que existem $n$ empresas no mercado, todos os custos fixos são afundados e a entrada é impossível, e o chamado "Longo Prazo", em que nenuhum custo é afundado (=todos os custos são evitáveis) e que a entrada é livre.
+
+#### Equilíbrio em Competição Perfeita -- Curto Prazo
+
+Neste caso, a oferta de mercado é a soma horizontal das curvas de oferta das empresas individuais -- que, por sua vez, são o ramo ascendente da curva de custo marginal, a partir dos custos médios *evitáveis*.
+Para um exemplo, vamos considerar a existência de três empresas no curto prazo com as seguintes curvas de custo marginal:
+$$
+\begin{align*}
+q_{1}&=\frac{CMg_{1}}{4}-2\\
+q_{2}&=\frac{CMg_{2}}{2}-4\\
+q_{3}&=\frac{CMg_{3}}{6}-\frac{4}{3}
+\end{align*}
+$$
+Agregando e definindo $Q=q_{1}+q_{2}+q_{3}$, chegamos à seguinte forma para a oferta de curto prazo:
+$P=CMg=\frac{12Q}{11}+8$
+
+O Equilíbrio fica então com a cara tradicional que conhecemos:
+
+```{r equ_CP_CP, echo=FALSE, engine='tikz', fig.ext='svg', fig.align='center', fig.cap='Equilíbrio mercado em CP'}
+\begin{tikzpicture}[scale=0.6]
+
+\draw[thick,<->] (0,10) node[above]{$P$}--(0,0)--(10,0) node[right]{$Q$};
+
+\node [below left] at (0,0) {$0$};
+
+\node [below] at (5,0) {$Q^*$};
+
+\node [left] at (0,5) {$P^*$};
+
+\draw(1,1)--(9,9) node[right]{$S$};
+
+\draw(1,9)--(9,1) node[right]{$D$};
+
+\draw[dashed](0,5)--(5,5)--(5,0);
+
+\end{tikzpicture}
+```
+
+
 
 
 ## Monopólio

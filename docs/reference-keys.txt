@@ -12,6 +12,7 @@ competição-perfeita-e-monopólio
 introdução-1
 competição-e-competição-perfeita
 equilíbrio-em-competição-perfeita
+equilíbrio-em-competição-perfeita-curto-prazo
 monopólio
 monopólio-versão-tradicional
 firma-dominante-franja-competitiva
