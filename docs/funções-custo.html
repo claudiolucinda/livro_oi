@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capitulo 2 Funções Custo | Organização Industrial</title>
+  <meta name="description" content="Livro de Organização Industrial." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capitulo 2 Funções Custo | Organização Industrial" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Livro de Organização Industrial." />
+  <meta name="github-repo" content="openscapes/series" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capitulo 2 Funções Custo | Organização Industrial" />
+  
+  <meta name="twitter:description" content="Livro de Organização Industrial." />
+  
+
+<meta name="author" content="Claudio Ribeiro de Lucinda" />
+
+
+<meta name="date" content="2021-04-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="competição-perfeita-e-monopólio.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="lib/css/style.css" type="text/css" />
+<link rel="stylesheet" href="lib/css/lesson.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Livro Organização Industrial</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Apresentação</a></li>
+<li class="chapter" data-level="2" data-path="funções-custo.html"><a href="funções-custo.html"><i class="fa fa-check"></i><b>2</b> Funções Custo</a><ul>
+<li class="chapter" data-level="2.1" data-path="funções-custo.html"><a href="funções-custo.html#introdução"><i class="fa fa-check"></i><b>2.1</b> Introdução</a></li>
+<li class="chapter" data-level="2.2" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-produção-e-de-custo-conhecidas"><i class="fa fa-check"></i><b>2.2</b> Funções de Produção e de Custo conhecidas</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="funções-custo.html"><a href="funções-custo.html#cobb-douglas"><i class="fa fa-check"></i><b>2.2.1</b> Cobb-Douglas</a></li>
+<li class="chapter" data-level="2.2.2" data-path="funções-custo.html"><a href="funções-custo.html#ces"><i class="fa fa-check"></i><b>2.2.2</b> CES</a></li>
+<li class="chapter" data-level="2.2.3" data-path="funções-custo.html"><a href="funções-custo.html#leontief"><i class="fa fa-check"></i><b>2.2.3</b> Leontief</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="funções-custo.html"><a href="funções-custo.html#medidas-de-economias-de-escala-e-economias-de-escopo"><i class="fa fa-check"></i><b>2.3</b> Medidas de Economias de Escala e Economias de Escopo</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="funções-custo.html"><a href="funções-custo.html#empresas-multiproduto"><i class="fa fa-check"></i><b>2.3.1</b> Empresas Multiproduto</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-custo-empíricas"><i class="fa fa-check"></i><b>2.4</b> Funções de Custo Empíricas</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html"><i class="fa fa-check"></i><b>3</b> Competição Perfeita e Monopólio</a><ul>
+<li class="chapter" data-level="3.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#introdução-1"><i class="fa fa-check"></i><b>3.1</b> Introdução</a></li>
+<li class="chapter" data-level="3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#competição-e-competição-perfeita"><i class="fa fa-check"></i><b>3.2</b> Competição e Competição Perfeita</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#equilíbrio-em-competição-perfeita"><i class="fa fa-check"></i><b>3.2.1</b> Equilíbrio em Competição Perfeita</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio"><i class="fa fa-check"></i><b>3.3</b> Monopólio</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio-versão-tradicional"><i class="fa fa-check"></i><b>3.3.1</b> Monopólio – Versão tradicional</a></li>
+<li class="chapter" data-level="3.3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#firma-dominante-franja-competitiva"><i class="fa fa-check"></i><b>3.3.2</b> Firma Dominante – Franja Competitiva</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="oligopólio.html"><a href="oligopólio.html"><i class="fa fa-check"></i><b>4</b> Oligopólio</a><ul>
+<li class="chapter" data-level="4.1" data-path="oligopólio.html"><a href="oligopólio.html#introdução-2"><i class="fa fa-check"></i><b>4.1</b> Introdução</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="oligopólio.html"><a href="oligopólio.html#resultado-geral"><i class="fa fa-check"></i><b>4.1.1</b> Resultado geral</a></li>
+<li class="chapter" data-level="4.1.2" data-path="oligopólio.html"><a href="oligopólio.html#exemplo-demanda-linear"><i class="fa fa-check"></i><b>4.1.2</b> Exemplo: Demanda Linear</a></li>
+<li class="chapter" data-level="4.1.3" data-path="oligopólio.html"><a href="oligopólio.html#modelo-de-cournot-com-muitas-firmas"><i class="fa fa-check"></i><b>4.1.3</b> Modelo de Cournot com muitas firmas</a></li>
+<li class="chapter" data-level="4.1.4" data-path="oligopólio.html"><a href="oligopólio.html#exposição-inicial"><i class="fa fa-check"></i><b>4.1.4</b> Exposição Inicial</a></li>
+<li class="chapter" data-level="4.1.5" data-path="oligopólio.html"><a href="oligopólio.html#bertrand-com-produtos-diferenciados"><i class="fa fa-check"></i><b>4.1.5</b> Bertrand com Produtos Diferenciados</a></li>
+<li class="chapter" data-level="4.1.6" data-path="oligopólio.html"><a href="oligopólio.html#jogos-sequenciais-em-bertrand"><i class="fa fa-check"></i><b>4.1.6</b> Jogos sequenciais em Bertrand</a></li>
+<li class="chapter" data-level="4.1.7" data-path="oligopólio.html"><a href="oligopólio.html#bertrand-multiproduto"><i class="fa fa-check"></i><b>4.1.7</b> Bertrand Multiproduto</a></li>
+<li class="chapter" data-level="4.1.8" data-path="oligopólio.html"><a href="oligopólio.html#bertrand-com-restrições-de-capacidade"><i class="fa fa-check"></i><b>4.1.8</b> Bertrand com restrições de capacidade</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="oligopólio.html"><a href="oligopólio.html#introdução-3"><i class="fa fa-check"></i><b>4.2</b> Introdução</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="oligopólio.html"><a href="oligopólio.html#apresentação-do-modelo"><i class="fa fa-check"></i><b>4.2.1</b> Apresentação do modelo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html"><i class="fa fa-check"></i><b>5</b> Modelo de Mankiw e Whinston</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html#bens-homogêneos"><i class="fa fa-check"></i><b>5.0.1</b> Bens Homogêneos</a></li>
+<li class="chapter" data-level="5.0.2" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html#produtos-diferenciados"><i class="fa fa-check"></i><b>5.0.2</b> Produtos Diferenciados</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado com Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Organização Industrial</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="funções-custo" class="section level1">
+<h1><span class="header-section-number">Capitulo 2</span> Funções Custo</h1>
+<div id="introdução" class="section level2">
+<h2><span class="header-section-number">2.1</span> Introdução</h2>
+<p>Neste capítulo iremos falar sobre custos - da forma que os economistas os entendem - e a utilização dos mesmos como forma de se racionalizar as escolhas da empresa, na forma de uma Função Custos.</p>
+<p>Antes de qualquer coisa, devo acalmar o leitor. Nada do que está exposto aqui vai implicar que as coisas que vocês aprenderam ao longo da sequência de Microeconomia ou nos cursos de Introdução à Economia são inválidas. Apenas gostaria de organizar conceitos que vocês já viram em outros cursos em uma estrutura conceitual mais organizada, porque com isso algumas coisas que pareciam complicadas nos outros cursos e que tinham como resposta habitual a memorização sem muita reflexão, deixam de sê-lo.</p>
+<p>Boa parte do que está exposto aqui também pode ser visto neste post aqui <a href="https://pricetheory.substack.com/p/costs-and-outputs">link</a>, bem como na referência clássica <span class="citation">(Alchian <a href="#ref-Alchian1958" role="doc-biblioref">1958</a>)</span> de Armen Alchian.</p>
+<p>O autor afirma neste texto que o custo de uma ação é a mudança no valor presente do patrimônio líquido causado por ela, sem levar em conta os benefícios (receitas) também gerados por ela.</p>
+<p>Para isso, ele utiliza um exemplo bastante simples – e ilustrativo. Vamos supor que o valor presente dos ativos<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> de uma empresa seja igual a 100 e que, ao final deste período – por exemplo, um ano – o valor destes ativos seja de 80, não levando em conta as receitas auferidas dentro deste período. Supondo que a taxa de desconto ajustada ao risco adequada seja de 6%, temos que o valor presente destes ativos é de 75,47. Ou seja, os custos associados com a operação da empresa seriam de 24,53.</p>
+<p>Esta definição é útil porque esclarece alguns pontos que ficam meio obscuros quando seguimos as apresentações tradicionais do tema. Por exemplo, com esta definição de custos econômicos a análise dos chamados “custos afundados” (<em>sunk costs</em>) fica bem mais simples. O valor de 100 no exemplo anterior já é descontado de todos estes custos afundados e, portanto, não é contado no cálculo dos custos econômicos desta ação.</p>
+<p>Da mesma forma, a análise da decisão de se interromper as atividades da empresa também fica mais clara. Quaisquer custos fixos que podem ser evitados também já são considerados no exemplo acima. E, finalmente, esta definição deixa claro que o conceito de custos econômicos está inevitavelmente associado com a dimensão temporal. Ou seja, quando estamos falando de custos associados com uma ação, estamos falando de custos <strong>por algum período de tempo</strong>.</p>
+<p>Gráficos como os que vimos nos cursos de Microeconomia pressupõem que o período de tempo esteja dado. E tendo isso em mente, podemos olhar com outros olhos uma distinção – entre Custos de Curto Prazo e Custos de Longo Prazo. Basicamente, a decisão deixa de ser vista em termos de tempo (sem tentar imaginar qual seria o número de meses em que saímos do Curto para o Longo Prazo), mas sim em termos de se é mais vantajoso para a empresa operar alterando apenas alguns dos insumos (o “Curto Prazo”) ou todos os seus insumos (o “Longo Prazo”)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<p>Com esta definição de custos, podemos representar o funcionamento da firma de duas formas alternativas:</p>
+<ul>
+<li><p>Função de Produção – Algo que toma as quantidades de insumos, faz o que tem que fazer e mais adiante gera o produto final</p></li>
+<li><p>Função de Custos – Algo que mostra, para dados preços de fatores de produção, qual é o mínimo custo para o atingimento de um <strong>vetor</strong> de quantidades produzidas.</p></li>
+</ul>
+<p>São formas alternativas de se apresentar a mesma coisa, mas não necessariamente as duas são igualmente adequadas para resolver todos os problemas conceituais que podemos ter. Questões como economias de escala, retornos decrescentes, costumam ser mais intuitivamente apreciados a partir da função custos do que a partir da função de produção.</p>
+<p>Temas como economias de escopo, além disso, somente podem ser apreciados corretamente quando olhamos a função custos. Existem situações onde você consegue modelar a produção conjunta a partir de uma função de produção, mas costuma ser bem desajeitado.</p>
+<p>Podemos ver isso de forma um pouco mais intuitiva com a figura a seguir, que ilustra uma função de produção cúbica, do tipo <span class="math inline">\(Q=a_{1}x +a_{2}x^2 + a_{3}x^3\)</span>. Os valores relativos de <span class="math inline">\(a_{2}\)</span> e <span class="math inline">\(a_{3}\)</span> determinam aonde os retornos crescentes e decrescentes começam.Uma versão interativa desse gráfico encontra-se no <a href="https://demonstrations.wolfram.com/ShortRunProductionAndCostCurves/">link</a></p>
+<p>Na figura a seguir mostra o análogo dessa função de produção – que também gera uma função cúbica de custos.</p>
+<div class="figure" style="text-align: center">
+<img src="livro_files/figure-html/cost_fig03-1.svg" alt="Função Cúbica de Custos" width="672" />
+<p class="caption">
+(#fig:cost_fig03)Função Cúbica de Custos
+</p>
+</div>
+<p>Um ponto importante que precisamos ter em mente é que tanto as funções de produção quanto as funções de custo podem ser entendidas como funções que racionalizam as decisões observadas da empresa. Ou seja, a função de produção – e a função custos – são relações <strong>comportamentais</strong> e não necessariamente técnicas (entendidas como o resultado dos processos físicos de produção).</p>
+<p>Iremos mostrar esta passagem da função de produção para a função de custos para algumas das funções de produção mais conhecidas.</p>
+</div>
+<div id="funções-de-produção-e-de-custo-conhecidas" class="section level2">
+<h2><span class="header-section-number">2.2</span> Funções de Produção e de Custo conhecidas</h2>
+<p>Como vocês devem se lembrar, a Função de Custos surge a partir do problema de minimização de custos da empresa. Vamos mostrar como é esse processo para algumas das funções de produção mais comuns<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<div id="cobb-douglas" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Cobb-Douglas</h3>
+<p>O Problema de Minimização de Custos é o seguinte:</p>
+<p><span class="math display">\[
+\begin{aligned}
+C(\mathbf{w},y)=min_{x_{1},x_{2}}w_{1}x_{1}+w_{2}x_{2}\\
+\mathrm{tal} \quad \mathrm{que} \quad Ax_{1}^{a}x_{2}^{b}=y
+\end{aligned}
+\]</span></p>
+<p>Resolvendo a restrição para <span class="math inline">\(x_{2}\)</span> e substituindo na função objetivo podemos notar que este problema se torna</p>
+<p><span class="math display">\[
+\begin{aligned}
+min_{x_{1}} w_{1} x_{1} + w_{2}A^{-\frac{1}{b}}y^{\frac{1}{b}}x_{1}^{-\frac{a}{b}}
+\end{aligned}
+\]</span></p>
+<p>As condições de primeira ordem são:</p>
+<p><span class="math display">\[
+w_{1}-\frac{a}{b}w_{2}A^{-\frac{1}{b}}y^{\frac{1}{b}}x_{1}^{-\frac{a+b}{b}}=0
+\]</span></p>
+<p>Que nos dá a demanda condicional por fatores de <span class="math inline">\(x_{1}\)</span>:</p>
+<p><span class="math display">\[
+x_{1}(w_{1},w_{2},y)=A^{-\frac{1}{a+b}}\left[ \frac{aw_{2}}{bw_{1}} \right]^{\frac{b}{a+b}}y^{\frac{1}{a+b}}
+\]</span></p>
+<p>Por simetria, temos que a outra demanda condicional por fatores é dada por</p>
+<p><span class="math display">\[
+x_{2}(w_{1},w_{2},y)=A^{-\frac{1}{a+b}}\left[ \frac{aw_{2}}{bw_{1}} \right]^{\frac{a}{a+b}}y^{\frac{1}{a+b}}
+\]</span></p>
+<p>A função custos fica sendo então:</p>
+<p><span class="math display">\[
+\begin{aligned}
+c(w_{1},w_{2},y)=w_{1}x_{1}(w_{1},w_{2},y)+w_{2}x_{2}(w_{1},w_{2},y)\\
+= A^{-\frac{1}{a+b}}\left[\left( \frac{a}{b} \right)^{\frac{b}{a+b}} + \left( \frac{a}{b} \right)^{\frac{-a}{a+b}} \right]w_{1}^{\frac{a}{a+b}}w_{2}^{\frac{b}{a+b}}y^{\frac{1}{a+b}}
+\end{aligned}
+\]</span></p>
+<p>Ou seja, a função de custos cobb-douglas também tem a forma cobb-douglas. A função Custo Marginal nesse caso é dada por:</p>
+<p><span class="math display">\[
+CMg=\frac{1}{a+b}A^{-\frac{1}{a+b}}\left[\left( \frac{a}{b} \right)^{\frac{b}{a+b}} + \left( \frac{a}{b} \right)^{\frac{-a}{a+b}} \right]w_{1}^{\frac{a}{a+b}}w_{2}^{\frac{b}{a+b}}y^{\frac{1-a-b}{a+b}}
+\]</span></p>
+<p>E se a função tiver retornos constantes de escala e <span class="math inline">\(a+b\)</span>=1, a função de custo marginal se torna</p>
+<p><span class="math display">\[
+CMg=Kw_{1}^{a}w_{2}^{1-a}
+\]</span></p>
+<p>Ou seja, uma função custo marginal log linear e com coeficientes dos logs de fatores de produção somando 1 é uma função de produção cobb-douglas com retornos constantes de escala.</p>
+</div>
+<div id="ces" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> CES</h3>
+<p>A similaridade entre a função de produção CES e a função custos associada também é grande. Vou apresentar apenas por completude, e porque em outras áreas a representação CES da tecnologia também aparece.</p>
+<p>Considerando a forma mais geral da função de produção CES:</p>
+<p><span class="math display">\[
+f(x_{1},x_{2})=y=\left[ \left( a_{1} x_{1} \right)^{\rho} + (a_{2} x_{2})^{\rho} \right]^{\frac{1}{\rho}}
+\]</span></p>
+<p>Podemos fazer os seguintes passos:</p>
+<ul>
+<li>Reorganizar a função de produção para tirar o <span class="math inline">\(\frac{1}{\rho}\)</span> de cima do colchete</li>
+<li>Reorganizar as condições de primeira ordem</li>
+<li>Substituir de volta na função de produção</li>
+<li>Chegar de volta nas demandas condicionais por fatores</li>
+</ul>
+<p>E chegar na função custo, que terá a forma de:</p>
+<p><span class="math display">\[
+C(w_{1},w_{2},y)=\left[ \left(\frac{w_{1}}{a_{1}} \right)^{r} + \left(\frac{w_{2}}{a_{2}} \right)^{r} \right]^{\frac{1}{r}} y
+\]</span>
+E a função de custo marginal da forma:</p>
+<p><span class="math display">\[
+CMg=\left[ \left(\frac{w_{1}}{a_{1}} \right)^{r} + \left(\frac{w_{2}}{a_{2}} \right)^{r} \right]^{\frac{1}{r}}
+\]</span></p>
+</div>
+<div id="leontief" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Leontief</h3>
+<p>Suponha que a função de produção seja <span class="math inline">\(y=min\left[a_{1}x_{1}, a_{2}x_{2} \right]\)</span>. Qual seria a função custos? Neste caso, o truque tradicional ``deriva e iguala a zero’’ não funciona. Precisamos pensar um pouco mais.</p>
+<p>Como a empresa não vai querer desperdiçar insumos, ela vai operar em um ponto onde <span class="math inline">\(y=ax_{1}=bx_{2}\)</span>. Ou seja, para produzir <span class="math inline">\(y\)</span> unidades, ela precisa usar <span class="math inline">\(y/a_{1}\)</span> do insumo 1 e <span class="math inline">\(y/a_{2}\)</span> do insumo 2, não importa quais são os preços dos insumos. Portanto, a função custo é dada por:</p>
+<p><span class="math display">\[
+C(w_{1},w_{2},y)=\frac{w_{1}y}{a_{1}}+\frac{w_{2}y}{a_{2}}=y\left(\frac{w_{1}}{a_{1}}+\frac{w_{2}}{a_{2}} \right)
+\]</span></p>
+<p>Com uma função de custo marginal linear nos fatores de produção:</p>
+<p><span class="math display">\[
+CMg=\left(\frac{w_{1}}{a_{1}} + \frac{w_{2}}{a_{2}} \right)
+\]</span></p>
+</div>
+</div>
+<div id="medidas-de-economias-de-escala-e-economias-de-escopo" class="section level2">
+<h2><span class="header-section-number">2.3</span> Medidas de Economias de Escala e Economias de Escopo</h2>
+<p>Medida de economias de escala ( Scale Economy Index ):
+<span class="math display">\[\begin{align*}
+  S=\frac{C(q)}{CMg(q)\times q}=\frac{CMe}{CMg}
+\end{align*}\]</span></p>
+<p>Com <span class="math inline">\(S&gt;1\)</span>, existem economias de escala. Com <span class="math inline">\(S&lt;1\)</span>, deseconomias de escala
+Podemos notar também que <span class="math inline">\(S\)</span> é o inverso da elasticidade do custo em relação à produção.</p>
+<p><span class="math display">\[\begin{align*}
+  \eta_{c} &amp;= \frac{\frac{\partial C}{\partial q}}{\frac{C}{q}} = \frac{1}{S}  \end{align*}\]</span></p>
+<div id="empresas-multiproduto" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Empresas Multiproduto</h3>
+<p>A maioria das empresas produz mais de um produto. Por exemplo, a Honda produz carros e motocicletas, a Microsoft produz o sistema operacional Windows e vários MS Office.</p>
+<p>Como definimos o custo médio desse tipo de empresa? (por exemplo, produz 2 produtos). Seja o custo total: <span class="math inline">\(C(q1, q2)\)</span>, podemos definir o custo marginal dos produtos 1 e 2:</p>
+<p><span class="math display">\[\begin{align*}
+CMg_{1}&amp;=\frac{\partial C(q_{1},q_{2})}{\partial q_{1}}\\
+CMg_{2}&amp;=\frac{\partial C(q_{1},q_{2})}{\partial q_{2}}
+\end{align*}\]</span></p>
+<p>Mas o custo médio é difícil de definir (custo por unidade do que?) em geral usamos <em>Ray Average Cost</em>. Suponha que uma empresa faça dois produtos, 1 e 2 com as quantidades <span class="math inline">\(q_{1}\)</span> e <span class="math inline">\(q_{2}\)</span> produzidas em uma proporção constante de 2 para 1. Então, a quantidade total Q pode ser definida de forma implícita a partir das equações <span class="math inline">\(q_{1} = (2/3)\times Q\)</span> e <span class="math inline">\(q_{2} = (1/3)\times Q\)</span>.</p>
+<p>De uma forma geral, suponha que os dois produtos sejam produzidos na razão <span class="math inline">\(\lambda_{1}/\lambda_{2}\)</span>, com <span class="math inline">\((\lambda_{1}+\lambda_{2})=1\)</span>. Então, a quantidade total é definida implicitamente das equações <span class="math inline">\(q_{1}=\lambda_{1} Q\)</span>e <span class="math inline">\(q_{2}=\lambda_{2}Q\)</span>. O <em>Ray Average Cost</em> fica definido então como:</p>
+<p><span class="math display">\[\begin{align*}
+RAC=\frac{C(\lambda_{1}Q,\lambda_{2}Q)}{Q}
+\end{align*}\]</span></p>
+<p>Medidas de economias de escala para firmas multiproduto:</p>
+<p><span class="math display">\[\begin{align*}
+S&amp;=\frac{C(q_{1},q_{2})}{CMg_{1}q_{1}+CMg_{2}q_{2}}
+\end{align*}\]</span></p>
+<p><strong>Economias de Escopo:</strong> Uma empresa possui economias de escopo se fornecer os dois produtos conjuntamente é mais barato que fornecer eles separadamente. Por exemplo, suponha que a firma 1 produza os produtos A e B, enquanto a firma 2 só produz o produto B. Existem economias de escopo se a firma 1 consegue fornecer o produto B a um custo menor que a firma 2. Formalmente:</p>
+<p><span class="math display">\[\begin{align*}
+C(q_{1},q_{2})&lt;C(q_{1},0)+C(0,q_{2})
+\end{align*}\]</span></p>
+<p>Supondo <span class="math inline">\(C(0,0)=0\)</span>Isso implica que:</p>
+<p><span class="math display">\[\begin{align*}
+C(q_{1},q_{2})-C(q_{1},0)&lt;C(0,q_{2})-C(0,0)
+\end{align*}\]</span></p>
+<p>Ou seja, o chamado ``Custo Incremental’’ de <span class="math inline">\(q_{2}\)</span>– o adicional de custos para se oferecer TODA a quantidade – é menor se você já produzir <span class="math inline">\(q_{1}\)</span>.</p>
+<p>Podemos medir as economias de escopo da seguinte forma:
+<span class="math display">\[\begin{align*}
+S_{c}&amp;=\frac{C(q_{1},0)+C(0,q_{2})-C(q_{1},q_{2})}{C(q_{1},q_{2})}
+\end{align*}\]</span></p>
+<p>Se <span class="math inline">\(S_{c}&lt;0\)</span>, não há Economias de Escopo, e se <span class="math inline">\(S_{c}&gt;0\)</span> há Economias de Escopo.</p>
+</div>
+</div>
+<div id="funções-de-custo-empíricas" class="section level2">
+<h2><span class="header-section-number">2.4</span> Funções de Custo Empíricas</h2>
+<p>Nesta subseção, iremos falar um pouco como é possível estimar os parâmetros de uma função custos a partir dos dados, bem como, a partir destas estimativas, calcular alguns parâmetros estruturais como medidas de economias de escala e custos marginais.</p>
+<p>Para isso vamos usar a análise de <span class="citation">(NERLOVE <a href="#ref-nerlove1963returns" role="doc-biblioref">1963</a>)</span>, que compilou uma base de dados para 145 geradoras de eletricidade em 44 estados dos EUA para o ano de 1955.</p>
+<p>Nesta base de dados temos as seguintes informações:</p>
+<ul>
+<li>Custo total de produção (<em>TC</em>): Custos calculados como a soma dos gastos com trabalho e combustível, mais a soma dos custos com o capital empregado na unidade</li>
+<li>Produção (<em>Q</em>): Total de Kwh produzido ao longo do ano de 1955.</li>
+<li>Salários (<em>PL</em>): Salário médio por hora de trabalho dos empregados de <strong>utilities</strong>, em dólares de 1955.</li>
+<li>Preço do Capital (<em>PK</em>): Taxa de juros dos títulos de 30 anos mais recentes emitidos pela empresa, expresso em número-índice.</li>
+<li>Preço dos Combustíveis (<em>PF</em>): Preço em centavos de dólar por milhão de Btu (British Thermal Unit).</li>
+</ul>
+<p>Vamos começar carregando os pacotes necessários:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">library</span>(readxl)</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">library</span>(car)</a></code></pre></div>
+<p>O autor começa assumindo que a função de produção seja uma tradicional Cobb-Douglas, com Trabalho (<span class="math inline">\(L\)</span>), Capital (<span class="math inline">\(K\)</span>) e Combustíveis (<span class="math inline">\(F\)</span>) como insumos:</p>
+<p><span class="math display">\[
+Q=AK^{\alpha_{K}}L^{\alpha_{L}}F^{\alpha_{F}}
+\]</span></p>
+<p>Olhando na seção anterior, podemos notar que a função custos associada possui a seguinte forma:</p>
+<p><span class="math display">\[
+CT=Q^{\frac{1}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}p_{K}^{\frac{\alpha_{K}}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}+ p_{L}^{\frac{\alpha_{L}}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}+p_{F}^{\frac{\alpha_{F}}{\alpha_{K}+\alpha_{L}+\alpha_{F}}}
+\]</span></p>
+<p>Vamos estimar a versão duplo log desta equação, da seguinte forma:</p>
+<p><span class="math display">\[
+\ln{CT_{i}}=\beta_{0}+\beta_{1}\ln{Q_{i}}+\beta_{2}\ln{p_{Fi}}+\beta_{3}\ln{p_{Ki}}+\beta_{4}\ln{p_{Li}}+\varepsilon_{i}
+\]</span>
+Mas antes, vamos importar os dados e dar uma olhada se tudo faz sentido:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">data=<span class="kw">read_xls</span>(<span class="st">&quot;NerloveDta.xls&quot;</span>,<span class="dt">skip=</span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">head</span>(data)</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 6
+##    Firm    TC     Q    PL    PF    PK
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     1 0.082     2  2.09  17.9   183
+## 2     2 0.661     3  2.05  35.1   174
+## 3     3 0.99      4  2.05  35.1   171
+## 4     4 0.315     4  1.83  32.2   166
+## 5     5 0.197     5  2.12  28.6   233
+## 6     6 0.098     9  2.12  28.6   195</code></pre>
+<p>Rodando a regressão agora:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">lm_log.model=<span class="kw">lm</span>(<span class="kw">log1p</span>(TC)<span class="op">~</span><span class="kw">log1p</span>(Q)<span class="op">+</span><span class="kw">log1p</span>(PF)<span class="op">+</span><span class="kw">log1p</span>(PK)<span class="op">+</span><span class="kw">log1p</span>(PL), <span class="dt">data=</span>data)</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">summary</span>(lm_log.model)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = log1p(TC) ~ log1p(Q) + log1p(PF) + log1p(PK) + log1p(PL), 
+##     data = data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.60180 -0.26667 -0.04531  0.19417  1.20477 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -5.03839    1.81341  -2.778  0.00621 ** 
+## log1p(Q)     0.53947    0.01718  31.395  &lt; 2e-16 ***
+## log1p(PF)    0.29211    0.10209   2.861  0.00486 ** 
+## log1p(PK)    0.25337    0.32907   0.770  0.44264    
+## log1p(PL)    1.16731    0.42877   2.722  0.00730 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.3787 on 140 degrees of freedom
+## Multiple R-squared:   0.88,  Adjusted R-squared:  0.8766 
+## F-statistic: 256.7 on 4 and 140 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Lembrando que o coeficiente <span class="math inline">\(\beta_{1}\)</span> do modelo nos dá o inverso da soma <span class="math inline">\(\alpha_{L}+\alpha_{K}+\alpha_{F}\)</span>, temos que a estimativa pontual dos coeficientes acima aponta para a rejeição da hipótese de Retornos Constantes de Escala. Para isso, iremos usar a função <code>linearHypothesis</code> do pacote <code>car</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">linearHypothesis</span>(lm_log.model,<span class="st">&quot;log1p(PF)+log1p(PK)+log1p(PL)=1&quot;</span>)</a></code></pre></div>
+<pre><code>## Linear hypothesis test
+## 
+## Hypothesis:
+## log1p(PF)  + log1p(PK)  + log1p(PL) = 1
+## 
+## Model 1: restricted model
+## Model 2: log1p(TC) ~ log1p(Q) + log1p(PF) + log1p(PK) + log1p(PL)
+## 
+##   Res.Df    RSS Df Sum of Sq      F Pr(&gt;F)
+## 1    141 20.302                           
+## 2    140 20.077  1   0.22551 1.5726 0.2119</code></pre>
+<p>O Teste F aponta, por outro lado, que não é possível rejeitar a hipótese de retornos constantes de escala com esses dados. Ou seja, vamos agora trabalhar com essa restrição. Uma observação. Se isso for verdade, a equação a ser estimada será:</p>
+<p><span class="math display">\[
+\ln{\frac{CT_{i}}{p_{Li}}}=\beta_{0}+\ln{Q_{i}}+\alpha_{F}\ln{\frac{p_{Fi}}{p_{Li}}}+\alpha_{K}\ln{\frac{p_{Ki}}{p_{Li}}}+\varepsilon_{i}
+\]</span></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">lm_log.rest=<span class="kw">lm</span>(<span class="kw">log1p</span>(TC<span class="op">/</span>PL)<span class="op">~</span><span class="kw">offset</span>(<span class="kw">log1p</span>(Q))<span class="op">+</span><span class="kw">log1p</span>(PF<span class="op">/</span>PL)<span class="op">+</span><span class="kw">log1p</span>(PK<span class="op">/</span>PL), <span class="dt">data=</span>data)</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="kw">summary</span>(lm_log.rest)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = log1p(TC/PL) ~ offset(log1p(Q)) + log1p(PF/PL) + 
+##     log1p(PK/PL), data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.1992 -0.6522 -0.3838  0.2128  4.3030 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   -8.8423     2.3887  -3.702 0.000306 ***
+## log1p(PF/PL)   0.8989     0.2913   3.085 0.002444 ** 
+## log1p(PK/PL)   0.3233     0.5264   0.614 0.540118    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.071 on 142 degrees of freedom
+## Multiple R-squared:  0.7496, Adjusted R-squared:  0.7461 
+## F-statistic: 212.6 on 2 and 142 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Com isso conseguimos estimar dois dos três coeficientes da função de produção. Vou mostrar como conseguir o terceiro coeficiente:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">alpha_L&lt;-<span class="dv">1</span><span class="op">-</span><span class="kw">coef</span>(lm_log.rest)[<span class="dv">2</span>]<span class="op">-</span><span class="kw">coef</span>(lm_log.rest)[<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb10-2" title="2">D &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">-1</span>, <span class="dv">-1</span>)</a>
+<a class="sourceLine" id="cb10-3" title="3">alpha_L.se &lt;-<span class="st"> </span><span class="kw">sqrt</span>( <span class="kw">t</span>(D) <span class="op">%*%</span><span class="st"> </span><span class="kw">vcov</span>(lm_log.rest) <span class="op">%*%</span><span class="st"> </span>D)</a>
+<a class="sourceLine" id="cb10-4" title="4">alpha_L</a></code></pre></div>
+<pre><code>## log1p(PF/PL) 
+##   -0.2221484</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">alpha_L.se</a></code></pre></div>
+<pre><code>##           [,1]
+## [1,] 0.5662802</code></pre>
+<p>Mas é necessário enfatizar algumas coisas. Este estudo foi realizado nos anos 60 do século passado e a prática econométrica tem avançado bastante desde então.</p>
+<p>Irei apenas listar sob quais hipóteses as estimativas aqui apresentadas ainda poderiam ser consideradas como as <em>verdadeiras</em> (não viesadas e consistentes) estimativas dos parâmetros da função de produção:</p>
+<ul>
+<li><p>Os preços dos fatores de produção não possuem erros de medida</p></li>
+<li><p>Os choques de produtividade não possuem efeitos sobre os preços dos fatores de produção – por exemplo, firmas mais produtivas não seriam capazes de conseguir insumos melhores e/ou mais baratos.</p>
+<ul>
+<li>Ou pelo menos eles são ortogonais à decisão de escolha de insumo das empresas e que as empresas são tomadoras de preços no mercado de insumos.</li>
+</ul></li>
+<li><p>Não existe heterogeneidade entre os fatores de produção utilizados nas diferentes plantas.</p></li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Alchian1958">
+<p>Alchian, AA. 1958. “Costs and Outputs.”</p>
+</div>
+<div id="ref-nerlove1963returns">
+<p>NERLOVE, M. 1963. “Returns to Scale in Electricity Supply.” <em>Measurement in Econometrics: Studies in Mathematical Economics and Econometrics in Memory of Yehuda Grunfeld</em>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Formalmente, fluxo de caixa livre para a empresa<a href="funções-custo.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Uma versão interativa desta decisão pode ser encontrada <a href="https://demonstrations.wolfram.com/LongRunAverageTotalCost/">aqui</a><a href="funções-custo.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>A fonte dessas demonstrações é <span class="citation">Varian (<a href="#ref-varian92" role="doc-biblioref">1992</a>)</span>.<a href="funções-custo.html#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="competição-perfeita-e-monopólio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/02-Cost_Fcns.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["livro.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
