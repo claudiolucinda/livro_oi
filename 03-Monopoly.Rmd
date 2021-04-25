@@ -133,6 +133,82 @@ Caso as empresas que entrem neste mercado sejam idênticas aos que entram no mer
 
 Por outro lado, se as empresas são heterogêneas e a entrada acaba por atrair empresas menos eficientes (ou seja, com curvas de custo médio mais elevado), a curva de oferta de longo prazo vai ter segmentos positivamente inclinados.
 
+#### Demanda Residual
+
+Um elemento importante para se entender o chamado ``Poder de Mercado'' (a capacidade de uma empresa unilateralmente elevar seus preços acima dos custos marginais) em uma situação real é chamada *Demanda Residual*
+
+
+
+A Demanda Residual é uma relação entre o preço cobrado por uma empresa específica e o quanto ela vende, depois que os seus competidores reagiram a sua decisão. Intuitivamente, a resposta da demanda residual é muito mais forte do que a da função demanda tradicional -- afinal de contas, a demanda residual leva em conta a substituição entre ofertantes também.
+
+Além disso, a sensibilidade a preço da Demanda Residual nos dá uma ideia do espaço que uma empresa possui para elevar os seus preços acima dos custos marginais. Mas este assunto veremos melhor mais adiante neste capítulo.
+
+
+Vamos definir a demanda residual de uma firma como $D_{r}(p)=D(p)-S_{0}(p)$.
+Além disso, vamos definir $q=\frac{Q}{n}$, $n=\frac{Q}{q}$ e $Q_{0}=(n-1)q$, uma vez que estamos trabalhando com o modelo de Competição Perfeita.
+
+Com isso, podemos relacionar a inclinação da curva de demanda de mercado e a demanda residual:
+
+$$
+\begin{align*}
+  \frac{\partial D_{r}}{\partial p} &=\frac{\partial D(p)}{\partial p} - \frac{\partial S_{0}}{\partial p}\\
+  \frac{\partial D_{r}}{\partial p}\frac{p}{q} &=\frac{\partial D(p)}{\partial p}\frac{p}{q} - \frac{\partial S_{0}}{\partial p}\frac{p}{q}\\
+  \frac{\partial D_{r}}{\partial p}\frac{p}{q} &=\frac{\partial D(p)}{\partial p}\frac{p}{q}\frac{Q}{Q} - \frac{\partial S_{0}}{\partial p}\frac{p}{q}\frac{Q_{0}}{Q_{0}}\\
+  \frac{\partial D_{r}}{\partial p}\frac{p}{q} &=\frac{\partial D(p)}{\partial p}\frac{p}{Q}\frac{Q}{q} - \frac{\partial S_{0}}{\partial p}\frac{p}{Q_{0}}\frac{Q_{0}}{q}\\
+  \varepsilon_{r}&=\varepsilon\times n -\eta_{0} \times (n-1) \\
+  \varepsilon_{r}&=(\varepsilon-\eta_{0})\times n +\eta_{0}
+\end{align*}
+
+
+$$
+
+Podemos notar que a elasticidade preço da demanda residual aqui é cada vez maior quanto maior o número de empresas. Apenas tenhamos em mente que esta fórmula é válida apenas para o caso de concorrência perfeita, onde não existe interdependência estratégica entre as empresas. No caso em que exista esta interdependência, a demanda residual é importante, mas a fórmula é diferente. Algumas versões disso serão apresentadas nos próximos capítulos.
+
+
+#### Entrada, Livre Entrada...
+
+As condições de entrada podem condicionar a estrutura de mercado. Agora, o problema é definir adequadamente como são as condições de entrada. Um primeiro passo é pensar nas respostas à estas perguntas:
+
+* Quantas empresas têm a capacidade de entrar nesta indústria?
+* Quão cara é a entrada?
+* Uma nova firma estará em desvantagem em relação às estabelecidas?
+* Uma nova empresa terá acesso à mesma informação que as empresas estabelecidas?
+* É caro sair da indústria?
+
+Isso é muito útil para entender *quais* são as barreiras à entrada, mas não nos ajuda a responder a questão mais conceitual: *O quê* são as barreiras à entrada. Esta definição causou muita controvérsia entre os economistas. Como definir uma barreira à entrada de uma forma não circular? Ou seja, sem cair na definição fácil de ``Barreira à Entrada é algo que impede a entrada''?
+
+O presente autor gosta muito da definição de Stigler (1968):
+
+Uma barreira à entrada é um custo de se produzir uma dada quantidade que precisa ser pago pelas empresas que buscam entrar no setor e que não precisa ser pago pelas empresas já instaladas.
+
+Podemos definir também algumas características de um mercado em equilíbrio com ``livre entrada''. Supondo que a empresa encontre-se em um equilíbrio de longo prazo, em que cada uma das empresas instaladas aufira um lucro igual a $\pi(n)$,
+em que $n$ é o número de empresas, temos que o VPL dos lucros em
+perpetuidade é dado por:
+
+\[
+VPL=\frac{\pi(n)}{r}
+\]
+
+Se uma empresa contemplar a entrada, ela deve esperar que os seus lucros sejam de $\pi(n+1)$, o que nos dá um VPL de $\frac{\pi(n+1)}{r}$. Este negócio deve ser comparado com o custo da entrada. Denotando tal custo por $K$, temos que a entrada se dá quando $\frac{\pi(n+1)}{r}-K>0$
+
+
+Caso tenhamos $\frac{\pi(n+1)}{r}-K<0$, ninguém quererá entrar. No entanto, precisamos saber se há incentivos para a saída; se não houver, isso é indicativo que estamos em um equilíbrio.
+Teremos incentivos para a manutenção das empresas no mercado caso a decisão delas seja consistente, no sentido que elas auferem lucros positivos por terem entrado.
+
+Ou seja, para elas, temos que:
+
+\[
+\frac{\pi(n)}{r}-K>0
+\]
+
+Combinando as duas condições, podemos definir um equilíbrio em livre entrada como sendo:
+
+\[
+\frac{\pi(n)}{r}-K>0>\frac{\pi(n+1)}{r}-K
+\]
+
+Este conjunto de inequações pode ser usado para analisar mercados reais para ver se eles se adequam a alguma das estruturas de mercado em competição imperfeita mais comuns - como veremos mais adiante.
+
 
 ## Monopólio
 
