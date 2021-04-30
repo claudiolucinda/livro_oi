@@ -17,7 +17,9 @@ demanda-residual
 entrada-livre-entrada
 monopólio
 monopólio-versão-tradicional
+monopsônio
 firma-dominante-franja-competitiva
+monopolista-de-bens-duráveis
 oligopólio
 introdução-2
 resultado-geral
