@@ -13,7 +13,7 @@ library(readstata13)
 library(haven)
 
 rm(list=ls())
-dataCAL=read_dta(file="california.dta")
+dataCAL=read_dta(file="./codes/california.dta")
 
 dataCAL=dataCAL %>%
   filter(DATE>19990600 & DATE<19991000) %>%

@@ -20,8 +20,12 @@ monopólio-versão-tradicional
 monopsônio
 firma-dominante-franja-competitiva
 monopolista-de-bens-duráveis
+econometria-estimando-a-demanda-residual-por-eletricidade
+interdependência-estratégica
+cartel
+história-o-cartel-dos-geradores-de-eletricidade
+teoria-jogos-repetidos
 oligopólio
-introdução-2
 resultado-geral
 exemplo-demanda-linear
 modelo-de-cournot-com-muitas-firmas
@@ -33,7 +37,7 @@ bertrand-multiproduto
 caso-com-n-empresas-de-produto-único
 uma-empresa-multiproduto
 bertrand-com-restrições-de-capacidade
-introdução-3
+introdução-2
 apresentação-do-modelo
 modelo-de-mankiw-e-whinston
 bens-homogêneos

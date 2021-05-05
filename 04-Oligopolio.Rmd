@@ -1,8 +1,121 @@
-# Oligopólio
+# Interdependência Estratégica
 
-## Introdução
+## Cartel
 
-Nesta nota, iremos trabalhar um dos principais modelos para entender competição imperfeita, o Modelo de Cournot. Inicialmente iremos fazer uma demonstração mais geral, para depois especializarmos para uma demanda linear.
+Nesta seção, vamos falar de uma situação em que (1) existem poucas empresas e (2) elas reconhecem esta interdependência e trabalham de forma coordenada para maximizar seus lucros conjuntos.
+
+O grande dilema é como fazer isso funcionar, por duas razões:
+
+* Isso costuma ser ilegal -- ou seja, se as empresas e as pessoas forem pegas fazendo isso, elas vão em cana.
+* O ``Dilema dos Prisioneiros'' -- há todo o incentivo para que as empresas tentem convencer as outras a participar de um cartel e, ao mesmo tempo, renegar o acordo na forma de descontos secretos.
+
+Antes de falarmos o que precisa ser necessário para se implementar um cartel, vamos falar o que *NÃO* precisa para se conseguir ser um cartel (algumas delas até facilitam, mas não são indispensáveis):
+
+* Poucas empresas: Um dos setores com maior número de condenações no CADE por cartel é o de Postos de Gasolina
+* Empresas grandes em relação ao mercado: existe caso até de cartel de padarias no CADE
+
+O que é necessário para um cartel funcionar:
+
+* Coordenar em preços (ou divisão de clientes)
+* Coordenar a alocação de produção entre os membros do cartel
+* Observabilidade das ações dos agentes: as empresas que participam do cartel precisam ser capazes de observar as ações (preços, quantidades vendidas)
+* Capacidade de punição de desvios em relação ao combinado: as empresas que participam do cartel precisam ser capazes de inflingir algum tipo de punição àquelas que não cumprem o que foi prometido.
+
+E note-se que estas duas características não são imutavelmente gravadas em pedra - muitos carteis que buscavam sucesso continuado conseguiram estender a vida útil dele por meio de mudanças no comportamento das próprias empresas que permitiam a melhora das duas dimensões -- tornar as ações mais observáveis e permitir punições automáticas.
+
+Outro mecanismo que é muito comum e muito empregado para aumentar a ``vida útil'' dos carteis é o emprego de empresas/associações patronais para permitir que um terceiro realize as atividades de observação dos seus companheiros de cartel. Afinal de contas, não se pode confiar nos seus colegas de crime (pois cartel é crime em muitas jurisdições) para garantir que as ações sejam observadas de forma imparcial, né?
+
+Um exemplo de empresa que (em sua encarnação anterior, AC Treuhand) realizou muitos dos trabalhos necessários para a manutenção de carteis é a ARCO [link](https://arco.swiss/en). 
+
+**Disclaimer**: Não estou afirmando que esta empresa se envolve em atividades acessórias a crimes de cartel; todavia, nas mãos de um grupo de empresas mal intencionadas, cada um dos serviços ali apresentados pode ser utilizado para aumentar a observabilidade das ações dos comparsas em um cartel.
+
+### História -- o cartel dos geradores de eletricidade
+
+Este é um texto baseado em parte em um box que está no livro do Carlton e Perloff, sobre o mercado de geradores de eletricidade nos Estados Unidos, ao longo das décadas de 50, 60 e 70.
+
+Nos anos 50, existiam três empresas no mercado de turbinas geradoras de energia:
+* Westinghouse
+* General Electric
+* Allis-Chalmers
+
+As empresas produziam geradores de eletricidade para as companhias geradoras de energia. Essencialmente as companhias preparavam uma planta geradora -- tipo uma hidroelétrica -- e depois especificavam em detalhe a quantidade e as características dos geradores que iam na barragem. As empresas que vendiam os geradores submetiam suas propostas e as companhias geradoras fechavam com aquela que oferece o menor preço. 
+
+Aí no ano de 1959, em uma competição por ofertas para a TVA -- Tennessee Valley Authority, um jornalista notou que a oferta vencedora foi de 96,760 dólares (da Westinghouse) e as ofertas das três outras empresas que perderam foram de 112,712 dólares -- exatamente as mesmas. Evidentemente, isso é muito esquisito -- as empresas são completamente diferentes e produzem seus geradores em lugares e condições completamente diferentes.
+
+Posteriormente, descobriu-se que as empresas já tinham se reunido no Hotel Traymore, em Atlantic City, para dividir o mercado de acordo com a seguinte fórmula:
+
+* 42\% para a GE
+* 38\% para a Westinghouse
+* Allis-Chalmers com 11\%
+* I-T-E 9\%
+
+Eventualmente fizeram alguns ajustes para acomodar alguns entrantes. Mas estes encontros se tornaram regulares e conseguiram manter estas participações por vários anos. O mecanismo do contrato era o mais curioso. Uma empresa -- a selecionada pelo cartel -- ia colocar o menor preço, e uma era escalada pra cobrar um preço intermediário, e uma terceira pra cobrar o preço alto. A que cobrou um preço mais alto iria, em outra ocasião, cobrar o preço mais baixo, e assim sucessivamente em uma rotação. O mecanismo pelo qual a empresa era selecionada para dar o lance mais baixo -- e ganhar -- era bastante curioso: as fases da lua. A depender de qual fase a lua se encontrasse na época do certame, uma das empresas era escolhida.
+
+Esta investigação levou a uma condenação depois de dois anos. As empresas foram condenadas a aproximadamente 2 milhões de dólares, as sete pessoas mais importantes foram presas e as outras multadas. Além disso, as empresas prejudicadas pelo cartel entraram com ações de reparação de danos que, ao fim e ao cabo, colocaram o custo disso para as empresas acima de 400 milhões de dólares (dos anos 60!).
+
+Depois dessa condenação, as empresas menores (Allis-Chalmers, I-T-E) saíram do mercado, deixando só a GE e a Westinghouse em uma situação bem complicada -- margens pequenas e tendo que lidar com a ressaca da condenação e os custos associados. 
+
+No começo dos anos 60, uma nova forma de coordenação foi proposta pela GE,
+sem nenhum acordo formal -- nem fases da lua. A GE anunciou a seguinte política:
+
+* Uma nova tabela de preços que simplificava o cálculo dos preços dos produtos para a elaboração dos lances;
+* Os preços de tabela seriam reduzidos significativamente,
+mas;
+  - Os preços verdadeiros seriam o valor do preço de tabela multiplicado
+por um fator comum, ajustado de forma que mantinha os preços aproximadamente
+iguais aos vigentes;
+  - A GE anunciou que venderia a estes preços a todos os consumidores *sem exceção*.
+  - Uma cláusula de proteção de preços foi instituída, em que, na eventualidade de uma redução de preços, a GE reduziria os preços retroativamente para qualquer consumidor que comprou um gerador nos últimos seis meses;
+* Uma empresa de consultoria iria auditar a **compliance** da GE com este acordo;
+* Os lances colocados pela GE, bem como os pedidos efetivamente feitos, foram tornados públicos
+
+Com isso, eles conseguiram elevar suas margens novamente, até serem acusados de cartel novamente nos anos 70. 
+
+
+### Teoria: Jogos Repetidos
+
+Para que possamos entender teoricamente porque arranjos como o da subseção anterior funcionam, precisamos nos dar conta que a interação estratégica entre as empresas é repetida. Ou seja, ainda que a decisão de preços ou quantidades produzidas tem que ser tomada em cada instante do tempo, o fato é que a empresa vai conviver de forma indefinida com esses oponentes. Neste sentido, o *payoff*  da ação é um valor presente líquido, descontado de acordo com uma taxa que reflita o risco e a expectativa de duração da interação. 
+Neste sentido, vamos supor que a ação envolve duas coisas -- sair do conluio ou se manter nele. Caso a empresa decida se manter no cartel, o valor presente dos lucros seria então:
+
+
+\[
+VP=\frac{\pi_{c}}{1+r}+\frac{\pi_{c}}{(1+r)^{2}}+\cdots=\frac{\pi_{c}}{r}
+\]
+
+Caso a empresa desvie da solução de conluio, duas coisas provavelmente acontecerão. Em primeiro lugar, ela conseguirá lucros maiores por um tempo -- pois os seus oponentes não se dão conta que ela não está mais no acordo. No entanto, quando elas o fazem, elas podem *punir* a empresa desviante. Ou seja, caso ela desvie da solução de conluio, e consiga lucros adicionais no curto prazo, seguidos de lucros menores depois, temos:
+
+\[
+VPC=\frac{\pi_{m}}{1+r}+\frac{\pi_{n}}{(1+r)^{2}}+\cdots
+\]
+
+Podemos notar que a empresa se mantém interessada no cartel caso $VP>VPC$.
+Isso pode acontecer quando:
+
+$$
+\begin{align*}
+\pi_{n} & < \pi_{c}\\
+\pi_{m} & > \pi_{c}
+\end{align*}
+$$
+
+E quando $r$ baixo o suficiente.
+Existe um resultado em jogos repetidos, chamado *Teorema Popular*,
+que afirma que qualquer estratégia -- e, conseqüentemente,
+os $\pi$ associados -- pode ser sustentável como um equilíbrio
+de Nash em jogos repetidos, desde que a taxa de desconto seja baixa
+o suficiente. Se chama *Teorema Popular* porque, durante muito tempo, a comunidade dos economistas acreditava e discutia o resultado, mas não havia uma
+prova formal do mesmo. Rubinstein (1979) propôs uma prova formal do resultado.
+
+Intuitivamente, isso significa que carteis são mais estaveis quando:
+
+* É mais fácil descobrir os desvios -- a fase de lucros maiores da empresa que desvia dura menos no tempo
+* A punição é mais forte -- ou seja, a perda de lucros é maior na eventualidade de descoberta
+* O fator de desconto é mais baixo -- ou seja, o futuro é mais valioso.
+
+
+## Oligopólio
+
+Iremos trabalhar um dos principais modelos para entender competição imperfeita, o Modelo de Cournot. Inicialmente iremos fazer uma demonstração mais geral, para depois especializarmos para uma demanda linear.
 
 ### Resultado geral
 

@@ -397,3 +397,101 @@ Este é um exemplo da *Conjectura de Coase*: Se o monopolista dos bens duráveis
 Uma vez que o monopolista daqui a pouco vai cobrar um preço próximo
 do competitivo, isso significa que ele não vai conseguir elevar o
 preço agora!
+
+
+### Econometria: Estimando a Demanda Residual por Eletricidade
+
+Como vimos até agora, o conceito de demanda residual é um elemento importante para entendermos o poder de mercado que uma empresa é capaz de exercer em uma situação em especial. 
+
+Iremos agora replicar a análise do paper "Vertical arrangements, market structure, and competition: An analysis of restructured US electricity markets" [@bushnell2008vertical]. O mercado de energia elétrica é especialmente adequado para este tipo de exercício porque (1) a quantidade ofertada e a quantidade demandada precisam ser iguais em todos os instantes do tempo (senão coisas ruins acontecem), e (2) em mercados razoavelmente organizados, este casamento de oferta e demanda é feito em um mercado centralizado de forma razoavelmente transparente.
+
+E por conta de (1), é bastante comum observarmos que em momentos de grande demanda para pouca oferta o preço da eletricidade pode se elevar rapidamente. Uma questão relevante para os acadêmicos é saber se estas elevações são o resultado simplesmente do aumento da demanda ou também da retirada estratégica de capacidade de geração em momentos críticos. 
+
+Para avaliarmos esse segundo ponto, os autores decidem estimar uma função demanda residual -- essencialmente, a quantidade demandada descontada de quanto de energia vem de fora do estado. No caso, o Estado da California.
+
+A oferta das empresas de fora é modelada da seguinte forma:
+
+$$
+q_{i}^{f}=\sum_{i=1}^{9}\alpha_{i} Month_{it} + \beta ln(p_{t}) + \sum_{s=1}^{S}\gamma_{S}Temp_{st} +\sum_{j=2}^{7}\delta_{j}Day_{ji}+\sum_{h=2}^{24} \phi_{h} Hora_{ht}+\varepsilon_{t}
+$$
+Em que:
+
+* $q_{i}^{f}$ é a quantidade da franja competitiva
+* $p_{t}$ é o preço no momento $t$
+* $Temp_{st}$ Temperatura no instante $t$ nos estados vizinhos
+* $Day_{jt}$ Dummy para o dia da semana
+* $Month_{it}$ Dummy para os meses do verão
+* $Hour_{ht}$ Dummy para a hora do dia
+* $\alpha,\beta,\gamma,\delta,\phi$: Coeficientes (o $\beta$ é o de interesse)
+
+
+
+Vamos então estimar esse negócio, puxando os dados do estado da California.
+
+```{r est_RD, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(dplyr)
+library(AER)
+library(readstata13)
+library(haven)
+
+rm(list=ls())
+dataCAL=read_dta(file="./codes/california.dta")
+```
+
+Como vocês podem notar, o banco de dados tem um monte de variáveis:
+
+```{r colnames_RD, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+colnames(dataCAL)
+```
+
+Vou organizar alguns dados e renomear as coisas para ficar tudo com o nome certinho. No final, vou mostrar quais são os regressores (as somatórias expandidas).
+
+```{r data_munging, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+dataCAL=dataCAL %>%
+  filter(DATE>19990600 & DATE<19991000) %>%
+  mutate(peak=ifelse(HOUR>10 & HOUR<21,ifelse(SAT==1 | SUN==1,0,1),0)) %>%
+  rename(fringe=Q_frg, price=lnp, load=lnI)
+
+weather_names=c(colnames(dataCAL)[5:24], colnames(dataCAL)[125:182], colnames(dataCAL)[233:310], 
+       colnames(dataCAL)[202:207], colnames(dataCAL)[208:230],colnames(dataCAL)[196:199])
+
+weather=paste(weather_names, collapse="+")
+weather
+
+```
+
+Aqui para estimar esta equação, eles utilizam o método de Variáveis Instrumentais, que eu usei a função `ivreg` do Pacote `AER`. Para o método funcionar, precisamos de pelo menos uma variável que seja correlacionada com a que suspeitamos endógena e que não seja correlacionada com o termo erro da equação de interesse. O instrumento que eles utilizam é a quantidade total de energia sendo transacionada (que está como `load`).
+
+```{r estimation_RD, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+spec=as.formula(paste("fringe~price+",weather,"| load+", weather, collapse=""))
+
+model01=ivreg(spec, data=dataCAL)
+summary(model01)
+```
+
+
+Podemos notar que o coeficiente da variável preço, `price` é altamente significante. Mas ainda não temos uma elasticidade, porque a variável independente está em log e a variável dependente está em nível. Para isso, precisamos dividir pela variável dependente.
+
+A elasticidade-preço da demanda residual é o próximo passo. Para isso, os autores fazem a seguinte premissa: uma vez que a demanda é inelástica a preço naquela hora, a demanda residual é simplesmente a Demanda Total (constante) MENOS a oferta da franja. Portanto, a inclinação da curva de demanda residual é simplesmente o negativo da inclinação da curva de oferta da franja.
+
+O autor faz um passo adicional (um termo AR(1) nos resíduos), que eu não vou mostrar aqui mas está no arquivo `03-BushnellReplication.R` no diretório `codes`. Aqui, vou fazer diretamente a partir do modelo que estimamos acima.
+
+```{r resdemelast, echo=TRUE, eval=TRUE, , message=FALSE, warning=FALSE}
+
+dataCAL = dataCAL %>%
+  mutate(resdem=exp(load)-fringe)
+
+mval=mean(dataCAL$resdem, na.rm=TRUE)
+
+elast=-model01$coefficients[2]/mval
+elast
+
+```
+
+
+Parece exótico, não é? Mas para vocês se darem conta de que isso não é tão distante assim, a figura a seguir mostra um email que foi encontrado em várias empresas que faziam um cartel de Sal Marinho durante a década passada:
+
+![E-mal Obtido nos Computadores das empresas do Cartel do Sal](DemandaResidualCARTELSAL.png)
