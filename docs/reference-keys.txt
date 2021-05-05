@@ -21,7 +21,7 @@ monopsônio
 firma-dominante-franja-competitiva
 monopolista-de-bens-duráveis
 econometria-estimando-a-demanda-residual-por-eletricidade
-interdependência-estratégica
+interdependencia-estrategica
 cartel
 história-o-cartel-dos-geradores-de-eletricidade
 teoria-jogos-repetidos
