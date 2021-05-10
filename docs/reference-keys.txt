@@ -25,6 +25,7 @@ interdependencia-estrategica
 cartel
 história-o-cartel-dos-geradores-de-eletricidade
 teoria-jogos-repetidos
+brasil-legislação-contra-carteis
 oligopólio
 resultado-geral
 exemplo-demanda-linear
@@ -37,7 +38,7 @@ bertrand-multiproduto
 caso-com-n-empresas-de-produto-único
 uma-empresa-multiproduto
 bertrand-com-restrições-de-capacidade
-introdução-2
+modelos-sequenciais-stackelberg
 apresentação-do-modelo
 modelo-de-mankiw-e-whinston
 bens-homogêneos

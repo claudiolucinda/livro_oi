@@ -98,7 +98,12 @@ $$
 \end{align*}
 $$
 
-E quando $r$ baixo o suficiente.
+E quando $r$ baixo o suficiente. A literatura mostra que vários tipos de estratégias de punição são sustentáveis neste sentido, como por exemplo:
+
+* *Grim Reaper*: uma vez que um dos caras desvia do comportamento colusivo, os outros vão jogar o comportamento competitivo para sempre.
+* *Stick and Carrot*: uma vez que um dos caras desvia do comportamento colusivo, os outros vão jogar o comportamento colusivo no próximo período.
+
+
 Existe um resultado em jogos repetidos, chamado *Teorema Popular*,
 que afirma que qualquer estratégia -- e, conseqüentemente,
 os $\pi$ associados -- pode ser sustentável como um equilíbrio
@@ -111,6 +116,97 @@ Intuitivamente, isso significa que carteis são mais estaveis quando:
 * É mais fácil descobrir os desvios -- a fase de lucros maiores da empresa que desvia dura menos no tempo
 * A punição é mais forte -- ou seja, a perda de lucros é maior na eventualidade de descoberta
 * O fator de desconto é mais baixo -- ou seja, o futuro é mais valioso.
+
+### Brasil: Legislação Contra Carteis
+
+Nesta seção, será revisada a jurisprudência existente sobre carteis. Conforme o art. 37 da Lei 12.529/2001, conforme apresentado por (CADE, 2020) temos as seguintes diretrizes para o estabelecimento de multas:
+
+“I - no caso de empresa, multa de 0,1% (um décimo por cento) a 20% (vinte por cento) do valor do faturamento bruto da empresa, grupo ou conglomerado obtido, no último exercício anterior à instauração do processo administrativo, no ramo de atividade empresarial em que ocorreu a infração, a qual nunca será inferior à vantagem auferida, quando for possível sua estimação;
+
+II - no caso das demais pessoas físicas ou jurídicas de direito público ou privado, bem como quaisquer associações de entidades ou pessoas constituídas de fato ou de direito, ainda que temporariamente, com ou sem personalidade jurídica, que não exerçam atividade empresarial, não sendo possível utilizar-se o critério do valor do faturamento bruto, a multa será entre R\$ 50.000,00 (cinquenta mil reais) e R\$ 2.000.000.000,00 (dois bilhões de reais);
+
+III - no caso de administrador, direta ou indiretamente responsável pela infração cometida, quando comprovada a sua culpa ou dolo, multa de 1% (um por cento) a 20% (vinte por cento) daquela aplicada à empresa, no caso previsto no inciso I do caput deste artigo, ou às pessoas jurídicas ou entidades, nos casos previstos no inciso II do caput deste artigo.
+
+§ 1o Em caso de reincidência, as multas cominadas serão aplicadas em dobro.”
+
+Além disso, podem ser impostas penalidades que implicam na proibição de se participar em licitações tendo por objeto aquisições, alienações, realização de obras e serviços, concessão de serviços públicos, na administração pública federal, estadual, municipal e do Distrito Federal, bem como em entidades da administração indireta, por prazo não inferior a 5 (cinco) anos (Art. 38).
+Quanto à definição de ramo de atividade empresarial, a Resolução do CADE 3/2012 apresenta uma lista de 144 setores de classificação industrial. Se mais de um setor dentre estes for afetado pelo cartel, o CADE geralmente soma o faturamento deles para fins de cálculo de multa. Além disso, a referida resolução inclui o seguinte trecho, conforme (CADE, 2020):
+
+Art. 2º Quando o representado não apresentar o valor do faturamento no(s) ramo(s) de atividade empresarial em que ocorreu a infração de forma completa, inequívoca e idônea, será considerado o faturamento total da empresa ou grupo de empresas, no último exercício anterior à instauração do processo administrativo.
+
+Art. 2-A. O Cade poderá, mediante decisão fundamentada, adaptar o ramo de atividade às especificidades da conduta quando as dimensões indicadas no art. 1º forem manifestamente desproporcionais. (Redação dada pela Resolução nº 18, de 23 de novembro de 2016)
+
+No aspecto criminal, a sanção para casos de cartel está dada pela Lei 8137/1990, no seu art. 4º, que disciplina os Crimes contra a Ordem Econômica, com a seguinte redação:
+
+Art. 4° Constitui crime contra a ordem econômica:
+
+I - abusar do poder econômico, dominando o mercado ou eliminando, total ou parcialmente, a concorrência mediante qualquer forma de ajuste ou acordo de empresas;
+
+II - formar acordo, convênio, ajuste ou aliança entre ofertantes, visando:
+
+a)	à fixação artificial de preços ou quantidades vendidas ou produzidas;
+
+b)	ao controle regionalizado do mercado por empresa ou grupo de empresas;
+
+c)	ao controle, em detrimento da concorrência, de rede de distribuição ou de fornecedores.
+
+Pena - reclusão, de 2 (dois) a 5 (cinco) anos e multa.  
+
+Especificamente com relação ao crime de cartel em licitações, o diploma legal relevante é a Lei 8.666/1993, com os seguintes tipos penais:
+
+Art. 90.  Frustrar ou fraudar, mediante ajuste, combinação ou qualquer outro expediente, o caráter competitivo do procedimento licitatório, com o intuito de obter, para si ou para outrem, vantagem decorrente da adjudicação do objeto da licitação:
+
+Pena - detenção, de 2 (dois) a 4 (quatro) anos, e multa.
+
+[...]
+
+Art. 95.  Afastar ou procurar afastar licitante, por meio de violência, grave ameaça, fraude ou oferecimento de vantagem de qualquer tipo:
+
+Pena - detenção, de 2 (dois) a 4 (quatro) anos, e multa, além da pena correspondente à violência.
+
+Parágrafo único.  Incorre na mesma pena quem se abstém ou desiste de licitar, em razão da vantagem oferecida.
+
+Art. 96.  Fraudar, em prejuízo da Fazenda Pública, licitação instaurada para aquisição ou venda de bens ou mercadorias, ou contrato dela decorrente:
+
+I - elevando arbitrariamente os preços;
+
+II - vendendo, como verdadeira ou perfeita, mercadoria falsificada ou deteriorada;
+
+III - entregando uma mercadoria por outra;
+
+IV - alterando substância, qualidade ou quantidade da mercadoria fornecida;
+
+V - tornando, por qualquer modo, injustamente, mais onerosa a proposta ou a execução do contrato:
+
+Pena - detenção, de 3 (três) a 6 (seis) anos, e multa
+
+Além disso, o Art. 47 da lei 12.521 também facilita a interposição de ações privadas de reparação de danos de cartel, conforme a redação a seguir:
+
+Art. 47. Os prejudicados, por si ou pelos legitimados referidos no art. 82 da Lei nº 8.078, de 11 de setembro de 1990 , poderão ingressar em juízo para, em defesa de seus interesses individuais ou individuais homogêneos, obter a cessação de práticas que constituam infração da ordem econômica, bem como o recebimento de indenização por perdas e danos sofridos, independentemente do inquérito ou processo administrativo, que não será suspenso em virtude do ajuizamento de ação.
+
+Em resumo, o ordenamento jurídico acima apresentado possui as seguintes características gerais:
+
+*	As multas são baseadas no faturamento:
+  -	Do ano anterior à instauração do ilícito
+  -	No segmento de atividade em que ocorreu a infração
+  -	Possuindo um limite superior
+  -	Podendo ser calculada com base no dano causado pelo cartel
+*	Podem ser impostas multas em pessoas físicas
+*	Tanto em casos de cartel de licitações ou carteis que envolvem agentes privados há a possibilidade de sanção criminal.
+
+Do ponto de vista de aplicação prática desse marco legal, a referência mais interessante é a tese de Flávia Chiquito dos Santos (SANTOS, 2014), que realiza uma análise de 631 atas de julgamento entre 1996 e 2013. Desta amostra inicial, em apenas 29 casos foi exarada decisão contendo multa de cartel. Deste estudo, alguns aspectos são importantes:
+
+*	94% das multas baseadas em porcentagens foram justificadas;
+  -	Em 17% das decisões são apresentadas estimativas da vantagem auferida;
+  -	Em 34% das decisões há menção à vantagem auferida;
+*	Média da Multa em casos em que o dano é considerado como severo, mas não há provas diretas da conduta: 3,97%
+*	Média da Multa em casos em que o dano é considerado como severo, e há provas diretas da conduta: 13,28%
+*	Apenas em 3 das 29 decisões o CADE determinou a remessa da sua decisão às autoridades criminais.
+*	Existiam 18 investigações criminais relacionadas à amostra de 29 decisões do CADE
+* Apenas em um caso o CADE determinou a remessa da decisão a entidade com o fim desta ser capaz de impetrar ações de reparação de danos.
+* Em quatro casos já existiam ações de reparação de danos correndo em paralelo à decisão do CADE.
+
+
 
 
 ## Oligopólio
@@ -212,10 +308,8 @@ P&=\frac{a+2c}{3}
 \end{aligned}
 $$
   
-  Podemos ver graficamente esta solução a partir da figura a seguir:
-  
-  <iframe scrolling='no' frameborder='0' src='https://www.wolframcloud.com/objects/demonstrations/CournotCompetitionWithTwoFirms?_view=EMBED' style='border:0;' width= '600' height='650'></iframe>
-  
+
+
   Primeira coisa interessante deste modelo de Cournot é que ele consegue representar um ``caminho intermediário'' entre o monopólio e competição perfeita. Por exemplo, em um mercado monopolizado, teríamos o seguinte:
   
   $$
@@ -559,7 +653,7 @@ Neste caso, temos um equilíbrio em estratégias puras, com preços acima dos cu
 
 Caso alguma dessas premissas não valha, o resultado de equilíbrio em estratégias puras com preços iguais e acima dos custos marginais não necessariamente se mantém.
 
-## Introdução
+## Modelos Sequenciais: Stackelberg
 
 No modelo de Cournot que vimos anteriormente, consideramos o jogo simultâneo, ou seja, não havia possibilidade de um dos jogadores agir de forma condicional ao que o outro fizesse. Em muitos casos isso não é verdade. Vamos supor, ainda usando a estrutura do modelo de Cournot da aula passada, que uma das empresas é capaz de agir de forma condicional ao que o seu oponente fizesse. Este modelo foi desenvolvido em 1934 por Heinrich von Stackelberg e por isso é chamado, não surpreendentemente, de ``Modelo de Stackelberg'', ou modelo da firma líder e firma seguidora.
 
