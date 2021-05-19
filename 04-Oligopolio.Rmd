@@ -206,6 +206,103 @@ Do ponto de vista de aplicação prática desse marco legal, a referência mais 
 * Apenas em um caso o CADE determinou a remessa da decisão a entidade com o fim desta ser capaz de impetrar ações de reparação de danos.
 * Em quatro casos já existiam ações de reparação de danos correndo em paralelo à decisão do CADE.
 
+### Exercício Empírico -- o *Joint Executive Committee*
+
+Vamos agora falar de um paper clássico de Rob Porter de 1983 [@porter1983study] -- ``A study in cartel stability: The Joint Executive Committee''. A ideia do artigo é testar empiricamente uma afirmação clássica de carteis -- que são instáveis e que ao longo do tempo você deve observar mudanças de comportamento de colusão (cartel) para competição.
+
+Para isso, o autor usa dados do mercado de frete ferroviário de um cartel. Sobre o funcionamento do artigo, segue a descrição do mesmo retirada diretamente do artigo (em tradução):
+
+``O JEC era um cartel que controlava os embarques de carga para o leste de Chicago para a costa atlântica na década de 1880. Foi formada em abril de 1879 por um acordo das ferrovias envolvidas no mercado. As empresas envolvidas reconheceram publicamente esse acordo, pois ele precedeu a aprovação do Sherman Act (1890) e a formação da Interstate Commerce Commission (1887), que iniciaram a legislação Antitruste nos Estados unidos. Um acordo separado foi feito para carregamentos para o oeste nas mesmas linhas ferroviárias, principalmente por causa das diferenças físicas essenciais dos produtos sendo transportados.
+
+O mecanismo de organização interna adotado pelo JEC era uma variante da estratégia de gatilho. De acordo com Ulen, houve vários casos em que o cartel pensou que tinha ocorrido trapaça, cortou os preços por um tempo e depois voltou ao preço do conluio'' ([@porter1983study], págs. 302-303)
+
+Os autores vão estimar um sistema de equações de oferta e demanda para identificar o efeito do cartel. Do lado de demanda, a equação tem a seguinte forma:
+
+$$
+log Q_{t}=\alpha_{0}+\alpha_{1}log p_{t} + \alpha_{2}L_{t}+\varepsilon_{t}
+$$
+
+Em que $\alpha_{1}$ é a elasticidade-preço da demanda e $L_{t}$ é uma variável *dummy* com o valor de 1 caso a rota de hidrovia pelos grandes lagos esteja aberta.
+
+A equação de oferta é dada por:
+
+$$
+log p_{t}=\beta_{0}+\beta_{1}log Q_{t} + \beta_{2} S_{t} + \beta_{3} I_{t} + \varepsilon_{st}
+$$
+
+Em que $S_{t}$ é um conjunto de *dummies* que refletem entrada e saída do mercado, e $I_{t}$ uma *dummy* que reflete quando o cartel está ativo. O autor, na página 305, afirma que o valor do coeficiente $\beta_{3}$ tem que ser positivo e um pouco menor que $log \left(\frac{\alpha_{1}}{1+\alpha_{1}}  \right)$. As duas equações -- demanda e oferta -- também incluem *dummies* de mês, que não são inclusas na apresentação do paper (não sei porquê).
+
+Agora passemos à estimação propriamente dita desse sistema. Iremos usar o método dos Mínimos Quadrados a Dois estágios. Começamos subindo os pacotes usuais, e depois a gente começa a análise.
+
+```{r porter1, echo=TRUE, eval=TRUE, warning=FALSE}
+library(readstata13)
+library(tidyverse)
+library(AER)
+library(ggplot2)
+
+rm(list=ls())
+
+data=read.delim("./codes/porter.out", sep="\t")
+
+```
+
+
+Neste banco de dados, temos as seguintes variáveis:
+
+* $GR$ - Grain Rate, em dólares por 100 libras.
+* $TQG$ - Total de grão transportado (em toneladas).
+* $LAKES$ - Variável *dummy*, indicando se os Grandes Lagos estão abertos para navegação.
+* $PO$ - Variável indicado quebra do cartel, com o valor de 1 se há aviso de quebra do cartel na **Railway Review**, e zero caso contrário.
+* $DM1$ - *dummy* com o valor de 1 da semana 28 em 1880 e 10 de 1883 - refletindo a entrada da **Grand Turk Railway**
+* $DM2$ - *dummy* com o valor de 1 da semana 26 de 1883 a semana 11 em 1886 - refletindo a entrada da **Chicago and Atlantic**
+* $DM3$ - *dummy* com o valor de 1 da semana 12 a 26 de 1886 - quando a **Chicago and Atlantic** saiu do JEC
+
+O passo seguinte envolve a construção das variáveis relevantes para o modelo econométrico:
+
+```{r porter02, echo=TRUE, eval=TRUE}
+data = data %>%
+  mutate(logq=log(tqg), logp=log(gr), po_price=po*logp, lakes_dm1=lakes*dm1,
+         lakes_dm2=lakes*dm2, lakes_dm3=lakes*dm3, lakes_dm4=lakes*dm4,
+         lakes_po=lakes*po)
+```
+
+
+Podemos plotar os dados, criando uma figura igual à da página 311 do paper:
+
+```{r porter03, echo=TRUE, eval=TRUE, fig.cap = 'Evolução dos Preços'}
+ggplot(data, aes(x=week, y=gr)) +
+  geom_line()
+
+```
+
+
+A figura acima mostra que temos épocas em que os preços caem pra abaixo da metade dos valores correspondentes ao comportamento de cartel. E eles conseguem marcar essas épocas como relacionadas aos avisos de ``quebra'' do cartel na revista da associação.
+
+O passo seguinte é estimar as equações de Demanda e Oferta, correspondentes às duas primeiras colunas da Tabela 3 do paper de [@porter1983study]. Estimaremos as equações separadamente por Variáveis Instrumentais (os autores usam o nome mais antigo de Mínimos Quadrados a dois Estágios).
+
+```{r porter04, echo=TRUE, eval=TRUE}
+demand=ivreg(logq~logp+lakes+t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11+t12 |
+               dm1+dm2+dm3+dm4+po+lakes+t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11+t12, data=data)
+
+summary(demand)
+```
+
+
+Podemos ver, como no paper, que a elasticidade-preço da demanda é de `r round(coef(demand)[2],2)`, da mesma forma que no paper. Agora olhemos pro lado da oferta:
+
+```{r porter05, echo=TRUE, eval=TRUE}
+supply=ivreg(logp~logq+dm1+dm2+dm3+dm4+po+t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11+t12 |
+               lakes++dm1+dm2+dm3+dm4+po+t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11+t12, data=data)
+
+summary(supply)
+
+```
+
+
+Podemos ver que o coeficiente de interesse, o $\beta_{3}$ na equação de oferta, é estatisticamente diferente de zero, com estimativa pontual de `r round(coef(supply)[7],4)`. Além disso, os preços no comportamento colusivo são maiores (em média 36.8%) e a entrada de competidores puxa os preços pra baixo.
+
+Finalmente, podemos calcular qual é o chamado *parâmetro de conduta* -- ou seja, a expectativa de como os competidores irão responder a um aumento de uma unidade na sua quantidade produzida. Este parâmetro aqui é igual a `r (exp(-coef(supply)[7])-1)*coef(demand)[2]`. que se comporta de acordo com o que os autores esperam. 
+
 
 
 

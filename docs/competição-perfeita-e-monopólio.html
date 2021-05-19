@@ -24,7 +24,7 @@
 <meta name="author" content="Claudio Ribeiro de Lucinda" />
 
 
-<meta name="date" content="2021-05-10" />
+<meta name="date" content="2021-05-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="funções-custo.html"/>
 <link rel="next" href="interdependencia-estrategica.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -55,25 +56,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -82,9 +85,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="lib/css/style.css" type="text/css" />
@@ -137,37 +162,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Apresentação</a></li>
-<li class="chapter" data-level="2" data-path="funções-custo.html"><a href="funções-custo.html"><i class="fa fa-check"></i><b>2</b> Funções Custo</a><ul>
+<li class="chapter" data-level="2" data-path="funções-custo.html"><a href="funções-custo.html"><i class="fa fa-check"></i><b>2</b> Funções Custo</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="funções-custo.html"><a href="funções-custo.html#introdução"><i class="fa fa-check"></i><b>2.1</b> Introdução</a></li>
-<li class="chapter" data-level="2.2" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-produção-e-de-custo-conhecidas"><i class="fa fa-check"></i><b>2.2</b> Funções de Produção e de Custo conhecidas</a><ul>
+<li class="chapter" data-level="2.2" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-produção-e-de-custo-conhecidas"><i class="fa fa-check"></i><b>2.2</b> Funções de Produção e de Custo conhecidas</a>
+<ul>
 <li class="chapter" data-level="2.2.1" data-path="funções-custo.html"><a href="funções-custo.html#cobb-douglas"><i class="fa fa-check"></i><b>2.2.1</b> Cobb-Douglas</a></li>
 <li class="chapter" data-level="2.2.2" data-path="funções-custo.html"><a href="funções-custo.html#ces"><i class="fa fa-check"></i><b>2.2.2</b> CES</a></li>
 <li class="chapter" data-level="2.2.3" data-path="funções-custo.html"><a href="funções-custo.html#leontief"><i class="fa fa-check"></i><b>2.2.3</b> Leontief</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="funções-custo.html"><a href="funções-custo.html#medidas-de-economias-de-escala-e-economias-de-escopo"><i class="fa fa-check"></i><b>2.3</b> Medidas de Economias de Escala e Economias de Escopo</a><ul>
+<li class="chapter" data-level="2.3" data-path="funções-custo.html"><a href="funções-custo.html#medidas-de-economias-de-escala-e-economias-de-escopo"><i class="fa fa-check"></i><b>2.3</b> Medidas de Economias de Escala e Economias de Escopo</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="funções-custo.html"><a href="funções-custo.html#empresas-multiproduto"><i class="fa fa-check"></i><b>2.3.1</b> Empresas Multiproduto</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-custo-empíricas"><i class="fa fa-check"></i><b>2.4</b> Funções de Custo Empíricas</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html"><i class="fa fa-check"></i><b>3</b> Competição Perfeita e Monopólio</a><ul>
+<li class="chapter" data-level="3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html"><i class="fa fa-check"></i><b>3</b> Competição Perfeita e Monopólio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#introdução-1"><i class="fa fa-check"></i><b>3.1</b> Introdução</a></li>
-<li class="chapter" data-level="3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#competição-e-competição-perfeita"><i class="fa fa-check"></i><b>3.2</b> Competição e Competição Perfeita</a><ul>
+<li class="chapter" data-level="3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#competição-e-competição-perfeita"><i class="fa fa-check"></i><b>3.2</b> Competição e Competição Perfeita</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#equilíbrio-em-competição-perfeita"><i class="fa fa-check"></i><b>3.2.1</b> Equilíbrio em Competição Perfeita</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio"><i class="fa fa-check"></i><b>3.3</b> Monopólio</a><ul>
+<li class="chapter" data-level="3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio"><i class="fa fa-check"></i><b>3.3</b> Monopólio</a>
+<ul>
 <li class="chapter" data-level="3.3.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio-versão-tradicional"><i class="fa fa-check"></i><b>3.3.1</b> Monopólio – Versão tradicional</a></li>
 <li class="chapter" data-level="3.3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopsônio"><i class="fa fa-check"></i><b>3.3.2</b> Monopsônio</a></li>
 <li class="chapter" data-level="3.3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#firma-dominante-franja-competitiva"><i class="fa fa-check"></i><b>3.3.3</b> Firma Dominante – Franja Competitiva</a></li>
 <li class="chapter" data-level="3.3.4" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#econometria-estimando-a-demanda-residual-por-eletricidade"><i class="fa fa-check"></i><b>3.3.4</b> Econometria: Estimando a Demanda Residual por Eletricidade</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html"><i class="fa fa-check"></i><b>4</b> Interdependencia Estrategica</a><ul>
-<li class="chapter" data-level="4.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#cartel"><i class="fa fa-check"></i><b>4.1</b> Cartel</a><ul>
+<li class="chapter" data-level="4" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html"><i class="fa fa-check"></i><b>4</b> Interdependencia Estrategica</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#cartel"><i class="fa fa-check"></i><b>4.1</b> Cartel</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#história-o-cartel-dos-geradores-de-eletricidade"><i class="fa fa-check"></i><b>4.1.1</b> História – o cartel dos geradores de eletricidade</a></li>
 <li class="chapter" data-level="4.1.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#teoria-jogos-repetidos"><i class="fa fa-check"></i><b>4.1.2</b> Teoria: Jogos Repetidos</a></li>
 <li class="chapter" data-level="4.1.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#brasil-legislação-contra-carteis"><i class="fa fa-check"></i><b>4.1.3</b> Brasil: Legislação Contra Carteis</a></li>
+<li class="chapter" data-level="4.1.4" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#exercício-empírico-o-joint-executive-committee"><i class="fa fa-check"></i><b>4.1.4</b> Exercício Empírico – o <em>Joint Executive Committee</em></a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#oligopólio"><i class="fa fa-check"></i><b>4.2</b> Oligopólio</a><ul>
+<li class="chapter" data-level="4.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#oligopólio"><i class="fa fa-check"></i><b>4.2</b> Oligopólio</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#resultado-geral"><i class="fa fa-check"></i><b>4.2.1</b> Resultado geral</a></li>
 <li class="chapter" data-level="4.2.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#exemplo-demanda-linear"><i class="fa fa-check"></i><b>4.2.2</b> Exemplo: Demanda Linear</a></li>
 <li class="chapter" data-level="4.2.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#modelo-de-cournot-com-muitas-firmas"><i class="fa fa-check"></i><b>4.2.3</b> Modelo de Cournot com muitas firmas</a></li>
@@ -177,11 +212,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.7" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#bertrand-multiproduto"><i class="fa fa-check"></i><b>4.2.7</b> Bertrand Multiproduto</a></li>
 <li class="chapter" data-level="4.2.8" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#bertrand-com-restrições-de-capacidade"><i class="fa fa-check"></i><b>4.2.8</b> Bertrand com restrições de capacidade</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#modelos-sequenciais-stackelberg"><i class="fa fa-check"></i><b>4.3</b> Modelos Sequenciais: Stackelberg</a><ul>
+<li class="chapter" data-level="4.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#modelos-sequenciais-stackelberg"><i class="fa fa-check"></i><b>4.3</b> Modelos Sequenciais: Stackelberg</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#apresentação-do-modelo"><i class="fa fa-check"></i><b>4.3.1</b> Apresentação do modelo</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html"><i class="fa fa-check"></i><b>5</b> Modelo de Mankiw e Whinston</a><ul>
+<li class="chapter" data-level="5" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html"><i class="fa fa-check"></i><b>5</b> Modelo de Mankiw e Whinston</a>
+<ul>
 <li class="chapter" data-level="5.0.1" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html#bens-homogêneos"><i class="fa fa-check"></i><b>5.0.1</b> Bens Homogêneos</a></li>
 <li class="chapter" data-level="5.0.2" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html#produtos-diferenciados"><i class="fa fa-check"></i><b>5.0.2</b> Produtos Diferenciados</a></li>
 </ul></li>
@@ -206,13 +243,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="competição-perfeita-e-monopólio" class="section level1">
+<div id="competição-perfeita-e-monopólio" class="section level1" number="3">
 <h1><span class="header-section-number">Capitulo 3</span> Competição Perfeita e Monopólio</h1>
-<div id="introdução-1" class="section level2">
+<div id="introdução-1" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Introdução</h2>
 <p>Neste capítulo, iremos recapitular duas estruturas de mercado mais comumente apresentadas em cursos de Microeconomia: (i) Competição Perfeita e (ii) Monopólio. No caso da competição perfeita, podemos apresentá-la como um padrão de comparação sobre as estruturas de mercado que vêm depois, e no caso de Monopólio podemos ressaltar alguns aspectos importantes de mercados em competição perfeita – o papel da entrada e o papel de eventuais competidores (a chamada Franja Competitiva).</p>
 </div>
-<div id="competição-e-competição-perfeita" class="section level2">
+<div id="competição-e-competição-perfeita" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Competição e Competição Perfeita</h2>
 <p>Nesta seção do capítulo, iremos revisitar o conceito de Competição e Competição Perfeita. Digo revisitar porque, novamente, estou assumindo que o leitor deste livro já tenha estudado este tema algumas vezes.
 Então, aqui os objetivos principais vão ser:</p>
@@ -231,7 +268,7 @@ Então, aqui os objetivos principais vão ser:</p>
 <li>Divisibilidade: as quantidades produzidas podem ser infinitamente divisíveis</li>
 </ul>
 <p>Como mencionado mais acima, estas premissas caracterizam um tipo de mercado que dificilmente pode ser encontrado no ``mundo real’’. A partir dessa informação, existem duas reações. A primeira delas é entender que o papel desta definição é justamente este – ser restritiva para fornecer um padrão de comparação para os modelos que nós detalharemos mais adiante.</p>
-<p>A segunda reação é pensar se, dado que estas condições caracterizam um mercado dificilmente encontrado no mundo real, existe um subconjunto destas condições que seria mais próxima do mundo real e que gere resultados parecidos com o de competição perfeita. Se entendermos ``resultados parecidos’’ como sendo preços convergindo para um equilíbrio - que chamarei de <em>mercado competitivo</em> como o resultado da interação de curvas de oferta e de demanda, o que a evidência experimental <span class="citation">(Smith <a href="#ref-smith1962experimental" role="doc-biblioref">1962</a>)</span> e <span class="citation">(Friedman and Ostroy <a href="#ref-FriedmanOstroy1995" role="doc-biblioref">1995</a>)</span> nos mostra é que apenas as seguintes premissas são necessárias:</p>
+<p>A segunda reação é pensar se, dado que estas condições caracterizam um mercado dificilmente encontrado no mundo real, existe um subconjunto destas condições que seria mais próxima do mundo real e que gere resultados parecidos com o de competição perfeita. Se entendermos ``resultados parecidos’’ como sendo preços convergindo para um equilíbrio - que chamarei de <em>mercado competitivo</em> como o resultado da interação de curvas de oferta e de demanda, o que a evidência experimental <span class="citation">(<a href="#ref-smith1962experimental" role="doc-biblioref">Smith 1962</a>)</span> e <span class="citation">(<a href="#ref-FriedmanOstroy1995" role="doc-biblioref">Friedman and Ostroy 1995</a>)</span> nos mostra é que apenas as seguintes premissas são necessárias:</p>
 <ul>
 <li>Os compradores conhecem as suas disposições a pagar</li>
 <li>Os vendedores conhecem o custo marginal de oportunidade das unidades que estão dispostas a oferecer</li>
@@ -239,7 +276,7 @@ Então, aqui os objetivos principais vão ser:</p>
 </ul>
 <p>Note-se que isso não significa que seja possível que outros aspectos (informação, custos de transação) sejam de tal magnitude que impeça que o resultado de mercado competitivo se estabeleça. E nem que todas as consequências de um mercado em competição perfeita também se verifique.</p>
 <p>E por falar no equilíbrio em competição perfeita, na seção seguinte iremos reapresentar o mesmo.</p>
-<div id="equilíbrio-em-competição-perfeita" class="section level3">
+<div id="equilíbrio-em-competição-perfeita" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Equilíbrio em Competição Perfeita</h3>
 <p>Seguindo a apresentação mais ``tradicional’’ de competição perfeita, o primeiro passo é analisar qual é o equilíbrio associado com estas premissas. Ou seja, se seguirmos este modelo, o que podemos esperar dos agentes desta economia?</p>
 <p>Em primeiro lugar, sobre o equilíbrio da empresa individual. Vamos assumir que a empresa maximize seus lucros. Esta maximização de lucros leva à seguinte relação comportamental: produzir até o nível em que a receita marginal decorrente de um pequeno aumento na produção seja igual ao custo marginal decorrente deste pequeno aumento na produção.</p>
@@ -255,8 +292,8 @@ Então, aqui os objetivos principais vão ser:</p>
 </p>
 </div>
 <p>A partir dessa decisão da empresa, o passo seguinte é entender de onde vem esse preço de mercado que regula as decisões da empresa. O preço de mercado vem da intersecção da oferta de mercado com a demanda de mercado. <strong>Nota: apenas em concorrência perfeita teremos uma CURVA de Oferta. Em todas as outras, temos uma RELAÇÃO de oferta</strong></p>
-<p>Para entendermos a oferta de mercado, precisamos fazer mais uma hipótese – que é sobre a possibilidade de entrada. Para ilustrar a importância dessa premissa, vamos mostrar os dois casos extremos – o chamado “Curto Prazo” de livro-texto de Microeconomia, em que existem <span class="math inline">\(n\)</span> empresas no mercado, todos os custos fixos são afundados e a entrada é impossível, e o chamado “Longo Prazo”, em que nenuhum custo é afundado (=todos os custos são evitáveis) e que a entrada é livre.</p>
-<div id="equilíbrio-em-competição-perfeita-curto-prazo" class="section level4">
+<p>Para entendermos a oferta de mercado, precisamos fazer mais uma hipótese – que é sobre a possibilidade de entrada. Para ilustrar a importância dessa premissa, vamos mostrar os dois casos extremos – o chamado “Curto Prazo” de livro-texto de Microeconomia, em que existem <span class="math inline">\(n\)</span> empresas no mercado, todos os custos fixos são afundados e a entrada é impossível, e o chamado “Longo Prazo,” em que nenuhum custo é afundado (=todos os custos são evitáveis) e que a entrada é livre.</p>
+<div id="equilíbrio-em-competição-perfeita-curto-prazo" class="section level4" number="3.2.1.1">
 <h4><span class="header-section-number">3.2.1.1</span> Equilíbrio em Competição Perfeita – Curto Prazo</h4>
 <p>Neste caso, a oferta de mercado é a soma horizontal das curvas de oferta das empresas individuais – que, por sua vez, são o ramo ascendente da curva de custo marginal, a partir dos custos médios <em>evitáveis</em>.
 Para um exemplo, vamos considerar a existência de três empresas no curto prazo com as seguintes curvas de custo marginal:
@@ -289,7 +326,7 @@ Agregando e definindo <span class="math inline">\(Q=q_{1}+q_{2}+q_{3}\)</span>, 
 <p>Caso as empresas que entrem neste mercado sejam idênticas aos que entram no mercado, <em>todas</em> as empresas (iguais) vão operar nas suas escalas mínimas eficientes. E nesse caso, a curva de oferta de longo prazo é <em>horizontal</em> no mínimo custo médio das empresas.</p>
 <p>Por outro lado, se as empresas são heterogêneas e a entrada acaba por atrair empresas menos eficientes (ou seja, com curvas de custo médio mais elevado), a curva de oferta de longo prazo vai ter segmentos positivamente inclinados.</p>
 </div>
-<div id="demanda-residual" class="section level4">
+<div id="demanda-residual" class="section level4" number="3.2.1.2">
 <h4><span class="header-section-number">3.2.1.2</span> Demanda Residual</h4>
 <p>Um elemento importante para se entender o chamado ``Poder de Mercado’’ (a capacidade de uma empresa unilateralmente elevar seus preços acima dos custos marginais) em uma situação real é chamada <em>Demanda Residual</em></p>
 <p>A Demanda Residual é uma relação entre o preço cobrado por uma empresa específica e o quanto ela vende, depois que os seus competidores reagiram a sua decisão. Intuitivamente, a resposta da demanda residual é muito mais forte do que a da função demanda tradicional – afinal de contas, a demanda residual leva em conta a substituição entre ofertantes também.</p>
@@ -309,7 +346,7 @@ Além disso, vamos definir <span class="math inline">\(q=\frac{Q}{n}\)</span>, <
 <p>$$</p>
 <p>Podemos notar que a elasticidade preço da demanda residual aqui é cada vez maior quanto maior o número de empresas. Apenas tenhamos em mente que esta fórmula é válida apenas para o caso de concorrência perfeita, onde não existe interdependência estratégica entre as empresas. No caso em que exista esta interdependência, a demanda residual é importante, mas a fórmula é diferente. Algumas versões disso serão apresentadas nos próximos capítulos.</p>
 </div>
-<div id="entrada-livre-entrada" class="section level4">
+<div id="entrada-livre-entrada" class="section level4" number="3.2.1.3">
 <h4><span class="header-section-number">3.2.1.3</span> Entrada, Livre Entrada…</h4>
 <p>As condições de entrada podem condicionar a estrutura de mercado. Agora, o problema é definir adequadamente como são as condições de entrada. Um primeiro passo é pensar nas respostas à estas perguntas:</p>
 <ul>
@@ -343,10 +380,10 @@ Teremos incentivos para a manutenção das empresas no mercado caso a decisão d
 </div>
 </div>
 </div>
-<div id="monopólio" class="section level2">
+<div id="monopólio" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Monopólio</h2>
 <p>Nesta nota, iremos detalhar um pouco a ideia do monopólio, e expressar algumas relações que vocês já conhecem em outros contextos em uma forma que enfatiza a generalidade com o que vem depois. Inicialmente vamos falar o monopólio tradicional, para depois falarmos da questão da firma dominante com a franja competitiva.</p>
-<div id="monopólio-versão-tradicional" class="section level3">
+<div id="monopólio-versão-tradicional" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Monopólio – Versão tradicional</h3>
 <p>Tendo visto um extremo das estruturas de mercado – a situação em que as empresas não tem poder nenhum de mercado – agora passemos ao outro extremo das situações de mercado. Ou seja, mercados em que existe apenas uma empresa.</p>
 <p>As explicações tradicionais para a existência de um monopólio costumam ser classificadas em três grandes grupos:</p>
@@ -391,7 +428,7 @@ P=\frac{\frac{\partial CT}{\partial Q}}{1-\frac{1}{|\varepsilon_{D}|}}
 </p>
 </div>
 </div>
-<div id="monopsônio" class="section level3">
+<div id="monopsônio" class="section level3" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> Monopsônio</h3>
 <p>Mas a existência de uma empresa apenas numa das pontas do mercado não é uma exclusividade do lado da oferta. Também é possível termos apenas uma empresa do lado da demanda – o chamado Monopsônio.</p>
 <p>Os resultados neste caso são similares aos do Monopólio, como veremos aqui. Vamos fazer um exemplo envolvendo apenas um demandante de trabalho. Basicamente, esse demandante irá contratar trabalhadores até o ponto em que o Valor gerado pelo trabalhador adicional seja igual ao custo deste trabalhador adicional.</p>
@@ -407,7 +444,7 @@ CT&amp;=W(L)\times L \\
 <p>Podemos notar que existe o mesmo índice de Lerner de antes, só que é a margem entre o valor produzido pela unidade de trabalho e seu custo. Esta margem proporcional é igual ao inverso da elasticidade-preço da oferta.</p>
 <p>Os mesmos resultados de ineficiência também valem aqui. Transações mutuamente benéficas deixam de acontecer.</p>
 </div>
-<div id="firma-dominante-franja-competitiva" class="section level3">
+<div id="firma-dominante-franja-competitiva" class="section level3" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> Firma Dominante – Franja Competitiva</h3>
 <p>Não há muita diferença na ideia de Firma Dominante com Franja Competitiva. O único ponto diferente é que a firma dominante trabalha com a Demanda Residual, definida de forma similar à do capítulo anterior do Carlton e Perloff: <span class="math inline">\(D_{R}(P)=D(P)-S_{0}(P)\)</span>. Vamos apresentar a solução ótima por meio da escolha de preços:</p>
 <p><span class="math display">\[
@@ -420,7 +457,7 @@ P-\frac{\partial CT}{\partial Q}=\frac{1}{\frac{\partial D_{R}}{\partial P}} D_{
 \end{aligned}
 \]</span>
 A única diferença neste caso é a inclinação da demanda residual – <span class="math inline">\(D_{R}\)</span> ao invés de <span class="math inline">\(D\)</span>. Em alguns casos é possível que a inclinação coincida (quando a franja está ativa), em outros não coincide.</p>
-<div id="monopolista-de-bens-duráveis" class="section level4">
+<div id="monopolista-de-bens-duráveis" class="section level4" number="3.3.3.1">
 <h4><span class="header-section-number">3.3.3.1</span> Monopolista de Bens duráveis</h4>
 <p>Vamos supor que o consumidor possa desfrutar dos bens por vários períodos.
 Neste caso, o preço que os consumidores estão dispostos a consumir hoje depende da expectativa de preço em consumir amanhã. Vamos supor um modelo de dois períodos, <span class="math inline">\(t=1,2\)</span>, e que bem produzido em 1 pode ser usado em 2. Todo mundo tem fator de desconto <span class="math inline">\(\delta=\frac{1}{(1+r)}\)</span>, e em cada período <span class="math inline">\(D=1-p\)</span></p>
@@ -449,10 +486,10 @@ do competitivo, isso significa que ele não vai conseguir elevar o
 preço agora!</p>
 </div>
 </div>
-<div id="econometria-estimando-a-demanda-residual-por-eletricidade" class="section level3">
+<div id="econometria-estimando-a-demanda-residual-por-eletricidade" class="section level3" number="3.3.4">
 <h3><span class="header-section-number">3.3.4</span> Econometria: Estimando a Demanda Residual por Eletricidade</h3>
 <p>Como vimos até agora, o conceito de demanda residual é um elemento importante para entendermos o poder de mercado que uma empresa é capaz de exercer em uma situação em especial.</p>
-<p>Iremos agora replicar a análise do paper “Vertical arrangements, market structure, and competition: An analysis of restructured US electricity markets” <span class="citation">(Bushnell, Mansur, and Saravia <a href="#ref-bushnell2008vertical" role="doc-biblioref">2008</a>)</span>. O mercado de energia elétrica é especialmente adequado para este tipo de exercício porque (1) a quantidade ofertada e a quantidade demandada precisam ser iguais em todos os instantes do tempo (senão coisas ruins acontecem), e (2) em mercados razoavelmente organizados, este casamento de oferta e demanda é feito em um mercado centralizado de forma razoavelmente transparente.</p>
+<p>Iremos agora replicar a análise do paper “Vertical arrangements, market structure, and competition: An analysis of restructured US electricity markets” <span class="citation">(<a href="#ref-bushnell2008vertical" role="doc-biblioref">Bushnell, Mansur, and Saravia 2008</a>)</span>. O mercado de energia elétrica é especialmente adequado para este tipo de exercício porque (1) a quantidade ofertada e a quantidade demandada precisam ser iguais em todos os instantes do tempo (senão coisas ruins acontecem), e (2) em mercados razoavelmente organizados, este casamento de oferta e demanda é feito em um mercado centralizado de forma razoavelmente transparente.</p>
 <p>E por conta de (1), é bastante comum observarmos que em momentos de grande demanda para pouca oferta o preço da eletricidade pode se elevar rapidamente. Uma questão relevante para os acadêmicos é saber se estas elevações são o resultado simplesmente do aumento da demanda ou também da retirada estratégica de capacidade de geração em momentos críticos.</p>
 <p>Para avaliarmos esse segundo ponto, os autores decidem estimar uma função demanda residual – essencialmente, a quantidade demandada descontada de quanto de energia vem de fora do estado. No caso, o Estado da California.</p>
 <p>A oferta das empresas de fora é modelada da seguinte forma:</p>
@@ -470,16 +507,16 @@ Em que:</p>
 <li><span class="math inline">\(\alpha,\beta,\gamma,\delta,\phi\)</span>: Coeficientes (o <span class="math inline">\(\beta\)</span> é o de interesse)</li>
 </ul>
 <p>Vamos então estimar esse negócio, puxando os dados do estado da California.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb14-2" title="2"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb14-3" title="3"><span class="kw">library</span>(AER)</a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="kw">library</span>(readstata13)</a>
-<a class="sourceLine" id="cb14-5" title="5"><span class="kw">library</span>(haven)</a>
-<a class="sourceLine" id="cb14-6" title="6"></a>
-<a class="sourceLine" id="cb14-7" title="7"><span class="kw">rm</span>(<span class="dt">list=</span><span class="kw">ls</span>())</a>
-<a class="sourceLine" id="cb14-8" title="8">dataCAL=<span class="kw">read_dta</span>(<span class="dt">file=</span><span class="st">&quot;./codes/california.dta&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="competição-perfeita-e-monopólio.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-2"><a href="competição-perfeita-e-monopólio.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-3"><a href="competição-perfeita-e-monopólio.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span>
+<span id="cb14-4"><a href="competição-perfeita-e-monopólio.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readstata13)</span>
+<span id="cb14-5"><a href="competição-perfeita-e-monopólio.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb14-6"><a href="competição-perfeita-e-monopólio.html#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="competição-perfeita-e-monopólio.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb14-8"><a href="competição-perfeita-e-monopólio.html#cb14-8" aria-hidden="true" tabindex="-1"></a>dataCAL<span class="ot">=</span><span class="fu">read_dta</span>(<span class="at">file=</span><span class="st">&quot;./codes/california.dta&quot;</span>)</span></code></pre></div>
 <p>Como vocês podem notar, o banco de dados tem um monte de variáveis:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">colnames</span>(dataCAL)</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="competição-perfeita-e-monopólio.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dataCAL)</span></code></pre></div>
 <pre><code>##   [1] &quot;HOUR&quot;      &quot;pxp&quot;       &quot;Q_imp&quot;     &quot;DATE&quot;      &quot;hight101&quot;  &quot;lowt101&quot;  
 ##   [7] &quot;hight102&quot;  &quot;lowt102&quot;   &quot;hight103&quot;  &quot;lowt103&quot;   &quot;hight104&quot;  &quot;lowt104&quot;  
 ##  [13] &quot;hight105&quot;  &quot;lowt105&quot;   &quot;hight106&quot;  &quot;lowt106&quot;   &quot;hight107&quot;  &quot;lowt107&quot;  
@@ -533,22 +570,22 @@ Em que:</p>
 ## [301] &quot;llowt410&quot;  &quot;llowt411&quot;  &quot;llowt412&quot;  &quot;llowt413&quot;  &quot;llowt414&quot;  &quot;llowt415&quot; 
 ## [307] &quot;llowt416&quot;  &quot;llowt417&quot;  &quot;llowt418&quot;  &quot;llowt419&quot;  &quot;T&quot;</code></pre>
 <p>Vou organizar alguns dados e renomear as coisas para ficar tudo com o nome certinho. No final, vou mostrar quais são os regressores (as somatórias expandidas).</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">dataCAL=dataCAL <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb17-2" title="2"><span class="st">  </span><span class="kw">filter</span>(DATE<span class="op">&gt;</span><span class="dv">19990600</span> <span class="op">&amp;</span><span class="st"> </span>DATE<span class="op">&lt;</span><span class="dv">19991000</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb17-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">peak=</span><span class="kw">ifelse</span>(HOUR<span class="op">&gt;</span><span class="dv">10</span> <span class="op">&amp;</span><span class="st"> </span>HOUR<span class="op">&lt;</span><span class="dv">21</span>,<span class="kw">ifelse</span>(SAT<span class="op">==</span><span class="dv">1</span> <span class="op">|</span><span class="st"> </span>SUN<span class="op">==</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>),<span class="dv">0</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb17-4" title="4"><span class="st">  </span><span class="kw">rename</span>(<span class="dt">fringe=</span>Q_frg, <span class="dt">price=</span>lnp, <span class="dt">load=</span>lnI)</a>
-<a class="sourceLine" id="cb17-5" title="5"></a>
-<a class="sourceLine" id="cb17-6" title="6">weather_names=<span class="kw">c</span>(<span class="kw">colnames</span>(dataCAL)[<span class="dv">5</span><span class="op">:</span><span class="dv">24</span>], <span class="kw">colnames</span>(dataCAL)[<span class="dv">125</span><span class="op">:</span><span class="dv">182</span>], <span class="kw">colnames</span>(dataCAL)[<span class="dv">233</span><span class="op">:</span><span class="dv">310</span>], </a>
-<a class="sourceLine" id="cb17-7" title="7">       <span class="kw">colnames</span>(dataCAL)[<span class="dv">202</span><span class="op">:</span><span class="dv">207</span>], <span class="kw">colnames</span>(dataCAL)[<span class="dv">208</span><span class="op">:</span><span class="dv">230</span>],<span class="kw">colnames</span>(dataCAL)[<span class="dv">196</span><span class="op">:</span><span class="dv">199</span>])</a>
-<a class="sourceLine" id="cb17-8" title="8"></a>
-<a class="sourceLine" id="cb17-9" title="9">weather=<span class="kw">paste</span>(weather_names, <span class="dt">collapse=</span><span class="st">&quot;+&quot;</span>)</a>
-<a class="sourceLine" id="cb17-10" title="10">weather</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="competição-perfeita-e-monopólio.html#cb17-1" aria-hidden="true" tabindex="-1"></a>dataCAL<span class="ot">=</span>dataCAL <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="competição-perfeita-e-monopólio.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(DATE<span class="sc">&gt;</span><span class="dv">19990600</span> <span class="sc">&amp;</span> DATE<span class="sc">&lt;</span><span class="dv">19991000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="competição-perfeita-e-monopólio.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">peak=</span><span class="fu">ifelse</span>(HOUR<span class="sc">&gt;</span><span class="dv">10</span> <span class="sc">&amp;</span> HOUR<span class="sc">&lt;</span><span class="dv">21</span>,<span class="fu">ifelse</span>(SAT<span class="sc">==</span><span class="dv">1</span> <span class="sc">|</span> SUN<span class="sc">==</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>),<span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="competição-perfeita-e-monopólio.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">fringe=</span>Q_frg, <span class="at">price=</span>lnp, <span class="at">load=</span>lnI)</span>
+<span id="cb17-5"><a href="competição-perfeita-e-monopólio.html#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="competição-perfeita-e-monopólio.html#cb17-6" aria-hidden="true" tabindex="-1"></a>weather_names<span class="ot">=</span><span class="fu">c</span>(<span class="fu">colnames</span>(dataCAL)[<span class="dv">5</span><span class="sc">:</span><span class="dv">24</span>], <span class="fu">colnames</span>(dataCAL)[<span class="dv">125</span><span class="sc">:</span><span class="dv">182</span>], <span class="fu">colnames</span>(dataCAL)[<span class="dv">233</span><span class="sc">:</span><span class="dv">310</span>], </span>
+<span id="cb17-7"><a href="competição-perfeita-e-monopólio.html#cb17-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">colnames</span>(dataCAL)[<span class="dv">202</span><span class="sc">:</span><span class="dv">207</span>], <span class="fu">colnames</span>(dataCAL)[<span class="dv">208</span><span class="sc">:</span><span class="dv">230</span>],<span class="fu">colnames</span>(dataCAL)[<span class="dv">196</span><span class="sc">:</span><span class="dv">199</span>])</span>
+<span id="cb17-8"><a href="competição-perfeita-e-monopólio.html#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="competição-perfeita-e-monopólio.html#cb17-9" aria-hidden="true" tabindex="-1"></a>weather<span class="ot">=</span><span class="fu">paste</span>(weather_names, <span class="at">collapse=</span><span class="st">&quot;+&quot;</span>)</span>
+<span id="cb17-10"><a href="competição-perfeita-e-monopólio.html#cb17-10" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
 <pre><code>## [1] &quot;hight101+lowt101+hight102+lowt102+hight103+lowt103+hight104+lowt104+hight105+lowt105+hight106+lowt106+hight107+lowt107+hight108+lowt108+hight109+lowt109+hight110+lowt110+hight301+lowt301+hight302+lowt302+hight303+lowt303+hight304+lowt304+hight305+lowt305+hight306+lowt306+hight307+lowt307+hight308+lowt308+hight309+lowt309+hight310+lowt310+hight401+lowt401+hight402+lowt402+hight403+lowt403+hight404+lowt404+hight405+lowt405+hight406+lowt406+hight407+lowt407+hight408+lowt408+hight409+lowt409+hight410+lowt410+hight411+lowt411+hight412+lowt412+hight413+lowt413+hight414+lowt414+hight415+lowt415+hight416+lowt416+hight417+lowt417+hight418+lowt418+hight419+lowt419+lhight101+lhight102+lhight103+lhight104+lhight105+lhight106+lhight107+lhight108+lhight109+lhight110+llowt101+llowt102+llowt103+llowt104+llowt105+llowt106+llowt107+llowt108+llowt109+llowt110+lhight301+lhight302+lhight303+lhight304+lhight305+lhight306+lhight307+lhight308+lhight309+lhight310+llowt301+llowt302+llowt303+llowt304+llowt305+llowt306+llowt307+llowt308+llowt309+llowt310+lhight401+lhight402+lhight403+lhight404+lhight405+lhight406+lhight407+lhight408+lhight409+lhight410+lhight411+lhight412+lhight413+lhight414+lhight415+lhight416+lhight417+lhight418+lhight419+llowt401+llowt402+llowt403+llowt404+llowt405+llowt406+llowt407+llowt408+llowt409+llowt410+llowt411+llowt412+llowt413+llowt414+llowt415+llowt416+llowt417+llowt418+llowt419+TUE+WED+THU+FRI+SAT+SUN+HR1+HR2+HR3+HR4+HR5+HR6+HR7+HR8+HR9+HR10+HR11+HR12+HR13+HR14+HR15+HR16+HR17+HR18+HR19+HR20+HR21+HR22+HR23+MY199906+MY199907+MY199908+MY199909&quot;</code></pre>
 <p>Aqui para estimar esta equação, eles utilizam o método de Variáveis Instrumentais, que eu usei a função <code>ivreg</code> do Pacote <code>AER</code>. Para o método funcionar, precisamos de pelo menos uma variável que seja correlacionada com a que suspeitamos endógena e que não seja correlacionada com o termo erro da equação de interesse. O instrumento que eles utilizam é a quantidade total de energia sendo transacionada (que está como <code>load</code>).</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1">spec=<span class="kw">as.formula</span>(<span class="kw">paste</span>(<span class="st">&quot;fringe~price+&quot;</span>,weather,<span class="st">&quot;| load+&quot;</span>, weather, <span class="dt">collapse=</span><span class="st">&quot;&quot;</span>))</a>
-<a class="sourceLine" id="cb19-2" title="2"></a>
-<a class="sourceLine" id="cb19-3" title="3">model01=<span class="kw">ivreg</span>(spec, <span class="dt">data=</span>dataCAL)</a>
-<a class="sourceLine" id="cb19-4" title="4"><span class="kw">summary</span>(model01)</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="competição-perfeita-e-monopólio.html#cb19-1" aria-hidden="true" tabindex="-1"></a>spec<span class="ot">=</span><span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">&quot;fringe~price+&quot;</span>,weather,<span class="st">&quot;| load+&quot;</span>, weather, <span class="at">collapse=</span><span class="st">&quot;&quot;</span>))</span>
+<span id="cb19-2"><a href="competição-perfeita-e-monopólio.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="competição-perfeita-e-monopólio.html#cb19-3" aria-hidden="true" tabindex="-1"></a>model01<span class="ot">=</span><span class="fu">ivreg</span>(spec, <span class="at">data=</span>dataCAL)</span>
+<span id="cb19-4"><a href="competição-perfeita-e-monopólio.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model01)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## ivreg(formula = spec, data = dataCAL)
@@ -714,18 +751,18 @@ Em que:</p>
 <p>Podemos notar que o coeficiente da variável preço, <code>price</code> é altamente significante. Mas ainda não temos uma elasticidade, porque a variável independente está em log e a variável dependente está em nível. Para isso, precisamos dividir pela variável dependente.</p>
 <p>A elasticidade-preço da demanda residual é o próximo passo. Para isso, os autores fazem a seguinte premissa: uma vez que a demanda é inelástica a preço naquela hora, a demanda residual é simplesmente a Demanda Total (constante) MENOS a oferta da franja. Portanto, a inclinação da curva de demanda residual é simplesmente o negativo da inclinação da curva de oferta da franja.</p>
 <p>O autor faz um passo adicional (um termo AR(1) nos resíduos), que eu não vou mostrar aqui mas está no arquivo <code>03-BushnellReplication.R</code> no diretório <code>codes</code>. Aqui, vou fazer diretamente a partir do modelo que estimamos acima.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1">dataCAL =<span class="st"> </span>dataCAL <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb21-2" title="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">resdem=</span><span class="kw">exp</span>(load)<span class="op">-</span>fringe)</a>
-<a class="sourceLine" id="cb21-3" title="3"></a>
-<a class="sourceLine" id="cb21-4" title="4">mval=<span class="kw">mean</span>(dataCAL<span class="op">$</span>resdem, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb21-5" title="5"></a>
-<a class="sourceLine" id="cb21-6" title="6">elast=<span class="op">-</span>model01<span class="op">$</span>coefficients[<span class="dv">2</span>]<span class="op">/</span>mval</a>
-<a class="sourceLine" id="cb21-7" title="7">elast</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="competição-perfeita-e-monopólio.html#cb21-1" aria-hidden="true" tabindex="-1"></a>dataCAL <span class="ot">=</span> dataCAL <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="competição-perfeita-e-monopólio.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">resdem=</span><span class="fu">exp</span>(load)<span class="sc">-</span>fringe)</span>
+<span id="cb21-3"><a href="competição-perfeita-e-monopólio.html#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="competição-perfeita-e-monopólio.html#cb21-4" aria-hidden="true" tabindex="-1"></a>mval<span class="ot">=</span><span class="fu">mean</span>(dataCAL<span class="sc">$</span>resdem, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb21-5"><a href="competição-perfeita-e-monopólio.html#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="competição-perfeita-e-monopólio.html#cb21-6" aria-hidden="true" tabindex="-1"></a>elast<span class="ot">=</span><span class="sc">-</span>model01<span class="sc">$</span>coefficients[<span class="dv">2</span>]<span class="sc">/</span>mval</span>
+<span id="cb21-7"><a href="competição-perfeita-e-monopólio.html#cb21-7" aria-hidden="true" tabindex="-1"></a>elast</span></code></pre></div>
 <pre><code>##      price 
 ## -0.7653193</code></pre>
 <p>Parece exótico, não é? Mas para vocês se darem conta de que isso não é tão distante assim, a figura a seguir mostra um email que foi encontrado em várias empresas que faziam um cartel de Sal Marinho durante a década passada:</p>
 <div class="figure">
-<img src="DemandaResidualCARTELSAL.png" alt="E-mal Obtido nos Computadores das empresas do Cartel do Sal" />
+<img src="DemandaResidualCARTELSAL.png" alt="" />
 <p class="caption">E-mal Obtido nos Computadores das empresas do Cartel do Sal</p>
 </div>
 
@@ -733,15 +770,15 @@ Em que:</p>
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-bushnell2008vertical">
-<p>Bushnell, James B, Erin T Mansur, and Celeste Saravia. 2008. “Vertical Arrangements, Market Structure, and Competition: An Analysis of Restructured Us Electricity Markets.” <em>American Economic Review</em> 98 (1): 237–66.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bushnell2008vertical" class="csl-entry">
+Bushnell, James B, Erin T Mansur, and Celeste Saravia. 2008. <span>“Vertical Arrangements, Market Structure, and Competition: An Analysis of Restructured US Electricity Markets.”</span> <em>American Economic Review</em> 98 (1): 237–66.
 </div>
-<div id="ref-FriedmanOstroy1995">
-<p>Friedman, Daniel, and Joseph Ostroy. 1995. “Competitivity in Auction Markets: An Experimental and Theoretical Investigation.” <em>The Economic Journal</em> 105 (428): 22–53.</p>
+<div id="ref-FriedmanOstroy1995" class="csl-entry">
+Friedman, Daniel, and Joseph Ostroy. 1995. <span>“Competitivity in Auction Markets: An Experimental and Theoretical Investigation.”</span> <em>The Economic Journal</em> 105 (428): 22–53.
 </div>
-<div id="ref-smith1962experimental">
-<p>Smith, Vernon L. 1962. “An Experimental Study of Competitive Market Behavior.” <em>Journal of Political Economy</em> 70 (2): 111–37.</p>
+<div id="ref-smith1962experimental" class="csl-entry">
+Smith, Vernon L. 1962. <span>“An Experimental Study of Competitive Market Behavior.”</span> <em>Journal of Political Economy</em> 70 (2): 111–37.
 </div>
 </div>
             </section>

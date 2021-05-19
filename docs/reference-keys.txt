@@ -1,3 +1,4 @@
+fig:porter03
 apresentação
 funções-custo
 introdução
@@ -26,6 +27,7 @@ cartel
 história-o-cartel-dos-geradores-de-eletricidade
 teoria-jogos-repetidos
 brasil-legislação-contra-carteis
+exercício-empírico-o-joint-executive-committee
 oligopólio
 resultado-geral
 exemplo-demanda-linear

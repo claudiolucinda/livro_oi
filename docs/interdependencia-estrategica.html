@@ -24,7 +24,7 @@
 <meta name="author" content="Claudio Ribeiro de Lucinda" />
 
 
-<meta name="date" content="2021-05-10" />
+<meta name="date" content="2021-05-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="competição-perfeita-e-monopólio.html"/>
 <link rel="next" href="modelo-de-mankiw-e-whinston.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -55,25 +56,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -82,9 +85,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="lib/css/style.css" type="text/css" />
@@ -137,37 +162,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Apresentação</a></li>
-<li class="chapter" data-level="2" data-path="funções-custo.html"><a href="funções-custo.html"><i class="fa fa-check"></i><b>2</b> Funções Custo</a><ul>
+<li class="chapter" data-level="2" data-path="funções-custo.html"><a href="funções-custo.html"><i class="fa fa-check"></i><b>2</b> Funções Custo</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="funções-custo.html"><a href="funções-custo.html#introdução"><i class="fa fa-check"></i><b>2.1</b> Introdução</a></li>
-<li class="chapter" data-level="2.2" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-produção-e-de-custo-conhecidas"><i class="fa fa-check"></i><b>2.2</b> Funções de Produção e de Custo conhecidas</a><ul>
+<li class="chapter" data-level="2.2" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-produção-e-de-custo-conhecidas"><i class="fa fa-check"></i><b>2.2</b> Funções de Produção e de Custo conhecidas</a>
+<ul>
 <li class="chapter" data-level="2.2.1" data-path="funções-custo.html"><a href="funções-custo.html#cobb-douglas"><i class="fa fa-check"></i><b>2.2.1</b> Cobb-Douglas</a></li>
 <li class="chapter" data-level="2.2.2" data-path="funções-custo.html"><a href="funções-custo.html#ces"><i class="fa fa-check"></i><b>2.2.2</b> CES</a></li>
 <li class="chapter" data-level="2.2.3" data-path="funções-custo.html"><a href="funções-custo.html#leontief"><i class="fa fa-check"></i><b>2.2.3</b> Leontief</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="funções-custo.html"><a href="funções-custo.html#medidas-de-economias-de-escala-e-economias-de-escopo"><i class="fa fa-check"></i><b>2.3</b> Medidas de Economias de Escala e Economias de Escopo</a><ul>
+<li class="chapter" data-level="2.3" data-path="funções-custo.html"><a href="funções-custo.html#medidas-de-economias-de-escala-e-economias-de-escopo"><i class="fa fa-check"></i><b>2.3</b> Medidas de Economias de Escala e Economias de Escopo</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="funções-custo.html"><a href="funções-custo.html#empresas-multiproduto"><i class="fa fa-check"></i><b>2.3.1</b> Empresas Multiproduto</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="funções-custo.html"><a href="funções-custo.html#funções-de-custo-empíricas"><i class="fa fa-check"></i><b>2.4</b> Funções de Custo Empíricas</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html"><i class="fa fa-check"></i><b>3</b> Competição Perfeita e Monopólio</a><ul>
+<li class="chapter" data-level="3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html"><i class="fa fa-check"></i><b>3</b> Competição Perfeita e Monopólio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#introdução-1"><i class="fa fa-check"></i><b>3.1</b> Introdução</a></li>
-<li class="chapter" data-level="3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#competição-e-competição-perfeita"><i class="fa fa-check"></i><b>3.2</b> Competição e Competição Perfeita</a><ul>
+<li class="chapter" data-level="3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#competição-e-competição-perfeita"><i class="fa fa-check"></i><b>3.2</b> Competição e Competição Perfeita</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#equilíbrio-em-competição-perfeita"><i class="fa fa-check"></i><b>3.2.1</b> Equilíbrio em Competição Perfeita</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio"><i class="fa fa-check"></i><b>3.3</b> Monopólio</a><ul>
+<li class="chapter" data-level="3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio"><i class="fa fa-check"></i><b>3.3</b> Monopólio</a>
+<ul>
 <li class="chapter" data-level="3.3.1" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopólio-versão-tradicional"><i class="fa fa-check"></i><b>3.3.1</b> Monopólio – Versão tradicional</a></li>
 <li class="chapter" data-level="3.3.2" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#monopsônio"><i class="fa fa-check"></i><b>3.3.2</b> Monopsônio</a></li>
 <li class="chapter" data-level="3.3.3" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#firma-dominante-franja-competitiva"><i class="fa fa-check"></i><b>3.3.3</b> Firma Dominante – Franja Competitiva</a></li>
 <li class="chapter" data-level="3.3.4" data-path="competição-perfeita-e-monopólio.html"><a href="competição-perfeita-e-monopólio.html#econometria-estimando-a-demanda-residual-por-eletricidade"><i class="fa fa-check"></i><b>3.3.4</b> Econometria: Estimando a Demanda Residual por Eletricidade</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html"><i class="fa fa-check"></i><b>4</b> Interdependencia Estrategica</a><ul>
-<li class="chapter" data-level="4.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#cartel"><i class="fa fa-check"></i><b>4.1</b> Cartel</a><ul>
+<li class="chapter" data-level="4" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html"><i class="fa fa-check"></i><b>4</b> Interdependencia Estrategica</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#cartel"><i class="fa fa-check"></i><b>4.1</b> Cartel</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#história-o-cartel-dos-geradores-de-eletricidade"><i class="fa fa-check"></i><b>4.1.1</b> História – o cartel dos geradores de eletricidade</a></li>
 <li class="chapter" data-level="4.1.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#teoria-jogos-repetidos"><i class="fa fa-check"></i><b>4.1.2</b> Teoria: Jogos Repetidos</a></li>
 <li class="chapter" data-level="4.1.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#brasil-legislação-contra-carteis"><i class="fa fa-check"></i><b>4.1.3</b> Brasil: Legislação Contra Carteis</a></li>
+<li class="chapter" data-level="4.1.4" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#exercício-empírico-o-joint-executive-committee"><i class="fa fa-check"></i><b>4.1.4</b> Exercício Empírico – o <em>Joint Executive Committee</em></a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#oligopólio"><i class="fa fa-check"></i><b>4.2</b> Oligopólio</a><ul>
+<li class="chapter" data-level="4.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#oligopólio"><i class="fa fa-check"></i><b>4.2</b> Oligopólio</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#resultado-geral"><i class="fa fa-check"></i><b>4.2.1</b> Resultado geral</a></li>
 <li class="chapter" data-level="4.2.2" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#exemplo-demanda-linear"><i class="fa fa-check"></i><b>4.2.2</b> Exemplo: Demanda Linear</a></li>
 <li class="chapter" data-level="4.2.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#modelo-de-cournot-com-muitas-firmas"><i class="fa fa-check"></i><b>4.2.3</b> Modelo de Cournot com muitas firmas</a></li>
@@ -177,11 +212,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.7" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#bertrand-multiproduto"><i class="fa fa-check"></i><b>4.2.7</b> Bertrand Multiproduto</a></li>
 <li class="chapter" data-level="4.2.8" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#bertrand-com-restrições-de-capacidade"><i class="fa fa-check"></i><b>4.2.8</b> Bertrand com restrições de capacidade</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#modelos-sequenciais-stackelberg"><i class="fa fa-check"></i><b>4.3</b> Modelos Sequenciais: Stackelberg</a><ul>
+<li class="chapter" data-level="4.3" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#modelos-sequenciais-stackelberg"><i class="fa fa-check"></i><b>4.3</b> Modelos Sequenciais: Stackelberg</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="interdependencia-estrategica.html"><a href="interdependencia-estrategica.html#apresentação-do-modelo"><i class="fa fa-check"></i><b>4.3.1</b> Apresentação do modelo</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html"><i class="fa fa-check"></i><b>5</b> Modelo de Mankiw e Whinston</a><ul>
+<li class="chapter" data-level="5" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html"><i class="fa fa-check"></i><b>5</b> Modelo de Mankiw e Whinston</a>
+<ul>
 <li class="chapter" data-level="5.0.1" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html#bens-homogêneos"><i class="fa fa-check"></i><b>5.0.1</b> Bens Homogêneos</a></li>
 <li class="chapter" data-level="5.0.2" data-path="modelo-de-mankiw-e-whinston.html"><a href="modelo-de-mankiw-e-whinston.html#produtos-diferenciados"><i class="fa fa-check"></i><b>5.0.2</b> Produtos Diferenciados</a></li>
 </ul></li>
@@ -206,9 +243,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="interdependencia-estrategica" class="section level1">
+<div id="interdependencia-estrategica" class="section level1" number="4">
 <h1><span class="header-section-number">Capitulo 4</span> Interdependencia Estrategica</h1>
-<div id="cartel" class="section level2">
+<div id="cartel" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Cartel</h2>
 <p>Nesta seção, vamos falar de uma situação em que (1) existem poucas empresas e (2) elas reconhecem esta interdependência e trabalham de forma coordenada para maximizar seus lucros conjuntos.</p>
 <p>O grande dilema é como fazer isso funcionar, por duas razões:</p>
@@ -232,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Outro mecanismo que é muito comum e muito empregado para aumentar a ``vida útil’’ dos carteis é o emprego de empresas/associações patronais para permitir que um terceiro realize as atividades de observação dos seus companheiros de cartel. Afinal de contas, não se pode confiar nos seus colegas de crime (pois cartel é crime em muitas jurisdições) para garantir que as ações sejam observadas de forma imparcial, né?</p>
 <p>Um exemplo de empresa que (em sua encarnação anterior, AC Treuhand) realizou muitos dos trabalhos necessários para a manutenção de carteis é a ARCO <a href="https://arco.swiss/en">link</a>.</p>
 <p><strong>Disclaimer</strong>: Não estou afirmando que esta empresa se envolve em atividades acessórias a crimes de cartel; todavia, nas mãos de um grupo de empresas mal intencionadas, cada um dos serviços ali apresentados pode ser utilizado para aumentar a observabilidade das ações dos comparsas em um cartel.</p>
-<div id="história-o-cartel-dos-geradores-de-eletricidade" class="section level3">
+<div id="história-o-cartel-dos-geradores-de-eletricidade" class="section level3" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> História – o cartel dos geradores de eletricidade</h3>
 <p>Este é um texto baseado em parte em um box que está no livro do Carlton e Perloff, sobre o mercado de geradores de eletricidade nos Estados Unidos, ao longo das décadas de 50, 60 e 70.</p>
 <p>Nos anos 50, existiam três empresas no mercado de turbinas geradoras de energia:
@@ -269,7 +306,7 @@ iguais aos vigentes;</li>
 </ul>
 <p>Com isso, eles conseguiram elevar suas margens novamente, até serem acusados de cartel novamente nos anos 70.</p>
 </div>
-<div id="teoria-jogos-repetidos" class="section level3">
+<div id="teoria-jogos-repetidos" class="section level3" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> Teoria: Jogos Repetidos</h3>
 <p>Para que possamos entender teoricamente porque arranjos como o da subseção anterior funcionam, precisamos nos dar conta que a interação estratégica entre as empresas é repetida. Ou seja, ainda que a decisão de preços ou quantidades produzidas tem que ser tomada em cada instante do tempo, o fato é que a empresa vai conviver de forma indefinida com esses oponentes. Neste sentido, o <em>payoff</em> da ação é um valor presente líquido, descontado de acordo com uma taxa que reflita o risco e a expectativa de duração da interação.
 Neste sentido, vamos supor que a ação envolve duas coisas – sair do conluio ou se manter nele. Caso a empresa decida se manter no cartel, o valor presente dos lucros seria então:</p>
@@ -306,7 +343,7 @@ prova formal do mesmo. Rubinstein (1979) propôs uma prova formal do resultado.<
 <li>O fator de desconto é mais baixo – ou seja, o futuro é mais valioso.</li>
 </ul>
 </div>
-<div id="brasil-legislação-contra-carteis" class="section level3">
+<div id="brasil-legislação-contra-carteis" class="section level3" number="4.1.3">
 <h3><span class="header-section-number">4.1.3</span> Brasil: Legislação Contra Carteis</h3>
 <p>Nesta seção, será revisada a jurisprudência existente sobre carteis. Conforme o art. 37 da Lei 12.529/2001, conforme apresentado por (CADE, 2020) temos as seguintes diretrizes para o estabelecimento de multas:</p>
 <p>“I - no caso de empresa, multa de 0,1% (um décimo por cento) a 20% (vinte por cento) do valor do faturamento bruto da empresa, grupo ou conglomerado obtido, no último exercício anterior à instauração do processo administrativo, no ramo de atividade empresarial em que ocorreu a infração, a qual nunca será inferior à vantagem auferida, quando for possível sua estimação;</p>
@@ -366,11 +403,146 @@ Quanto à definição de ramo de atividade empresarial, a Resolução do CADE 3/
 <li>Em quatro casos já existiam ações de reparação de danos correndo em paralelo à decisão do CADE.</li>
 </ul>
 </div>
+<div id="exercício-empírico-o-joint-executive-committee" class="section level3" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Exercício Empírico – o <em>Joint Executive Committee</em></h3>
+<p>Vamos agora falar de um paper clássico de Rob Porter de 1983 <span class="citation">(<a href="#ref-porter1983study" role="doc-biblioref">Porter 1983</a>)</span> – ``A study in cartel stability: The Joint Executive Committee’’. A ideia do artigo é testar empiricamente uma afirmação clássica de carteis – que são instáveis e que ao longo do tempo você deve observar mudanças de comportamento de colusão (cartel) para competição.</p>
+<p>Para isso, o autor usa dados do mercado de frete ferroviário de um cartel. Sobre o funcionamento do artigo, segue a descrição do mesmo retirada diretamente do artigo (em tradução):</p>
+<p>``O JEC era um cartel que controlava os embarques de carga para o leste de Chicago para a costa atlântica na década de 1880. Foi formada em abril de 1879 por um acordo das ferrovias envolvidas no mercado. As empresas envolvidas reconheceram publicamente esse acordo, pois ele precedeu a aprovação do Sherman Act (1890) e a formação da Interstate Commerce Commission (1887), que iniciaram a legislação Antitruste nos Estados unidos. Um acordo separado foi feito para carregamentos para o oeste nas mesmas linhas ferroviárias, principalmente por causa das diferenças físicas essenciais dos produtos sendo transportados.</p>
+<p>O mecanismo de organização interna adotado pelo JEC era uma variante da estratégia de gatilho. De acordo com Ulen, houve vários casos em que o cartel pensou que tinha ocorrido trapaça, cortou os preços por um tempo e depois voltou ao preço do conluio’’ (<span class="citation">(<a href="#ref-porter1983study" role="doc-biblioref">Porter 1983</a>)</span>, págs. 302-303)</p>
+<p>Os autores vão estimar um sistema de equações de oferta e demanda para identificar o efeito do cartel. Do lado de demanda, a equação tem a seguinte forma:</p>
+<p><span class="math display">\[
+log Q_{t}=\alpha_{0}+\alpha_{1}log p_{t} + \alpha_{2}L_{t}+\varepsilon_{t}
+\]</span></p>
+<p>Em que <span class="math inline">\(\alpha_{1}\)</span> é a elasticidade-preço da demanda e <span class="math inline">\(L_{t}\)</span> é uma variável <em>dummy</em> com o valor de 1 caso a rota de hidrovia pelos grandes lagos esteja aberta.</p>
+<p>A equação de oferta é dada por:</p>
+<p><span class="math display">\[
+log p_{t}=\beta_{0}+\beta_{1}log Q_{t} + \beta_{2} S_{t} + \beta_{3} I_{t} + \varepsilon_{st}
+\]</span></p>
+<p>Em que <span class="math inline">\(S_{t}\)</span> é um conjunto de <em>dummies</em> que refletem entrada e saída do mercado, e <span class="math inline">\(I_{t}\)</span> uma <em>dummy</em> que reflete quando o cartel está ativo. O autor, na página 305, afirma que o valor do coeficiente <span class="math inline">\(\beta_{3}\)</span> tem que ser positivo e um pouco menor que <span class="math inline">\(log \left(\frac{\alpha_{1}}{1+\alpha_{1}} \right)\)</span>. As duas equações – demanda e oferta – também incluem <em>dummies</em> de mês, que não são inclusas na apresentação do paper (não sei porquê).</p>
+<p>Agora passemos à estimação propriamente dita desse sistema. Iremos usar o método dos Mínimos Quadrados a Dois estágios. Começamos subindo os pacotes usuais, e depois a gente começa a análise.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="interdependencia-estrategica.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readstata13)</span>
+<span id="cb23-2"><a href="interdependencia-estrategica.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb23-3"><a href="interdependencia-estrategica.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span>
+<span id="cb23-4"><a href="interdependencia-estrategica.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb23-5"><a href="interdependencia-estrategica.html#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="interdependencia-estrategica.html#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb23-7"><a href="interdependencia-estrategica.html#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="interdependencia-estrategica.html#cb23-8" aria-hidden="true" tabindex="-1"></a>data<span class="ot">=</span><span class="fu">read.delim</span>(<span class="st">&quot;./codes/porter.out&quot;</span>, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
+<p>Neste banco de dados, temos as seguintes variáveis:</p>
+<ul>
+<li><span class="math inline">\(GR\)</span> - Grain Rate, em dólares por 100 libras.</li>
+<li><span class="math inline">\(TQG\)</span> - Total de grão transportado (em toneladas).</li>
+<li><span class="math inline">\(LAKES\)</span> - Variável <em>dummy</em>, indicando se os Grandes Lagos estão abertos para navegação.</li>
+<li><span class="math inline">\(PO\)</span> - Variável indicado quebra do cartel, com o valor de 1 se há aviso de quebra do cartel na <strong>Railway Review</strong>, e zero caso contrário.</li>
+<li><span class="math inline">\(DM1\)</span> - <em>dummy</em> com o valor de 1 da semana 28 em 1880 e 10 de 1883 - refletindo a entrada da <strong>Grand Turk Railway</strong></li>
+<li><span class="math inline">\(DM2\)</span> - <em>dummy</em> com o valor de 1 da semana 26 de 1883 a semana 11 em 1886 - refletindo a entrada da <strong>Chicago and Atlantic</strong></li>
+<li><span class="math inline">\(DM3\)</span> - <em>dummy</em> com o valor de 1 da semana 12 a 26 de 1886 - quando a <strong>Chicago and Atlantic</strong> saiu do JEC</li>
+</ul>
+<p>O passo seguinte envolve a construção das variáveis relevantes para o modelo econométrico:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="interdependencia-estrategica.html#cb24-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="interdependencia-estrategica.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">logq=</span><span class="fu">log</span>(tqg), <span class="at">logp=</span><span class="fu">log</span>(gr), <span class="at">po_price=</span>po<span class="sc">*</span>logp, <span class="at">lakes_dm1=</span>lakes<span class="sc">*</span>dm1,</span>
+<span id="cb24-3"><a href="interdependencia-estrategica.html#cb24-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">lakes_dm2=</span>lakes<span class="sc">*</span>dm2, <span class="at">lakes_dm3=</span>lakes<span class="sc">*</span>dm3, <span class="at">lakes_dm4=</span>lakes<span class="sc">*</span>dm4,</span>
+<span id="cb24-4"><a href="interdependencia-estrategica.html#cb24-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">lakes_po=</span>lakes<span class="sc">*</span>po)</span></code></pre></div>
+<p>Podemos plotar os dados, criando uma figura igual à da página 311 do paper:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="interdependencia-estrategica.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>week, <span class="at">y=</span>gr)) <span class="sc">+</span></span>
+<span id="cb25-2"><a href="interdependencia-estrategica.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<div class="figure"><span id="fig:porter03"></span>
+<img src="livro_files/figure-html/porter03-1.png" alt="Evolução dos Preços" width="672" />
+<p class="caption">
+Figure 4.1: Evolução dos Preços
+</p>
 </div>
-<div id="oligopólio" class="section level2">
+<p>A figura acima mostra que temos épocas em que os preços caem pra abaixo da metade dos valores correspondentes ao comportamento de cartel. E eles conseguem marcar essas épocas como relacionadas aos avisos de ``quebra’’ do cartel na revista da associação.</p>
+<p>O passo seguinte é estimar as equações de Demanda e Oferta, correspondentes às duas primeiras colunas da Tabela 3 do paper de <span class="citation">(<a href="#ref-porter1983study" role="doc-biblioref">Porter 1983</a>)</span>. Estimaremos as equações separadamente por Variáveis Instrumentais (os autores usam o nome mais antigo de Mínimos Quadrados a dois Estágios).</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="interdependencia-estrategica.html#cb26-1" aria-hidden="true" tabindex="-1"></a>demand<span class="ot">=</span><span class="fu">ivreg</span>(logq<span class="sc">~</span>logp<span class="sc">+</span>lakes<span class="sc">+</span>t1<span class="sc">+</span>t2<span class="sc">+</span>t3<span class="sc">+</span>t4<span class="sc">+</span>t5<span class="sc">+</span>t6<span class="sc">+</span>t7<span class="sc">+</span>t8<span class="sc">+</span>t9<span class="sc">+</span>t10<span class="sc">+</span>t11<span class="sc">+</span>t12 <span class="sc">|</span></span>
+<span id="cb26-2"><a href="interdependencia-estrategica.html#cb26-2" aria-hidden="true" tabindex="-1"></a>               dm1<span class="sc">+</span>dm2<span class="sc">+</span>dm3<span class="sc">+</span>dm4<span class="sc">+</span>po<span class="sc">+</span>lakes<span class="sc">+</span>t1<span class="sc">+</span>t2<span class="sc">+</span>t3<span class="sc">+</span>t4<span class="sc">+</span>t5<span class="sc">+</span>t6<span class="sc">+</span>t7<span class="sc">+</span>t8<span class="sc">+</span>t9<span class="sc">+</span>t10<span class="sc">+</span>t11<span class="sc">+</span>t12, <span class="at">data=</span>data)</span>
+<span id="cb26-3"><a href="interdependencia-estrategica.html#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="interdependencia-estrategica.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(demand)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## ivreg(formula = logq ~ logp + lakes + t1 + t2 + t3 + t4 + t5 + 
+##     t6 + t7 + t8 + t9 + t10 + t11 + t12 | dm1 + dm2 + dm3 + dm4 + 
+##     po + lakes + t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + 
+##     t10 + t11 + t12, data = data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.38281 -0.25400  0.06989  0.27617  1.07333 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  9.17716    0.18385  49.916  &lt; 2e-16 ***
+## logp        -0.73494    0.11994  -6.128 2.68e-09 ***
+## lakes       -0.43729    0.12024  -3.637 0.000323 ***
+## t1          -0.13204    0.11120  -1.187 0.235965    
+## t2           0.07704    0.11192   0.688 0.491739    
+## t3           0.12174    0.11194   1.088 0.277615    
+## t4           0.15419    0.11099   1.389 0.165737    
+## t5           0.09443    0.13093   0.721 0.471286    
+## t6           0.02452    0.16121   0.152 0.879206    
+## t7           0.09627    0.16215   0.594 0.553143    
+## t8          -0.25972    0.16176  -1.606 0.109368    
+## t9          -0.02256    0.16210  -0.139 0.889390    
+## t10          0.13405    0.16476   0.814 0.416473    
+## t11          0.18844    0.16226   1.161 0.246377    
+## t12          0.20235    0.16025   1.263 0.207628    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.3981 on 313 degrees of freedom
+## Multiple R-Squared: 0.3097,  Adjusted R-squared: 0.2788 
+## Wald test: 8.531 on 14 and 313 DF,  p-value: 1.233e-15</code></pre>
+<p>Podemos ver, como no paper, que a elasticidade-preço da demanda é de -0.73, da mesma forma que no paper. Agora olhemos pro lado da oferta:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="interdependencia-estrategica.html#cb28-1" aria-hidden="true" tabindex="-1"></a>supply<span class="ot">=</span><span class="fu">ivreg</span>(logp<span class="sc">~</span>logq<span class="sc">+</span>dm1<span class="sc">+</span>dm2<span class="sc">+</span>dm3<span class="sc">+</span>dm4<span class="sc">+</span>po<span class="sc">+</span>t1<span class="sc">+</span>t2<span class="sc">+</span>t3<span class="sc">+</span>t4<span class="sc">+</span>t5<span class="sc">+</span>t6<span class="sc">+</span>t7<span class="sc">+</span>t8<span class="sc">+</span>t9<span class="sc">+</span>t10<span class="sc">+</span>t11<span class="sc">+</span>t12 <span class="sc">|</span></span>
+<span id="cb28-2"><a href="interdependencia-estrategica.html#cb28-2" aria-hidden="true" tabindex="-1"></a>               lakes<span class="sc">++</span>dm1<span class="sc">+</span>dm2<span class="sc">+</span>dm3<span class="sc">+</span>dm4<span class="sc">+</span>po<span class="sc">+</span>t1<span class="sc">+</span>t2<span class="sc">+</span>t3<span class="sc">+</span>t4<span class="sc">+</span>t5<span class="sc">+</span>t6<span class="sc">+</span>t7<span class="sc">+</span>t8<span class="sc">+</span>t9<span class="sc">+</span>t10<span class="sc">+</span>t11<span class="sc">+</span>t12, <span class="at">data=</span>data)</span>
+<span id="cb28-3"><a href="interdependencia-estrategica.html#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="interdependencia-estrategica.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(supply)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## ivreg(formula = logp ~ logq + dm1 + dm2 + dm3 + dm4 + po + t1 + 
+##     t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11 + t12 | 
+##     lakes + +dm1 + dm2 + dm3 + dm4 + po + t1 + t2 + t3 + t4 + 
+##         t5 + t6 + t7 + t8 + t9 + t10 + t11 + t12, data = data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.62580 -0.15968  0.02076  0.14085  0.60218 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -3.9750483  1.7781237  -2.236 0.026097 *  
+## logq         0.2529086  0.1730393   1.462 0.144876    
+## dm1         -0.2019134  0.0552972  -3.651 0.000306 ***
+## dm2         -0.1726670  0.0805900  -2.143 0.032931 *  
+## dm3         -0.3186861  0.0647147  -4.924 1.38e-06 ***
+## dm4         -0.2081806  0.1721876  -1.209 0.227574    
+## po           0.3681081  0.0538476   6.836 4.35e-11 ***
+## t1           0.0296711  0.0717509   0.414 0.679505    
+## t2           0.0924901  0.0692067   1.336 0.182391    
+## t3           0.1296702  0.0711630   1.822 0.069398 .  
+## t4          -0.0006216  0.0815621  -0.008 0.993925    
+## t5          -0.0425715  0.0757193  -0.562 0.574368    
+## t6          -0.0431205  0.0902747  -0.478 0.633231    
+## t7          -0.0836778  0.0815187  -1.026 0.305465    
+## t8           0.0724364  0.1271474   0.570 0.569293    
+## t9           0.0410667  0.0988321   0.416 0.678050    
+## t10         -0.1105308  0.0774529  -1.427 0.154569    
+## t11         -0.0965937  0.0743072  -1.300 0.194596    
+## t12          0.0166324  0.0778148   0.214 0.830889    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2459 on 309 degrees of freedom
+## Multiple R-Squared: 0.3163,  Adjusted R-squared: 0.2764 
+## Wald test: 13.87 on 18 and 309 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Podemos ver que o coeficiente de interesse, o <span class="math inline">\(\beta_{3}\)</span> na equação de oferta, é estatisticamente diferente de zero, com estimativa pontual de 0.3681. Além disso, os preços no comportamento colusivo são maiores (em média 36.8%) e a entrada de competidores puxa os preços pra baixo.</p>
+<p>Finalmente, podemos calcular qual é o chamado <em>parâmetro de conduta</em> – ou seja, a expectativa de como os competidores irão responder a um aumento de uma unidade na sua quantidade produzida. Este parâmetro aqui é igual a 0.2263293. que se comporta de acordo com o que os autores esperam.</p>
+</div>
+</div>
+<div id="oligopólio" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Oligopólio</h2>
 <p>Iremos trabalhar um dos principais modelos para entender competição imperfeita, o Modelo de Cournot. Inicialmente iremos fazer uma demonstração mais geral, para depois especializarmos para uma demanda linear.</p>
-<div id="resultado-geral" class="section level3">
+<div id="resultado-geral" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Resultado geral</h3>
 <p>Vamos assumir que existam <span class="math inline">\(n\)</span> empresas neste mercado, cada uma indexada por <span class="math inline">\(i\)</span>. A decisão delas é sobre o quanto produzir, representada por <span class="math inline">\(q_{i}\)</span>. O custo marginal de produção é constante e não necessariamente idêntico entre as empresas.
 O preço de mercado é igual para todas as empresas e é o resultado da quantidade <strong>total</strong> produzida, <span class="math inline">\(P=f(\sum_{i=1}^{n} q_{i})=f(Q)\)</span>, de acordo com o que se espera de uma função demanda, <span class="math inline">\(f^{\prime}&lt;0\)</span>. Com essa definição, temos a seguinte expressão para a função receita marginal:</p>
@@ -408,7 +580,7 @@ P-CMg_{i}+q_{i}\times \frac{\partial P}{\partial Q}&amp;=0\\
 \]</span>
 Em que <span class="math inline">\(HHI\)</span> é o chamado Índice Herfindahl-Hirschman. Se as premissas do modelo de Cournot forem válidas (competição por quantidades, produtos homogêneos), uma forma de avaliar a competitividade em um mercado sem ter que descobrir quais seriam os custos marginais é simplesmente calcular o Índice Herfindahl-Hirschman.</p>
 </div>
-<div id="exemplo-demanda-linear" class="section level3">
+<div id="exemplo-demanda-linear" class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Exemplo: Demanda Linear</h3>
 <p>Vamos agora assumir uma demanda e custos marginais lineares, e duas empresas. A vantagem dessa abordagem é que ela permite que apresentamos as coisas de forma gráfica. Como anteriormente, vamos assumir que a demanda inversa é uma função das quantidades produzidas das duas empresas</p>
 <p><span class="math display">\[
@@ -453,7 +625,7 @@ P&amp;=\frac{a+c}{2}
 <p>Esta seria a quantidade de equilíbrio que um cartel que buscasse maximizar os lucros também produziria. Supondo firmas idênticas, teríamos <span class="math inline">\(q_{i}=\frac{a-c}{4b}\)</span>. O problema é que esta configuração não é um equilíbrio estável. Se as duas empresas estiverem produzindo isso, a melhor resposta de uma delas é aumentar um pouco sua produção.</p>
 <p>O segundo ponto interessante é que o modelo de Cournot mantém essa característica de ``caso intermediário’’ à medida em que variamos o número de empresas.</p>
 </div>
-<div id="modelo-de-cournot-com-muitas-firmas" class="section level3">
+<div id="modelo-de-cournot-com-muitas-firmas" class="section level3" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> Modelo de Cournot com muitas firmas</h3>
 <p>Usando a mesma forma de demanda e custos, apenas assumindo que as firmas são idênticas e que ao invés de duas, existem <span class="math inline">\(n\)</span> empresas. A função demanda fica sendo então:</p>
 <p><span class="math display">\[
@@ -484,7 +656,7 @@ P=&amp;\frac{a}{n+1}+c\frac{n}{n+1}
 <p>## Introdução</p>
 <p>Neste texto, iremos analisar o modelo inicialmente desenvolvido por Joseph Bertrand como uma resposta às conclusões do Modelo de Cournot. Dentro deste modelo, a principal variável estratégica utilizada são os preços cobrados pelas empresas envolvidas</p>
 </div>
-<div id="exposição-inicial" class="section level3">
+<div id="exposição-inicial" class="section level3" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> Exposição Inicial</h3>
 <p>Vamos supor a existência de duas firmas e que não exista diferenciação de produto. Ou seja, os produtos são substituíveis aos olhos do consumidor e, tendo em vista que eles conhecem os preços dos dois produtores, eles irão comprar do produtor de menor preço.
 Caso as duas empresas cobrem o mesmo preço, elas dividirão o mercado igualmente. Considerando uma função demanda de mercado dada por <span class="math inline">\(Q=D(P)\)</span>, e supondo que cada firma tenha um custo marginal constante e igual a <span class="math inline">\(c\)</span>, temos que a função lucro para a firma <span class="math inline">\(i=1,2\)</span> igual a:</p>
@@ -497,9 +669,9 @@ D_{i}=\begin{cases} D(p_{i}), \quad p_{i}&lt;p_{j}\\ \frac{D(p_{i})}{2}, \quad p
 0,\quad p_{i}&gt;p_{j} \end{cases}
 \]</span>
 Além disso, podemos afirmar que o lucro agregado de mercado, <span class="math inline">\(\pi_{1}+\pi_{2}\)</span> é menor do que o lucro que aconteceria se o mercado fosse monopolizado. Além disso, não há situação em que a empresa cobre um preço maior do que o custo marginal e ganhe lucros negativos. Estas duas premissas são necessárias somente para que a gente garanta que não exista uma configuração esquisita de mercado em que exista apenas uma empresa.</p>
-<div id="o-paradoxo-de-bertrand" class="section level4">
+<div id="o-paradoxo-de-bertrand" class="section level4" number="4.2.4.1">
 <h4><span class="header-section-number">4.2.4.1</span> O “Paradoxo de Bertrand”</h4>
-<p>Vamos mostrar agora um teorema, que deu margem ao chamado “Paradoxo de Bertrand”. Para esta demonstração, vamos usar novamente os conceitos de Teoria dos Jogos e caracterizar este equilíbrio como também um Equilíbrio de Nash.</p>
+<p>Vamos mostrar agora um teorema, que deu margem ao chamado “Paradoxo de Bertrand.” Para esta demonstração, vamos usar novamente os conceitos de Teoria dos Jogos e caracterizar este equilíbrio como também um Equilíbrio de Nash.</p>
 <p>Um equilíbrio de Nash é um conjunto de configurações de estratégias (no nosso caso, preços) tal que cada uma delas é uma melhor resposta às estratégias dos seus oponentes.</p>
 <p>Com isso, podemos afirmar o seguinte teorema:</p>
 <p><strong>O Jogo acima exposto somente admite um Equilíbrio de Nash em estratégias puras,em que cada empresa cobra um preço exatamente igual ao custo marginal, isto é, <span class="math inline">\(p_{1}^{*}=p_{2}^{*}=c\)</span></strong></p>
@@ -521,7 +693,7 @@ Vamos agora supor que <span class="math inline">\(p_{1}^{*}=p_{2}^{*}&gt;c\)</sp
 <p>Ao longo das próximas aulas, iremos falar de extensões deste modelos em todas as direções.</p>
 </div>
 </div>
-<div id="bertrand-com-produtos-diferenciados" class="section level3">
+<div id="bertrand-com-produtos-diferenciados" class="section level3" number="4.2.5">
 <h3><span class="header-section-number">4.2.5</span> Bertrand com Produtos Diferenciados</h3>
 <p>Vamos assumir que os produtos sejam diferenciados aos olhos dos consumidores. Tal diferenciação não necessariamente precisa coincidir com alguma caracterização física diferente.</p>
 <p>Suponhamos que a quantidade vendida pela empresa <span class="math inline">\(i\)</span> seja dada pela seguinte equação:</p>
@@ -543,7 +715,7 @@ q_{i}=\alpha-\beta p_{i} + \gamma p_{j}
 <p><span class="math display">\[
 p_{i}=\frac{\alpha+\gamma p_{j}+c\beta}{2\beta}
 \]</span></p>
-<p>Um ponto importante é que estas funções melhor resposta são positivamente inclinadas – ou seja, a melhor resposta a um preço maior do seu oponente é aumentar o seu preço. No modelo de Cournot essas funções melhor resposta eram negativamente inclinadas. Nesta literatura, quando temos as FMR positivamente inclinadas dizemos que as variáveis são “substitutos estratégicos”" e quando elas são negativas elas são “complementos estratégicos”. Podemos mostrar que esta diferença é importante quando passamos de um jogo simultâneo para um jogo sequencial.</p>
+<p>Um ponto importante é que estas funções melhor resposta são positivamente inclinadas – ou seja, a melhor resposta a um preço maior do seu oponente é aumentar o seu preço. No modelo de Cournot essas funções melhor resposta eram negativamente inclinadas. Nesta literatura, quando temos as FMR positivamente inclinadas dizemos que as variáveis são “substitutos estratégicos”" e quando elas são negativas elas são “complementos estratégicos.” Podemos mostrar que esta diferença é importante quando passamos de um jogo simultâneo para um jogo sequencial.</p>
 <p>Evidentemente, temos uma Função melhor resposta simétrica que gera um sistema de equações. Resolvendo o sistema associado e substituindo a Função Melhor Resposta da firma <span class="math inline">\(j\)</span> na FMR da firma <span class="math inline">\(i\)</span>, temos:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -572,7 +744,7 @@ q_{i}&amp;=\frac{\alpha\beta+c\beta(\gamma-\beta)}{2\beta-\gamma}
 </ul>
 <p>A intuição para estes resultados é a seguinte. Uma vez que na competição de Cournot as empresas esperam que as suas oponentes mantenham suas quantidades constantes, uma elevação unilateral das quantidades produzidas levará a uma redução nos preços, e por isso elas se abstêm de aumentar as quantidades. Por outro lado, na competição Bertrand, como as empresas assumem em suas funções melhor resposta que seus oponentes manterão seus preços constantes, elas aumentam mais sua produção, puxando os preços um pouco mais para baixo.</p>
 </div>
-<div id="jogos-sequenciais-em-bertrand" class="section level3">
+<div id="jogos-sequenciais-em-bertrand" class="section level3" number="4.2.6">
 <h3><span class="header-section-number">4.2.6</span> Jogos sequenciais em Bertrand</h3>
 <p>Neste caso, a derivação de um jogo sequencial para a competição de Bertrand com produtos diferenciados é que é pouco relevante. A mecânica é a mesma, resolvendo a FMR da seguidora e substituindo na função objetivo da empresa líder. No entanto, ocorre o seguinte resultado:</p>
 <ul>
@@ -582,11 +754,11 @@ q_{i}&amp;=\frac{\alpha\beta+c\beta(\gamma-\beta)}{2\beta-\gamma}
 </ul>
 <p>Intuitivamente, a lógica desta proposição é a seguinte. A empresa líder sabe que a seguidora irá cobrar preços um pouco mais baixos que ela. Portanto, sabendo disso, ela irá cobrar preços mais altos que no equilíbrio em jogos simultâneos, para evitar que a seguidora coloque um preço baixo demais e roube consumidores demais. Ou seja, as duas empresas cobram preços acima dos de equilíbrio no jogo simultâneo. Como a empresa seguidora vai cobrar o preço um pouco mais baixo que a empresa líder, ela tem os lucros relativamente maiores.</p>
 </div>
-<div id="bertrand-multiproduto" class="section level3">
+<div id="bertrand-multiproduto" class="section level3" number="4.2.7">
 <h3><span class="header-section-number">4.2.7</span> Bertrand Multiproduto</h3>
 <p>O <em>insight</em> deste tipo de modelo, com competição oligopolística com produtos diferenciados, é poderoso o suficiente para que possamos inclusive usá-lo para prever os efeitos que eventuais operações de fusão tem sobre os preços.</p>
 <p>Aqui adaptaremos um código que o pessoal do DOJ (<em>Department of Justice</em>) dos EUA utilizou no seu pacote <code>antitrust</code>. Vamos entender isso melhor.</p>
-<div id="caso-com-n-empresas-de-produto-único" class="section level4">
+<div id="caso-com-n-empresas-de-produto-único" class="section level4" number="4.2.7.1">
 <h4><span class="header-section-number">4.2.7.1</span> Caso com <span class="math inline">\(N\)</span> empresas de produto único</h4>
 <p>Vamos começar com o caso mais simples, onde existam <span class="math inline">\(N\)</span> empresas, potencialmente diferentes com seus custos marginais, cada uma produzindo apenas um bem. Neste caso, a função lucro de uma empresa <span class="math inline">\(i\)</span> é dada por:</p>
 <p><span class="math display">\[
@@ -607,7 +779,7 @@ q_{i}&amp;=\frac{\alpha\beta+c\beta(\gamma-\beta)}{2\beta-\gamma}
 <p><span class="math display">\[
 \mathbf{1}+(\mathbb{E}\odot \mathbf{I})(\mathbf{m})=\mathbf{0}
 \]</span></p>
-<p>Em que <span class="math inline">\(\mathbf{1}\)</span> é um vetor coluna de 1’s, <span class="math inline">\(\mathbb{E}\)</span> uma matriz <span class="math inline">\(N\times N\)</span> de elasticidades, <span class="math inline">\(\mathbf{I}\)</span> a matriz identidade e <span class="math inline">\(\mathbf{m}\)</span> um vetor coluna de índices de Lerner para cada um dos produtos. O operador <span class="math inline">\(\odot\)</span> é o chamado “Operador Hadamard”, ou multiplicação de matrizes elemento por elemento.
+<p>Em que <span class="math inline">\(\mathbf{1}\)</span> é um vetor coluna de 1’s, <span class="math inline">\(\mathbb{E}\)</span> uma matriz <span class="math inline">\(N\times N\)</span> de elasticidades, <span class="math inline">\(\mathbf{I}\)</span> a matriz identidade e <span class="math inline">\(\mathbf{m}\)</span> um vetor coluna de índices de Lerner para cada um dos produtos. O operador <span class="math inline">\(\odot\)</span> é o chamado “Operador Hadamard,” ou multiplicação de matrizes elemento por elemento.
 Calculando ou calibrando as elasticidades, podemos calcular as margens observadas reorganizando este sistema de equações da seguinte forma:</p>
 <p><span class="math display">\[
 \mathbf{m}=-(\mathbb{E}\odot \mathbf{I})^{-1}\mathbf{1}
@@ -615,7 +787,7 @@ Calculando ou calibrando as elasticidades, podemos calcular as margens observada
 Como os preços e quantidades são observados, sabendo as elasticidades conseguimos calcular os custos marginais de cada produto.</p>
 <p>Vamos agora analisar o caso em que uma empresa produza 2 produtos, sendo que os outros <span class="math inline">\(N-2\)</span> produtos são oferecidos pelas outras empresas.</p>
 </div>
-<div id="uma-empresa-multiproduto" class="section level4">
+<div id="uma-empresa-multiproduto" class="section level4" number="4.2.7.2">
 <h4><span class="header-section-number">4.2.7.2</span> Uma empresa multiproduto</h4>
 <p>Neste caso, a empresa no momento em que ela decide escolher o preço da empresa 1, tem que levar em conta que irá afetar as vendas da outra marca que possui. Ou seja, se aumentar os preços de um dos produtos, alguns dos consumidores irão fugir para outro dos produtos da mesma empresa. Isso faz com que as condições de primeira ordem se tornem:</p>
 <p><span class="math display">\[
@@ -658,10 +830,10 @@ s_{1}+\left(\frac{p_{1}-c_{1}}{p_{1}} \right)\epsilon_{11}s_{1}+ \left( \frac{p_
 <p><div style="width: 100% ; height: 700px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div></p>
 </div>
 </div>
-<div id="bertrand-com-restrições-de-capacidade" class="section level3">
+<div id="bertrand-com-restrições-de-capacidade" class="section level3" number="4.2.8">
 <h3><span class="header-section-number">4.2.8</span> Bertrand com restrições de capacidade</h3>
 <p>A hipótese de diferenciação de produtos como forma de sair do “paradoxo de Bertrand” é muito útil, mas não é o único caminho. Outra linha teórica envolve assumir a existência de limites de capacidade – ou seja, as empresas são capazes de atender aos consumidores até certo ponto.</p>
-<p>Esta abordagem tem alguns limites, no sentido que não necessariamente gera conclusões robustas às premissas. Dependendo dos tamanhos relativos das capacidades e de como os consumidores são selecionados para serem atendidos pela empresa com preço mais barato, pode não haver equilíbrio em estratégias puras. Este fenômeno foi reconhecido por F. Y. Edgeworth em 1995, dando margem aos chamados “Ciclos de Edgeworth”.</p>
+<p>Esta abordagem tem alguns limites, no sentido que não necessariamente gera conclusões robustas às premissas. Dependendo dos tamanhos relativos das capacidades e de como os consumidores são selecionados para serem atendidos pela empresa com preço mais barato, pode não haver equilíbrio em estratégias puras. Este fenômeno foi reconhecido por F. Y. Edgeworth em 1995, dando margem aos chamados “Ciclos de Edgeworth.”</p>
 <p>No presente texto, iremos adotar uma versão deste modelo em que existe um equilíbrio de Nash em estratégias puras.</p>
 <p>A estrutura é a mais simples, duas empresas <span class="math inline">\(i=1,2\)</span>. Cada uma delas tem um custo marginal constante e igual a <span class="math inline">\(c\)</span>, até um nível de capacidade <span class="math inline">\(K\)</span>. A partir daí, o custo marginal tende ao infinito.</p>
 <p>Vamos supor inicialmente a seguinte função demanda:</p>
@@ -706,7 +878,7 @@ Neste caso a construção da função melhor resposta por meio do “deriva e ig
 </table>
 <p>A firma 2 tem uma tabela bastante similar, o que implica que este jogo tem apenas um perfil de estratégias puras que é Equilíbrio de Nash, <span class="math inline">\(P_{1}=P_{2}=a-2bK\)</span>. As funções Melhor Resposta neste caso ficam sendo:</p>
 <div class="figure">
-<img src="Bertrand.png" alt="Funções Melhor Resposta" />
+<img src="Bertrand.png" alt="" />
 <p class="caption">Funções Melhor Resposta</p>
 </div>
 <p>Neste caso, temos um equilíbrio em estratégias puras, com preços acima dos custos marginais. Só que este resultado depende de algumas premissas:</p>
@@ -717,10 +889,10 @@ Neste caso a construção da função melhor resposta por meio do “deriva e ig
 <p>Caso alguma dessas premissas não valha, o resultado de equilíbrio em estratégias puras com preços iguais e acima dos custos marginais não necessariamente se mantém.</p>
 </div>
 </div>
-<div id="modelos-sequenciais-stackelberg" class="section level2">
+<div id="modelos-sequenciais-stackelberg" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Modelos Sequenciais: Stackelberg</h2>
 <p>No modelo de Cournot que vimos anteriormente, consideramos o jogo simultâneo, ou seja, não havia possibilidade de um dos jogadores agir de forma condicional ao que o outro fizesse. Em muitos casos isso não é verdade. Vamos supor, ainda usando a estrutura do modelo de Cournot da aula passada, que uma das empresas é capaz de agir de forma condicional ao que o seu oponente fizesse. Este modelo foi desenvolvido em 1934 por Heinrich von Stackelberg e por isso é chamado, não surpreendentemente, de ``Modelo de Stackelberg’’, ou modelo da firma líder e firma seguidora.</p>
-<div id="apresentação-do-modelo" class="section level3">
+<div id="apresentação-do-modelo" class="section level3" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> Apresentação do modelo</h3>
 <p>Vamos supor que existam duas firmas em um mercado, representadas por <span class="math inline">\(i=1,2\)</span>. No entanto, neste mercado a primeira das companhias também tem precedência na escolha da quantidade produzida em relação à segunda. Ou, em outras palavras, a segunda empresa pode reagir ao que a primeira fizer. Este fato pode ser devido a um monte de motivos, seja por uma tecnologia mais avançada ou admiistração mais eficiente.</p>
 <p>Como são as estratégias destas empresas? A da firma 1 – que vou chamar de líder – é bastante simples, a determinação de um valor para a quantidade produzida.
@@ -768,6 +940,12 @@ q_{2}&amp;=\frac{a-c}{4b}
 <p>Podemos notar que este modelo implica que a empresa que pode reagir acaba tendo menor produção e menores lucros que a empresa que não reage. Este é um tipo de situação em que não há vantagem em se ter flexibilidade; muito pelo contrário, há vantagens para o comprometimento.</p>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-porter1983study" class="csl-entry">
+Porter, Robert H. 1983. <span>“A Study of Cartel Stability: The Joint Executive Committee, 1880-1886.”</span> <em>The Bell Journal of Economics</em>, 301–14.
 </div>
 </div>
             </section>
